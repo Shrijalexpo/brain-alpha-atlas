@@ -1,0 +1,7 @@
+[
+  {"company_name":"Apple Inc.","ticker":"AAPL","isin":"US0378331005","mic":"XNAS","confidence_score":0.82,"investment_horizon":22,"return_prediction":0.045},
+  {"company_name":"Microsoft Corporation","ticker":"MSFT","isin":"US5949181045","mic":"XNAS","confidence_score":0.76,"investment_horizon":30,"return_prediction":0.038},
+  {"company_name":"NVIDIA Corporation","ticker":"NVDA","isin":"US67066G1040","mic":"XNAS","confidence_score":0.64,"investment_horizon":20,"return_prediction":0.055},
+  {"company_name":"Tesla Inc.","ticker":"TSLA","isin":"US88160R1014","mic":"XNAS","confidence_score":-0.58,"investment_horizon":15,"return_prediction":0.032},
+  {"company_name":"Intel Corporation","ticker":"INTC","isin":"US4581401001","mic":"XNAS","confidence_score":-0.41,"investment_horizon":25,"return_prediction":0.018}
+]

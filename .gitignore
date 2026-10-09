@@ -1,0 +1,76 @@
+# ---------------------------------------------------------------------------
+# Private, confidential or personally identifying material.
+# Nothing here should ever be tracked, in this or any public repository.
+# ---------------------------------------------------------------------------
+
+# Personal consulting agreements and contracts
+*.pdf
+!docs/**/*.pdf
+
+# Competition / program legal terms captured locally
+competition_contract.txt
+
+# Consultant-program material (subject to program terms)
+tutorials/consultant_information/
+
+# Verbatim captures of third-party documentation (copyrighted, and they carry
+# the capturing account's UI header)
+tutorials/worldquant_brain_documentation_raw/
+Operators/worldquant_brain_operators_raw_capture.txt
+
+# Third-party papers, books and formula collections
+Books/
+
+# Platform automation library and notebooks (credential-handling flow,
+# account artefacts in outputs)
+ACE_API__Gold_/
+
+# ---------------------------------------------------------------------------
+# Local-only working documents (decision recorded 2026-10-09)
+#
+# Personal agent-instruction files and consultant-program notes. They stay on
+# this machine and are not part of the public wiki; the durable, general rules
+# they produce are republished in docs/11-lessons.md and docs/13-tools-and-api.md.
+# Commands.md, tutorials/worldquant_brain_documentation_index.md and
+# Research/iteration_workflow.md each carry a short note pointing that out.
+# ---------------------------------------------------------------------------
+CLAUDE.md
+instructions.md
+tutorials/consultant_program_osmosis_allocation_guide.md
+tutorials/spc_2026_prompt_competition.md
+
+# ---------------------------------------------------------------------------
+# Machine-specific and agent state
+# ---------------------------------------------------------------------------
+.remember/
+.freebuff/
+.venv/
+.venv-docs/
+.venv-docs*/
+venv/
+__pycache__/
+
+# Build output of the documentation site (regenerate with mkdocs build).
+site/
+*.pyc
+*.pyo
+.cache/
+.pytest_cache/
+.ipynb_checkpoints/
+.DS_Store
+*.log
+*.pid
+*.swp
+*~
+
+# Local audit / review notes and scratch files
+_private_review/
+_scratch/
+*.local.md
+
+# ---------------------------------------------------------------------------
+# Notes
+# ---------------------------------------------------------------------------
+# Adding a path here does NOT untrack a file that is already committed. If a
+# secret was ever committed: remove it from history as well, then rotate the
+# credential. See docs/contributing.md.

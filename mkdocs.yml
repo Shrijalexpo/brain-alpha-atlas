@@ -1,0 +1,79 @@
+# Documentation site configuration.
+#
+# The wiki is plain Markdown and reads correctly on GitHub without this file; this only adds
+# sidebar navigation for local preview and for the optional GitHub Pages build.
+#
+#   python3 -m venv .venv-docs
+#   .venv-docs/bin/pip install -r requirements-docs.txt
+#   .venv-docs/bin/mkdocs serve            # local preview
+#   .venv-docs/bin/mkdocs build --strict   # what CI runs
+#
+# No site is published by this configuration: publishing is a separate, manual workflow
+# described in docs/13-tools-and-api.md. Nothing here calls the network.
+
+site_name: BRAIN Alpha Atlas
+site_description: >-
+  A practical, evidence-linked knowledge base for WorldQuant BRAIN alpha research:
+  platform concepts, Fast Expression, operators, data fields, simulation settings,
+  failed-check diagnosis, and lessons from 71 recorded experiments.
+
+# The base path a published site is served from. Actions can override it without editing this
+# file, so a fork or a differently-named repository does not need a code change:
+#   MKDOCS_SITE_URL=https://<user>.github.io/<repo>/ mkdocs build --strict
+site_url: !ENV [MKDOCS_SITE_URL, "https://shrijalexpo.github.io/brain-alpha-atlas/"]
+
+docs_dir: docs
+site_dir: site
+use_directory_urls: true
+
+theme:
+  name: mkdocs
+
+nav:
+  - Home: index.md
+  - Foundations:
+      - How BRAIN research works: 01-foundations.md
+      - Simulation settings: 02-simulation-settings.md
+      - Fast Expression: 03-fast-expression.md
+      - Operators: 04-operators.md
+      - Data and fields: 05-data-and-fields.md
+  - Working method:
+      - Research workflow: 06-research-workflow.md
+      - Evaluating results: 07-evaluating-results.md
+      - Failed checks: 08-failed-checks.md
+      - Improving alphas: 09-improving-alphas.md
+  - The record:
+      - Experiment index: 10-experiment-index.md
+      - Lessons: 11-lessons.md
+  - Reference:
+      - Regions and universes: 12-regions-and-universes.md
+      - Tools and API: 13-tools-and-api.md
+      - Advanced topics: 14-advanced.md
+      - Sources and policy: 15-sources-and-policy.md
+  - Contributing:
+      - Contributing: contributing.md
+      - Change log: changelog.md
+
+markdown_extensions:
+  - tables
+  - fenced_code
+  - sane_lists
+
+# Link validation, and why two rules are relaxed.
+#
+# The wiki deliberately links to repository files outside docs/ -- simulation records, the
+# ledgers, Research/, Tools/, the sweep data. Those links are correct on GitHub, the primary
+# way this wiki is read, but MkDocs cannot resolve them because docs_dir contains only docs/,
+# so 'not_found' and 'unrecognized_links' fire on every one of them. They are not unchecked:
+# Tools/check_docs.py resolves every relative link against the real filesystem and fails the
+# build when a target is missing, which is a stronger check than MkDocs' warning.
+# 'anchors' is raised to warn so a stale '#anchor' inside docs/ fails the strict build.
+validation:
+  links:
+    not_found: ignore
+    unrecognized_links: ignore
+    absolute_links: ignore
+    anchors: warn
+
+# Deliberately minimal: no plugins, no analytics, no external assets. A documentation build
+# should not be able to reach the network or grow a dependency tree of its own.

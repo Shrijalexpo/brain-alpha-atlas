@@ -1,0 +1,7248 @@
+{
+ "source": "simulations/sweeps/sources/20261009_115500.txt",
+ "dump_index": 5,
+ "declared_count": 174,
+ "settings": {
+  "Region": "USA",
+  "Universe": "TOP3000",
+  "Delay": "1",
+  "Pasteurization": "ON",
+  "NaN Handling": "ON"
+ },
+ "legend": {
+  "F1": [
+   "LOW_SHARPE",
+   "LOW_FITNESS",
+   "IS_LADDER_SHARPE"
+  ],
+  "F2": [
+   "LOW_SHARPE",
+   "LOW_FITNESS",
+   "CONCENTRATED_WEIGHT",
+   "IS_LADDER_SHARPE"
+  ],
+  "F3": [
+   "LOW_SHARPE",
+   "LOW_FITNESS",
+   "LOW_2Y_SHARPE"
+  ],
+  "F4": [
+   "LOW_SHARPE",
+   "LOW_FITNESS",
+   "LOW_SUB_UNIVERSE_SHARPE",
+   "LOW_2Y_SHARPE"
+  ],
+  "F5": [
+   "LOW_SHARPE",
+   "LOW_FITNESS",
+   "CONCENTRATED_WEIGHT",
+   "LOW_SUB_UNIVERSE_SHARPE",
+   "LOW_2Y_SHARPE"
+  ],
+  "F6": [
+   "LOW_SHARPE",
+   "LOW_FITNESS",
+   "LOW_SUB_UNIVERSE_SHARPE",
+   "IS_LADDER_SHARPE"
+  ],
+  "F7": [
+   "LOW_SHARPE",
+   "LOW_FITNESS",
+   "CONCENTRATED_WEIGHT",
+   "LOW_2Y_SHARPE"
+  ],
+  "F8": [
+   "LOW_SHARPE",
+   "LOW_FITNESS",
+   "CONCENTRATED_WEIGHT",
+   "LOW_SUB_UNIVERSE_SHARPE",
+   "IS_LADDER_SHARPE"
+  ],
+  "F9": [
+   "LOW_SHARPE",
+   "LOW_FITNESS",
+   "LOW_TURNOVER",
+   "LOW_2Y_SHARPE"
+  ],
+  "F10": [
+   "CONCENTRATED_WEIGHT",
+   "LOW_SUB_UNIVERSE_SHARPE"
+  ],
+  "F11": [
+   "LOW_SHARPE",
+   "LOW_FITNESS"
+  ],
+  "F12": [
+   "LOW_SHARPE",
+   "LOW_FITNESS",
+   "LOW_TURNOVER",
+   "LOW_SUB_UNIVERSE_SHARPE",
+   "LOW_2Y_SHARPE"
+  ],
+  "F13": [
+   "LOW_SHARPE",
+   "LOW_FITNESS",
+   "HIGH_TURNOVER",
+   "LOW_SUB_UNIVERSE_SHARPE",
+   "LOW_2Y_SHARPE"
+  ],
+  "F14": [
+   "LOW_SHARPE",
+   "CONCENTRATED_WEIGHT",
+   "IS_LADDER_SHARPE"
+  ],
+  "F15": [
+   "LOW_SHARPE",
+   "LOW_FITNESS",
+   "CONCENTRATED_WEIGHT",
+   "LOW_SUB_UNIVERSE_SHARPE"
+  ],
+  "F16": [
+   "LOW_SHARPE",
+   "LOW_FITNESS",
+   "HIGH_TURNOVER",
+   "CONCENTRATED_WEIGHT",
+   "IS_LADDER_SHARPE"
+  ],
+  "F17": [
+   "CONCENTRATED_WEIGHT",
+   "LOW_SUB_UNIVERSE_SHARPE",
+   "IS_LADDER_SHARPE"
+  ],
+  "F18": [
+   "LOW_FITNESS",
+   "CONCENTRATED_WEIGHT",
+   "IS_LADDER_SHARPE"
+  ],
+  "F19": [
+   "LOW_FITNESS",
+   "IS_LADDER_SHARPE"
+  ],
+  "F20": [
+   "LOW_FITNESS"
+  ],
+  "F21": [
+   "LOW_SHARPE",
+   "LOW_FITNESS",
+   "LOW_SUB_UNIVERSE_SHARPE"
+  ],
+  "F22": [
+   "LOW_SHARPE",
+   "LOW_FITNESS",
+   "CONCENTRATED_WEIGHT"
+  ],
+  "F23": [
+   "LOW_SHARPE",
+   "LOW_FITNESS",
+   "HIGH_TURNOVER",
+   "LOW_SUB_UNIVERSE_SHARPE",
+   "IS_LADDER_SHARPE"
+  ],
+  "F24": [
+   "LOW_SHARPE",
+   "LOW_FITNESS",
+   "LOW_TURNOVER",
+   "CONCENTRATED_WEIGHT",
+   "LOW_SUB_UNIVERSE_SHARPE",
+   "CLUSTER_TEST"
+  ]
+ },
+ "universe_labels": [
+  "TOP3000"
+ ],
+ "neutralization_labels": [
+  "INDUSTRY",
+  "MARKET",
+  "NONE",
+  "SECTOR",
+  "SUBINDUSTRY"
+ ],
+ "sections": [
+  {
+   "line": 36,
+   "universe": null,
+   "neutralization": "SUBINDUSTRY"
+  },
+  {
+   "line": 1572,
+   "universe": null,
+   "neutralization": "INDUSTRY"
+  },
+  {
+   "line": 1925,
+   "universe": null,
+   "neutralization": "NONE"
+  },
+  {
+   "line": 1992,
+   "universe": null,
+   "neutralization": "MARKET"
+  },
+  {
+   "line": 2189,
+   "universe": null,
+   "neutralization": "SECTOR"
+  }
+ ],
+ "results": [
+  {
+   "result_no": 1,
+   "number_synthesised": true,
+   "line": 38,
+   "universe": "TOP3000",
+   "neutralization": "SUBINDUSTRY",
+   "decay": 6,
+   "truncation": 0.08,
+   "expression": "iv_signal = zscore(implied_volatility_call_120 - implied_volatility_put_120) + rank(implied_volatility_call_120 / historical_volatility_120); cap_group = bucket(rank(cap), range=\"0.1,1,0.1\"); group_neutralize(iv_signal, cap_group)",
+   "primary_field": "iv_signal",
+   "family": "other",
+   "train_fitness": 1.76,
+   "sharpe": 2.61,
+   "extra": {
+    "Sharpe": "2.61",
+    "Turnover": "35.73%",
+    "Fitness": "1.88",
+    "Returns": "18.61%",
+    "Drawdown": "7.62%",
+    "Margin": "10.42 bps",
+    "Long Count": "1427",
+    "Short Count": "1201"
+   },
+   "turnover": 35.73,
+   "fitness": 1.88,
+   "returns": 18.61,
+   "drawdown": 7.62,
+   "margin_bps": 10.42,
+   "long_count": 1427.0,
+   "short_count": 1201.0,
+   "status": "FAIL",
+   "failed_check_codes": [
+    "F10"
+   ],
+   "failed_checks": [
+    "CONCENTRATED_WEIGHT",
+    "LOW_SUB_UNIVERSE_SHARPE"
+   ]
+  },
+  {
+   "result_no": 2,
+   "number_synthesised": true,
+   "line": 51,
+   "universe": "TOP3000",
+   "neutralization": "SUBINDUSTRY",
+   "decay": 4,
+   "truncation": 0.08,
+   "expression": "iv_difference = implied_volatility_call_120 - implied_volatility_put_120; hv_group = bucket(rank(ts_rank(operating_income / cap, 250)), range=\"0.1,1,0.1\"); group_neutralize(iv_difference, hv_group)",
+   "primary_field": "iv_difference",
+   "family": "other",
+   "train_fitness": 1.56,
+   "sharpe": 2.34,
+   "extra": {
+    "Sharpe": "2.34",
+    "Turnover": "48.23%",
+    "Fitness": "1.47",
+    "Returns": "19.05%",
+    "Drawdown": "9.19%",
+    "Margin": "7.90 bps",
+    "Long Count": "1445",
+    "Short Count": "1091"
+   },
+   "turnover": 48.23,
+   "fitness": 1.47,
+   "returns": 19.05,
+   "drawdown": 9.19,
+   "margin_bps": 7.9,
+   "long_count": 1445.0,
+   "short_count": 1091.0,
+   "status": "FAIL",
+   "failed_check_codes": [
+    "F10"
+   ],
+   "failed_checks": [
+    "CONCENTRATED_WEIGHT",
+    "LOW_SUB_UNIVERSE_SHARPE"
+   ]
+  },
+  {
+   "result_no": 3,
+   "number_synthesised": true,
+   "line": 64,
+   "universe": "TOP3000",
+   "neutralization": "SUBINDUSTRY",
+   "decay": 4,
+   "truncation": 0.08,
+   "expression": "iv_difference = implied_volatility_call_120 - implied_volatility_put_120; hv_group = bucket(rank(ts_sum(vec_avg(nws12_afterhsz_sl), 60)), range=\"0.1,1,0.1\"); group_neutralize(iv_difference, hv_group)",
+   "primary_field": "iv_difference",
+   "family": "other",
+   "train_fitness": 1.36,
+   "sharpe": 2.29,
+   "extra": {
+    "Sharpe": "2.29",
+    "Turnover": "47.32%",
+    "Fitness": "1.47",
+    "Returns": "19.62%",
+    "Drawdown": "11.67%",
+    "Margin": "8.29 bps",
+    "Long Count": "1521",
+    "Short Count": "1128"
+   },
+   "turnover": 47.32,
+   "fitness": 1.47,
+   "returns": 19.62,
+   "drawdown": 11.67,
+   "margin_bps": 8.29,
+   "long_count": 1521.0,
+   "short_count": 1128.0,
+   "status": "FAIL",
+   "failed_check_codes": [
+    "F10"
+   ],
+   "failed_checks": [
+    "CONCENTRATED_WEIGHT",
+    "LOW_SUB_UNIVERSE_SHARPE"
+   ]
+  },
+  {
+   "result_no": 4,
+   "number_synthesised": true,
+   "line": 77,
+   "universe": "TOP3000",
+   "neutralization": "SUBINDUSTRY",
+   "decay": 8,
+   "truncation": 0.08,
+   "expression": "hv_group = bucket(rank(historical_volatility_120), range=\"0.1,1,0.1\"); group_neutralize(rank(implied_volatility_call_120 - implied_volatility_put_120), hv_group)",
+   "primary_field": "hv_group",
+   "family": "other",
+   "train_fitness": 1.11,
+   "sharpe": 2.21,
+   "extra": {
+    "Sharpe": "2.21",
+    "Turnover": "32.91%",
+    "Fitness": "1.07",
+    "Returns": "7.68%",
+    "Drawdown": "5.27%",
+    "Margin": "4.67 bps",
+    "Long Count": "1406",
+    "Short Count": "1239"
+   },
+   "turnover": 32.91,
+   "fitness": 1.07,
+   "returns": 7.68,
+   "drawdown": 5.27,
+   "margin_bps": 4.67,
+   "long_count": 1406.0,
+   "short_count": 1239.0,
+   "status": "FAIL",
+   "failed_check_codes": [
+    "F10"
+   ],
+   "failed_checks": [
+    "CONCENTRATED_WEIGHT",
+    "LOW_SUB_UNIVERSE_SHARPE"
+   ]
+  },
+  {
+   "result_no": 5,
+   "number_synthesised": true,
+   "line": 90,
+   "universe": "TOP3000",
+   "neutralization": "SUBINDUSTRY",
+   "decay": 4,
+   "truncation": 0.08,
+   "expression": "rank(ts_rank(operating_income / cap, 250)) > 0.5 ? 1 : rank(-ts_delta(close, 2))",
+   "primary_field": "operating_income",
+   "family": "other",
+   "train_fitness": 1.07,
+   "sharpe": 2.17,
+   "extra": {
+    "Sharpe": "2.17",
+    "Turnover": "30.08%",
+    "Fitness": "1.10",
+    "Returns": "7.76%",
+    "Drawdown": "4.11%",
+    "Margin": "5.16 bps",
+    "Long Count": "1629",
+    "Short Count": "1368"
+   },
+   "turnover": 30.08,
+   "fitness": 1.1,
+   "returns": 7.76,
+   "drawdown": 4.11,
+   "margin_bps": 5.16,
+   "long_count": 1629.0,
+   "short_count": 1368.0,
+   "status": "PENDING",
+   "failed_check_codes": [],
+   "failed_checks": []
+  },
+  {
+   "result_no": 6,
+   "number_synthesised": true,
+   "line": 103,
+   "universe": "TOP3000",
+   "neutralization": "SUBINDUSTRY",
+   "decay": 4,
+   "truncation": 0.08,
+   "expression": "scale(ts_sum(rank(ts_rank(op_cash_flow_stddev, 126)), 60)) > 0.5 ? 1 : rank(-ts_delta(close, 2))",
+   "primary_field": "op_cash_flow_stddev",
+   "family": "other",
+   "train_fitness": 0.9,
+   "sharpe": 1.94,
+   "extra": {
+    "Sharpe": "1.94",
+    "Turnover": "64.34%",
+    "Fitness": "0.86",
+    "Returns": "12.78%",
+    "Drawdown": "9.37%",
+    "Margin": "3.97 bps",
+    "Long Count": "1547",
+    "Short Count": "1514"
+   },
+   "turnover": 64.34,
+   "fitness": 0.86,
+   "returns": 12.78,
+   "drawdown": 9.37,
+   "margin_bps": 3.97,
+   "long_count": 1547.0,
+   "short_count": 1514.0,
+   "status": "FAIL",
+   "failed_check_codes": [
+    "F19"
+   ],
+   "failed_checks": [
+    "LOW_FITNESS",
+    "IS_LADDER_SHARPE"
+   ]
+  },
+  {
+   "result_no": 7,
+   "number_synthesised": true,
+   "line": 116,
+   "universe": "TOP3000",
+   "neutralization": "SUBINDUSTRY",
+   "decay": 4,
+   "truncation": 0.08,
+   "expression": "iv_signal = ts_rank(fnd6_newqv1300_miiq / debt, 252) + rank(-returns) + rank(volume / adv20); cap_group = bucket(rank(cap), range=\"0.1,1,0.1\"); group_neutralize(iv_signal, cap_group)",
+   "primary_field": "iv_signal",
+   "family": "other",
+   "train_fitness": 0.71,
+   "sharpe": 1.85,
+   "extra": {
+    "Sharpe": "1.85",
+    "Turnover": "49.28%",
+    "Fitness": "0.76",
+    "Returns": "8.26%",
+    "Drawdown": "4.12%",
+    "Margin": "3.35 bps",
+    "Long Count": "1094",
+    "Short Count": "1121"
+   },
+   "turnover": 49.28,
+   "fitness": 0.76,
+   "returns": 8.26,
+   "drawdown": 4.12,
+   "margin_bps": 3.35,
+   "long_count": 1094.0,
+   "short_count": 1121.0,
+   "status": "FAIL",
+   "failed_check_codes": [
+    "F20"
+   ],
+   "failed_checks": [
+    "LOW_FITNESS"
+   ]
+  },
+  {
+   "result_no": 8,
+   "number_synthesised": true,
+   "line": 129,
+   "universe": "TOP3000",
+   "neutralization": "SUBINDUSTRY",
+   "decay": 6,
+   "truncation": 0.08,
+   "expression": "iv_signal = rank(implied_volatility_call_120 - implied_volatility_put_120) + rank(-returns) + scale(high / adv20); cap_group = bucket(rank(ts_delta(op_cash_flow_stddev, 20)), range=\"0.1,1,0.1\"); group_neutralize(iv_signal, cap_group)",
+   "primary_field": "iv_signal",
+   "family": "other",
+   "train_fitness": 0.93,
+   "sharpe": 1.74,
+   "extra": {
+    "Sharpe": "1.74",
+    "Turnover": "53.11%",
+    "Fitness": "0.90",
+    "Returns": "14.33%",
+    "Drawdown": "10.51%",
+    "Margin": "5.40 bps",
+    "Long Count": "228",
+    "Short Count": "216"
+   },
+   "turnover": 53.11,
+   "fitness": 0.9,
+   "returns": 14.33,
+   "drawdown": 10.51,
+   "margin_bps": 5.4,
+   "long_count": 228.0,
+   "short_count": 216.0,
+   "status": "FAIL",
+   "failed_check_codes": [
+    "F18"
+   ],
+   "failed_checks": [
+    "LOW_FITNESS",
+    "CONCENTRATED_WEIGHT",
+    "IS_LADDER_SHARPE"
+   ]
+  },
+  {
+   "result_no": 9,
+   "number_synthesised": true,
+   "line": 142,
+   "universe": "TOP3000",
+   "neutralization": "SUBINDUSTRY",
+   "decay": 16,
+   "truncation": 0.08,
+   "expression": "zscore(rank(-returns) + 0.25 * rank(ts_rank(fnd6_cptnewqv1300_epsfxq, 126)) + 0.25 * rank(ebitda / enterprise_value))",
+   "primary_field": "returns",
+   "family": "other",
+   "train_fitness": 0.75,
+   "sharpe": 1.73,
+   "extra": {
+    "Sharpe": "1.73",
+    "Turnover": "33.13%",
+    "Fitness": "1.02",
+    "Returns": "11.59%",
+    "Drawdown": "8.76%",
+    "Margin": "7.00 bps",
+    "Long Count": "990",
+    "Short Count": "990"
+   },
+   "turnover": 33.13,
+   "fitness": 1.02,
+   "returns": 11.59,
+   "drawdown": 8.76,
+   "margin_bps": 7.0,
+   "long_count": 990.0,
+   "short_count": 990.0,
+   "status": "PENDING",
+   "failed_check_codes": [],
+   "failed_checks": []
+  },
+  {
+   "result_no": 10,
+   "number_synthesised": true,
+   "line": 155,
+   "universe": "TOP3000",
+   "neutralization": "SUBINDUSTRY",
+   "decay": 4,
+   "truncation": 0.08,
+   "expression": "group_neutralize(rank(ts_rank(operating_income / assets, 126)) + rank(ts_delta(return_assets, 63)) + rank(ts_mean(-returns, 5)), bucket(rank(cap), range=\"0.1,1,0.1\"))",
+   "primary_field": "operating_income",
+   "family": "other",
+   "train_fitness": 0.59,
+   "sharpe": 1.49,
+   "extra": {
+    "Sharpe": "1.49",
+    "Turnover": "18.57%",
+    "Fitness": "0.82",
+    "Returns": "5.66%",
+    "Drawdown": "3.95%",
+    "Margin": "6.09 bps",
+    "Long Count": "1401",
+    "Short Count": "1393"
+   },
+   "turnover": 18.57,
+   "fitness": 0.82,
+   "returns": 5.66,
+   "drawdown": 3.95,
+   "margin_bps": 6.09,
+   "long_count": 1401.0,
+   "short_count": 1393.0,
+   "status": "FAIL",
+   "failed_check_codes": [
+    "F11"
+   ],
+   "failed_checks": [
+    "LOW_SHARPE",
+    "LOW_FITNESS"
+   ]
+  },
+  {
+   "result_no": 11,
+   "number_synthesised": true,
+   "line": 168,
+   "universe": "TOP3000",
+   "neutralization": "SUBINDUSTRY",
+   "decay": 4,
+   "truncation": 0.08,
+   "expression": "rank(ts_sum(vec_avg(story_event_record_count_fast_d1), 120))",
+   "primary_field": "story_event_record_count_fast_d1",
+   "family": "other",
+   "train_fitness": 0.58,
+   "sharpe": 1.4,
+   "extra": {
+    "Sharpe": "1.40",
+    "Turnover": "3.29%",
+    "Fitness": "0.90",
+    "Returns": "5.18%",
+    "Drawdown": "6.85%",
+    "Margin": "31.54 bps",
+    "Long Count": "1541",
+    "Short Count": "1520"
+   },
+   "turnover": 3.29,
+   "fitness": 0.9,
+   "returns": 5.18,
+   "drawdown": 6.85,
+   "margin_bps": 31.54,
+   "long_count": 1541.0,
+   "short_count": 1520.0,
+   "status": "FAIL",
+   "failed_check_codes": [
+    "F21"
+   ],
+   "failed_checks": [
+    "LOW_SHARPE",
+    "LOW_FITNESS",
+    "LOW_SUB_UNIVERSE_SHARPE"
+   ]
+  },
+  {
+   "result_no": 12,
+   "number_synthesised": true,
+   "line": 181,
+   "universe": "TOP3000",
+   "neutralization": "SUBINDUSTRY",
+   "decay": 16,
+   "truncation": 0.08,
+   "expression": "scale(ts_sum(rank(implied_volatility_call_120 - implied_volatility_put_120), 60)) > 0.5 ? 1 : rank(-ts_delta(close, 2))",
+   "primary_field": "implied_volatility_call_120",
+   "family": "other",
+   "train_fitness": 0.82,
+   "sharpe": 1.39,
+   "extra": {
+    "Sharpe": "1.39",
+    "Turnover": "34.48%",
+    "Fitness": "0.75",
+    "Returns": "10.15%",
+    "Drawdown": "7.61%",
+    "Margin": "5.89 bps",
+    "Long Count": "1555",
+    "Short Count": "1505"
+   },
+   "turnover": 34.48,
+   "fitness": 0.75,
+   "returns": 10.15,
+   "drawdown": 7.61,
+   "margin_bps": 5.89,
+   "long_count": 1555.0,
+   "short_count": 1505.0,
+   "status": "FAIL",
+   "failed_check_codes": [
+    "F1"
+   ],
+   "failed_checks": [
+    "LOW_SHARPE",
+    "LOW_FITNESS",
+    "IS_LADDER_SHARPE"
+   ]
+  },
+  {
+   "result_no": 13,
+   "number_synthesised": true,
+   "line": 194,
+   "universe": "TOP3000",
+   "neutralization": "SUBINDUSTRY",
+   "decay": 16,
+   "truncation": 0.08,
+   "expression": "iv_signal = ts_rank(working_capital, 126) + rank(-returns) + rank(volume / adv20); cap_group = bucket(rank(cap), range=\"0.1,1,0.1\"); group_neutralize(iv_signal, cap_group)",
+   "primary_field": "iv_signal",
+   "family": "other",
+   "train_fitness": 0.64,
+   "sharpe": 1.34,
+   "extra": {
+    "Sharpe": "1.34",
+    "Turnover": "14.05%",
+    "Fitness": "0.74",
+    "Returns": "4.24%",
+    "Drawdown": "3.79%",
+    "Margin": "6.04 bps",
+    "Long Count": "1158",
+    "Short Count": "1123"
+   },
+   "turnover": 14.05,
+   "fitness": 0.74,
+   "returns": 4.24,
+   "drawdown": 3.79,
+   "margin_bps": 6.04,
+   "long_count": 1158.0,
+   "short_count": 1123.0,
+   "status": "FAIL",
+   "failed_check_codes": [
+    "F11"
+   ],
+   "failed_checks": [
+    "LOW_SHARPE",
+    "LOW_FITNESS"
+   ]
+  },
+  {
+   "result_no": 14,
+   "number_synthesised": true,
+   "line": 207,
+   "universe": "TOP3000",
+   "neutralization": "SUBINDUSTRY",
+   "decay": 6,
+   "truncation": 0.08,
+   "expression": "hv_group = densify(bucket(ts_delta(op_cash_flow_stddev, 20), range=\"0.1,1,0.1\")); group_neutralize(rank(implied_volatility_call_120 - implied_volatility_put_120), hv_group)",
+   "primary_field": "hv_group",
+   "family": "other",
+   "train_fitness": 0.78,
+   "sharpe": 1.31,
+   "extra": {
+    "Sharpe": "1.31",
+    "Turnover": "36.97%",
+    "Fitness": "0.65",
+    "Returns": "9.14%",
+    "Drawdown": "9.71%",
+    "Margin": "4.95 bps",
+    "Long Count": "237",
+    "Short Count": "206"
+   },
+   "turnover": 36.97,
+   "fitness": 0.65,
+   "returns": 9.14,
+   "drawdown": 9.71,
+   "margin_bps": 4.95,
+   "long_count": 237.0,
+   "short_count": 206.0,
+   "status": "FAIL",
+   "failed_check_codes": [
+    "F8"
+   ],
+   "failed_checks": [
+    "LOW_SHARPE",
+    "LOW_FITNESS",
+    "CONCENTRATED_WEIGHT",
+    "LOW_SUB_UNIVERSE_SHARPE",
+    "IS_LADDER_SHARPE"
+   ]
+  },
+  {
+   "result_no": 15,
+   "number_synthesised": true,
+   "line": 220,
+   "universe": "TOP3000",
+   "neutralization": "SUBINDUSTRY",
+   "decay": 16,
+   "truncation": 0.08,
+   "expression": "iv_signal = rank(ts_rank(op_cash_flow_stddev, 126)) + rank(-returns) + rank(volume / adv20); cap_group = bucket(rank(cap), range=\"0.1,1,0.1\"); group_scale(iv_signal, cap_group)",
+   "primary_field": "iv_signal",
+   "family": "other",
+   "train_fitness": 0.8,
+   "sharpe": 1.3,
+   "extra": {
+    "Sharpe": "1.30",
+    "Turnover": "18.44%",
+    "Fitness": "0.78",
+    "Returns": "6.63%",
+    "Drawdown": "6.72%",
+    "Margin": "7.19 bps",
+    "Long Count": "275",
+    "Short Count": "272"
+   },
+   "turnover": 18.44,
+   "fitness": 0.78,
+   "returns": 6.63,
+   "drawdown": 6.72,
+   "margin_bps": 7.19,
+   "long_count": 275.0,
+   "short_count": 272.0,
+   "status": "FAIL",
+   "failed_check_codes": [
+    "F1"
+   ],
+   "failed_checks": [
+    "LOW_SHARPE",
+    "LOW_FITNESS",
+    "IS_LADDER_SHARPE"
+   ]
+  },
+  {
+   "result_no": 16,
+   "number_synthesised": true,
+   "line": 233,
+   "universe": "TOP3000",
+   "neutralization": "SUBINDUSTRY",
+   "decay": 0,
+   "truncation": 0.08,
+   "expression": "group_neutralize(rank(ts_rank(fnd6_newqv1300_miiq / debt, 252)) + rank(ts_delta(return_assets, 126)) + rank(ts_sum(-returns, 5)), bucket(ts_decay_linear(pcr_vol_1080, 120), range=\"0.1,1,0.1\"))",
+   "primary_field": "fnd6_newqv1300_miiq",
+   "family": "fnd6 (fundamental)",
+   "train_fitness": 0.26,
+   "sharpe": 1.25,
+   "extra": {
+    "Sharpe": "1.25",
+    "Turnover": "54.14%",
+    "Fitness": "0.44",
+    "Returns": "6.74%",
+    "Drawdown": "7.48%",
+    "Margin": "2.49 bps",
+    "Long Count": "812",
+    "Short Count": "814"
+   },
+   "turnover": 54.14,
+   "fitness": 0.44,
+   "returns": 6.74,
+   "drawdown": 7.48,
+   "margin_bps": 2.49,
+   "long_count": 812.0,
+   "short_count": 814.0,
+   "status": "FAIL",
+   "failed_check_codes": [
+    "F2"
+   ],
+   "failed_checks": [
+    "LOW_SHARPE",
+    "LOW_FITNESS",
+    "CONCENTRATED_WEIGHT",
+    "IS_LADDER_SHARPE"
+   ]
+  },
+  {
+   "result_no": 17,
+   "number_synthesised": true,
+   "line": 246,
+   "universe": "TOP3000",
+   "neutralization": "SUBINDUSTRY",
+   "decay": 12,
+   "truncation": 0.08,
+   "expression": "rank(recurring_assets_fair_value_2) + rank(-(close - dividend) / vwap)",
+   "primary_field": "recurring_assets_fair_value_2",
+   "family": "other",
+   "train_fitness": 0.56,
+   "sharpe": 1.23,
+   "extra": {
+    "Sharpe": "1.23",
+    "Turnover": "16.69%",
+    "Fitness": "0.71",
+    "Returns": "5.56%",
+    "Drawdown": "9.73%",
+    "Margin": "6.67 bps",
+    "Long Count": "658",
+    "Short Count": "592"
+   },
+   "turnover": 16.69,
+   "fitness": 0.71,
+   "returns": 5.56,
+   "drawdown": 9.73,
+   "margin_bps": 6.67,
+   "long_count": 658.0,
+   "short_count": 592.0,
+   "status": "FAIL",
+   "failed_check_codes": [
+    "F1"
+   ],
+   "failed_checks": [
+    "LOW_SHARPE",
+    "LOW_FITNESS",
+    "IS_LADDER_SHARPE"
+   ]
+  },
+  {
+   "result_no": 18,
+   "number_synthesised": true,
+   "line": 259,
+   "universe": "TOP3000",
+   "neutralization": "SUBINDUSTRY",
+   "decay": 5,
+   "truncation": 0.08,
+   "expression": "group_neutralize(rank(ts_rank(operating_income / assets, 126)) + rank(ts_delta(return_assets, 126)) + zscore(ts_mean(-returns, 5)), bucket(ts_decay_linear(pcr_oi_1080, 126), range=\"0.1,1,0.1\"))",
+   "primary_field": "operating_income",
+   "family": "other",
+   "train_fitness": 0.57,
+   "sharpe": 1.21,
+   "extra": {
+    "Sharpe": "1.21",
+    "Turnover": "30.58%",
+    "Fitness": "0.72",
+    "Returns": "10.79%",
+    "Drawdown": "11.73%",
+    "Margin": "7.06 bps",
+    "Long Count": "1303",
+    "Short Count": "1284"
+   },
+   "turnover": 30.58,
+   "fitness": 0.72,
+   "returns": 10.79,
+   "drawdown": 11.73,
+   "margin_bps": 7.06,
+   "long_count": 1303.0,
+   "short_count": 1284.0,
+   "status": "FAIL",
+   "failed_check_codes": [
+    "F2"
+   ],
+   "failed_checks": [
+    "LOW_SHARPE",
+    "LOW_FITNESS",
+    "CONCENTRATED_WEIGHT",
+    "IS_LADDER_SHARPE"
+   ]
+  },
+  {
+   "result_no": 19,
+   "number_synthesised": true,
+   "line": 272,
+   "universe": "TOP3000",
+   "neutralization": "SUBINDUSTRY",
+   "decay": 4,
+   "truncation": 0.08,
+   "expression": "zscore(ts_zscore(implied_volatility_call_150 / parkinson_volatility_120, 120) + 0.25 * rank(ts_rank(sales_growth, 126)) + 0.25 * rank(ebitda / enterprise_value))",
+   "primary_field": "implied_volatility_call_150",
+   "family": "other",
+   "train_fitness": 0.55,
+   "sharpe": 1.13,
+   "extra": {
+    "Sharpe": "1.13",
+    "Turnover": "27.20%",
+    "Fitness": "0.50",
+    "Returns": "5.25%",
+    "Drawdown": "7.04%",
+    "Margin": "3.86 bps",
+    "Long Count": "851",
+    "Short Count": "884"
+   },
+   "turnover": 27.2,
+   "fitness": 0.5,
+   "returns": 5.25,
+   "drawdown": 7.04,
+   "margin_bps": 3.86,
+   "long_count": 851.0,
+   "short_count": 884.0,
+   "status": "FAIL",
+   "failed_check_codes": [
+    "F2"
+   ],
+   "failed_checks": [
+    "LOW_SHARPE",
+    "LOW_FITNESS",
+    "CONCENTRATED_WEIGHT",
+    "IS_LADDER_SHARPE"
+   ]
+  },
+  {
+   "result_no": 20,
+   "number_synthesised": true,
+   "line": 285,
+   "universe": "TOP3000",
+   "neutralization": "SUBINDUSTRY",
+   "decay": 4,
+   "truncation": 0.08,
+   "expression": "group_neutralize((quantile(ts_rank(operating_income / assets, 126)) + ts_delta(fnd6_newqv1300_glcea12 / assets, 126)) * rank(ts_arg_min(-returns, 5)), bucket(ts_rank(fn_liab_fair_val_l1_a, 252), range=\"0.1,1,0.1\"))",
+   "primary_field": "operating_income",
+   "family": "other",
+   "train_fitness": 0.91,
+   "sharpe": 1.07,
+   "extra": {
+    "Sharpe": "1.07",
+    "Turnover": "24.81%",
+    "Fitness": "0.91",
+    "Returns": "18.10%",
+    "Drawdown": "11.18%",
+    "Margin": "14.59 bps",
+    "Long Count": "120",
+    "Short Count": "119"
+   },
+   "turnover": 24.81,
+   "fitness": 0.91,
+   "returns": 18.1,
+   "drawdown": 11.18,
+   "margin_bps": 14.59,
+   "long_count": 120.0,
+   "short_count": 119.0,
+   "status": "FAIL",
+   "failed_check_codes": [
+    "F2"
+   ],
+   "failed_checks": [
+    "LOW_SHARPE",
+    "LOW_FITNESS",
+    "CONCENTRATED_WEIGHT",
+    "IS_LADDER_SHARPE"
+   ]
+  },
+  {
+   "result_no": 21,
+   "number_synthesised": true,
+   "line": 298,
+   "universe": "TOP3000",
+   "neutralization": "SUBINDUSTRY",
+   "decay": 4,
+   "truncation": 0.08,
+   "expression": "group_neutralize(rank(ts_rank(operating_income / assets, 126)) + rank(ts_delta(return_assets, 63)) + rank(ts_rank(operating_income / cap, 250)), bucket(rank(returns), range=\"0.1,1,0.1\"))",
+   "primary_field": "operating_income",
+   "family": "other",
+   "train_fitness": 0.34,
+   "sharpe": 1.06,
+   "extra": {
+    "Sharpe": "1.06",
+    "Turnover": "8.38%",
+    "Fitness": "0.52",
+    "Returns": "3.06%",
+    "Drawdown": "4.77%",
+    "Margin": "7.29 bps",
+    "Long Count": "1401",
+    "Short Count": "1393"
+   },
+   "turnover": 8.38,
+   "fitness": 0.52,
+   "returns": 3.06,
+   "drawdown": 4.77,
+   "margin_bps": 7.29,
+   "long_count": 1401.0,
+   "short_count": 1393.0,
+   "status": "FAIL",
+   "failed_check_codes": [
+    "F11"
+   ],
+   "failed_checks": [
+    "LOW_SHARPE",
+    "LOW_FITNESS"
+   ]
+  },
+  {
+   "result_no": 22,
+   "number_synthesised": true,
+   "line": 311,
+   "universe": "TOP3000",
+   "neutralization": "SUBINDUSTRY",
+   "decay": 4,
+   "truncation": 0.08,
+   "expression": "group_scale(rank(ts_rank(operating_income / assets, 126)) + ts_delta(fnd6_newqv1300_glcea12 / assets, 126) + rank(rank(volume / adv20)), bucket(rank(cap), range=\"0.1,1,0.1\"))",
+   "primary_field": "operating_income",
+   "family": "other",
+   "train_fitness": 0.71,
+   "sharpe": 1.0,
+   "extra": {
+    "Sharpe": "1.00",
+    "Turnover": "36.39%",
+    "Fitness": "0.71",
+    "Returns": "18.47%",
+    "Drawdown": "7.30%",
+    "Margin": "10.15 bps",
+    "Long Count": "274",
+    "Short Count": "274"
+   },
+   "turnover": 36.39,
+   "fitness": 0.71,
+   "returns": 18.47,
+   "drawdown": 7.3,
+   "margin_bps": 10.15,
+   "long_count": 274.0,
+   "short_count": 274.0,
+   "status": "FAIL",
+   "failed_check_codes": [
+    "F2"
+   ],
+   "failed_checks": [
+    "LOW_SHARPE",
+    "LOW_FITNESS",
+    "CONCENTRATED_WEIGHT",
+    "IS_LADDER_SHARPE"
+   ]
+  },
+  {
+   "result_no": 23,
+   "number_synthesised": true,
+   "line": 324,
+   "universe": "TOP3000",
+   "neutralization": "SUBINDUSTRY",
+   "decay": 8,
+   "truncation": 0.05,
+   "expression": "zscore(rank(ts_delta(op_cash_flow_stddev, 20)) + 0.35 * rank(ts_rank(sales_growth, 126)) + 0.15 * rank(ts_rank(op_cash_flow_stddev, 126)))",
+   "primary_field": "op_cash_flow_stddev",
+   "family": "other",
+   "train_fitness": 0.62,
+   "sharpe": 1.0,
+   "extra": {
+    "Sharpe": "1.00",
+    "Turnover": "13.94%",
+    "Fitness": "0.59",
+    "Returns": "4.78%",
+    "Drawdown": "7.00%",
+    "Margin": "6.86 bps",
+    "Long Count": "223",
+    "Short Count": "227"
+   },
+   "turnover": 13.94,
+   "fitness": 0.59,
+   "returns": 4.78,
+   "drawdown": 7.0,
+   "margin_bps": 6.86,
+   "long_count": 223.0,
+   "short_count": 227.0,
+   "status": "FAIL",
+   "failed_check_codes": [
+    "F1"
+   ],
+   "failed_checks": [
+    "LOW_SHARPE",
+    "LOW_FITNESS",
+    "IS_LADDER_SHARPE"
+   ]
+  },
+  {
+   "result_no": 24,
+   "number_synthesised": true,
+   "line": 337,
+   "universe": "TOP3000",
+   "neutralization": "SUBINDUSTRY",
+   "decay": 6,
+   "truncation": 0.08,
+   "expression": "group_neutralize(rank(ts_rank(operating_income / assets, 126)) + ts_delta(fnd6_newqv1300_glcea12 / assets, 252) + rank(ts_rank(operating_income / cap, 250)), bucket(quantile(cap), range=\"0.1,1,0.1\"))",
+   "primary_field": "operating_income",
+   "family": "other",
+   "train_fitness": 1.3,
+   "sharpe": 0.98,
+   "extra": {
+    "Sharpe": "0.98",
+    "Turnover": "10.37%",
+    "Fitness": "1.30",
+    "Returns": "22.11%",
+    "Drawdown": "16.65%",
+    "Margin": "42.62 bps",
+    "Long Count": "243",
+    "Short Count": "244"
+   },
+   "turnover": 10.37,
+   "fitness": 1.3,
+   "returns": 22.11,
+   "drawdown": 16.65,
+   "margin_bps": 42.62,
+   "long_count": 243.0,
+   "short_count": 244.0,
+   "status": "FAIL",
+   "failed_check_codes": [
+    "F14"
+   ],
+   "failed_checks": [
+    "LOW_SHARPE",
+    "CONCENTRATED_WEIGHT",
+    "IS_LADDER_SHARPE"
+   ]
+  },
+  {
+   "result_no": 25,
+   "number_synthesised": true,
+   "line": 350,
+   "universe": "TOP3000",
+   "neutralization": "SUBINDUSTRY",
+   "decay": 6,
+   "truncation": 0.08,
+   "expression": "group_neutralize(rank(ts_rank(operating_income / cap, 250)), bucket(ts_rank(fn_liab_fair_val_l1_a, 252), range=\"0,1,0.1\"))",
+   "primary_field": "operating_income",
+   "family": "other",
+   "train_fitness": 0.58,
+   "sharpe": 0.97,
+   "extra": {
+    "Sharpe": "0.97",
+    "Turnover": "7.55%",
+    "Fitness": "0.58",
+    "Returns": "4.46%",
+    "Drawdown": "8.54%",
+    "Margin": "11.82 bps",
+    "Long Count": "647",
+    "Short Count": "647"
+   },
+   "turnover": 7.55,
+   "fitness": 0.58,
+   "returns": 4.46,
+   "drawdown": 8.54,
+   "margin_bps": 11.82,
+   "long_count": 647.0,
+   "short_count": 647.0,
+   "status": "FAIL",
+   "failed_check_codes": [
+    "F1"
+   ],
+   "failed_checks": [
+    "LOW_SHARPE",
+    "LOW_FITNESS",
+    "IS_LADDER_SHARPE"
+   ]
+  },
+  {
+   "result_no": 26,
+   "number_synthesised": true,
+   "line": 363,
+   "universe": "TOP3000",
+   "neutralization": "SUBINDUSTRY",
+   "decay": 4,
+   "truncation": 0.08,
+   "expression": "rank(operating_income / cap) + ts_quantile(fnd6_newqv1300_miiq / debt, 252)",
+   "primary_field": "operating_income",
+   "family": "other",
+   "train_fitness": 0.39,
+   "sharpe": 0.97,
+   "extra": {
+    "Sharpe": "0.97",
+    "Turnover": "5.67%",
+    "Fitness": "0.53",
+    "Returns": "3.79%",
+    "Drawdown": "13.07%",
+    "Margin": "13.38 bps",
+    "Long Count": "1047",
+    "Short Count": "1149"
+   },
+   "turnover": 5.67,
+   "fitness": 0.53,
+   "returns": 3.79,
+   "drawdown": 13.07,
+   "margin_bps": 13.38,
+   "long_count": 1047.0,
+   "short_count": 1149.0,
+   "status": "FAIL",
+   "failed_check_codes": [
+    "F1"
+   ],
+   "failed_checks": [
+    "LOW_SHARPE",
+    "LOW_FITNESS",
+    "IS_LADDER_SHARPE"
+   ]
+  },
+  {
+   "result_no": 27,
+   "number_synthesised": true,
+   "line": 376,
+   "universe": "TOP3000",
+   "neutralization": "SUBINDUSTRY",
+   "decay": 12,
+   "truncation": 0.08,
+   "expression": "group_neutralize(rank(ts_delta(op_cash_flow_stddev, 10)) + rank(ts_delta(return_assets, 126)) + rank(ts_mean(-returns, 5)), bucket(rank(cap), range=\"0.1,1,0.1\"))",
+   "primary_field": "op_cash_flow_stddev",
+   "family": "other",
+   "train_fitness": 0.41,
+   "sharpe": 0.96,
+   "extra": {
+    "Sharpe": "0.96",
+    "Turnover": "17.05%",
+    "Fitness": "0.58",
+    "Returns": "6.13%",
+    "Drawdown": "12.74%",
+    "Margin": "7.20 bps",
+    "Long Count": "239",
+    "Short Count": "240"
+   },
+   "turnover": 17.05,
+   "fitness": 0.58,
+   "returns": 6.13,
+   "drawdown": 12.74,
+   "margin_bps": 7.2,
+   "long_count": 239.0,
+   "short_count": 240.0,
+   "status": "FAIL",
+   "failed_check_codes": [
+    "F1"
+   ],
+   "failed_checks": [
+    "LOW_SHARPE",
+    "LOW_FITNESS",
+    "IS_LADDER_SHARPE"
+   ]
+  },
+  {
+   "result_no": 28,
+   "number_synthesised": true,
+   "line": 389,
+   "universe": "TOP3000",
+   "neutralization": "SUBINDUSTRY",
+   "decay": 4,
+   "truncation": 0.08,
+   "expression": "zscore(rank(rank(ts_rank(operating_income / assets, 126))) + 0.25 * rank(ts_rank(sales_growth, 126)) + 0.25 * rank(ebitda / enterprise_value))",
+   "primary_field": "operating_income",
+   "family": "other",
+   "train_fitness": 0.34,
+   "sharpe": 0.96,
+   "extra": {
+    "Sharpe": "0.96",
+    "Turnover": "6.86%",
+    "Fitness": "0.51",
+    "Returns": "3.51%",
+    "Drawdown": "8.45%",
+    "Margin": "10.23 bps",
+    "Long Count": "936",
+    "Short Count": "940"
+   },
+   "turnover": 6.86,
+   "fitness": 0.51,
+   "returns": 3.51,
+   "drawdown": 8.45,
+   "margin_bps": 10.23,
+   "long_count": 936.0,
+   "short_count": 940.0,
+   "status": "FAIL",
+   "failed_check_codes": [
+    "F3"
+   ],
+   "failed_checks": [
+    "LOW_SHARPE",
+    "LOW_FITNESS",
+    "LOW_2Y_SHARPE"
+   ]
+  },
+  {
+   "result_no": 29,
+   "number_synthesised": true,
+   "line": 402,
+   "universe": "TOP3000",
+   "neutralization": "SUBINDUSTRY",
+   "decay": 16,
+   "truncation": 0.08,
+   "expression": "group_neutralize(rank(ts_rank(operating_income / assets, 126)) + ts_delta(fnd6_newqv1300_glcea12 / assets, 126) + rank(ts_mean(-returns, 5)), bucket(rank(cap), range=\"0.1,1,0.1\"))",
+   "primary_field": "operating_income",
+   "family": "other",
+   "train_fitness": 0.95,
+   "sharpe": 0.95,
+   "extra": {
+    "Sharpe": "0.95",
+    "Turnover": "14.97%",
+    "Fitness": "0.95",
+    "Returns": "15.03%",
+    "Drawdown": "12.95%",
+    "Margin": "20.08 bps",
+    "Long Count": "273",
+    "Short Count": "276"
+   },
+   "turnover": 14.97,
+   "fitness": 0.95,
+   "returns": 15.03,
+   "drawdown": 12.95,
+   "margin_bps": 20.08,
+   "long_count": 273.0,
+   "short_count": 276.0,
+   "status": "FAIL",
+   "failed_check_codes": [
+    "F2"
+   ],
+   "failed_checks": [
+    "LOW_SHARPE",
+    "LOW_FITNESS",
+    "CONCENTRATED_WEIGHT",
+    "IS_LADDER_SHARPE"
+   ]
+  },
+  {
+   "result_no": 30,
+   "number_synthesised": true,
+   "line": 415,
+   "universe": "TOP3000",
+   "neutralization": "SUBINDUSTRY",
+   "decay": 6,
+   "truncation": 0.08,
+   "expression": "group_neutralize(rank(ts_rank(operating_income / cap, 250)), bucket(normalize(-ts_rank(close, 2)), range=\"0,1,0.1\"))",
+   "primary_field": "operating_income",
+   "family": "other",
+   "train_fitness": 0.48,
+   "sharpe": 0.94,
+   "extra": {
+    "Sharpe": "0.94",
+    "Turnover": "7.79%",
+    "Fitness": "0.52",
+    "Returns": "3.78%",
+    "Drawdown": "6.65%",
+    "Margin": "9.71 bps",
+    "Long Count": "1455",
+    "Short Count": "1447"
+   },
+   "turnover": 7.79,
+   "fitness": 0.52,
+   "returns": 3.78,
+   "drawdown": 6.65,
+   "margin_bps": 9.71,
+   "long_count": 1455.0,
+   "short_count": 1447.0,
+   "status": "FAIL",
+   "failed_check_codes": [
+    "F1"
+   ],
+   "failed_checks": [
+    "LOW_SHARPE",
+    "LOW_FITNESS",
+    "IS_LADDER_SHARPE"
+   ]
+  },
+  {
+   "result_no": 31,
+   "number_synthesised": true,
+   "line": 428,
+   "universe": "TOP3000",
+   "neutralization": "SUBINDUSTRY",
+   "decay": 16,
+   "truncation": 0.08,
+   "expression": "iv_signal = rank(implied_volatility_call_120 - implied_volatility_put_120) + rank(-returns) + ts_rank(fn_liab_fair_val_l1_a, 252); cap_group = bucket(rank(cap), range=\"0.1,1,0.1\"); group_neutralize(iv_signal, cap_group)",
+   "primary_field": "iv_signal",
+   "family": "other",
+   "train_fitness": 0.28,
+   "sharpe": 0.93,
+   "extra": {
+    "Sharpe": "0.93",
+    "Turnover": "28.14%",
+    "Fitness": "0.36",
+    "Returns": "4.12%",
+    "Drawdown": "9.02%",
+    "Margin": "2.93 bps",
+    "Long Count": "618",
+    "Short Count": "595"
+   },
+   "turnover": 28.14,
+   "fitness": 0.36,
+   "returns": 4.12,
+   "drawdown": 9.02,
+   "margin_bps": 2.93,
+   "long_count": 618.0,
+   "short_count": 595.0,
+   "status": "FAIL",
+   "failed_check_codes": [
+    "F8"
+   ],
+   "failed_checks": [
+    "LOW_SHARPE",
+    "LOW_FITNESS",
+    "CONCENTRATED_WEIGHT",
+    "LOW_SUB_UNIVERSE_SHARPE",
+    "IS_LADDER_SHARPE"
+   ]
+  },
+  {
+   "result_no": 32,
+   "number_synthesised": true,
+   "line": 441,
+   "universe": "TOP3000",
+   "neutralization": "SUBINDUSTRY",
+   "decay": 4,
+   "truncation": 0.08,
+   "expression": "group_neutralize(ts_rank(sales_growth, 126) + rank(ts_delta(return_assets, 126)) + rank(ts_zscore(implied_volatility_call_120 / parkinson_volatility_120, 120)), bucket(rank(cap), range=\"0.1,1,0.1\"))",
+   "primary_field": "sales_growth",
+   "family": "other",
+   "train_fitness": 0.27,
+   "sharpe": 0.89,
+   "extra": {
+    "Sharpe": "0.89",
+    "Turnover": "18.63%",
+    "Fitness": "0.33",
+    "Returns": "2.57%",
+    "Drawdown": "5.21%",
+    "Margin": "2.76 bps",
+    "Long Count": "1200",
+    "Short Count": "1195"
+   },
+   "turnover": 18.63,
+   "fitness": 0.33,
+   "returns": 2.57,
+   "drawdown": 5.21,
+   "margin_bps": 2.76,
+   "long_count": 1200.0,
+   "short_count": 1195.0,
+   "status": "FAIL",
+   "failed_check_codes": [
+    "F2"
+   ],
+   "failed_checks": [
+    "LOW_SHARPE",
+    "LOW_FITNESS",
+    "CONCENTRATED_WEIGHT",
+    "IS_LADDER_SHARPE"
+   ]
+  },
+  {
+   "result_no": 33,
+   "number_synthesised": true,
+   "line": 454,
+   "universe": "TOP3000",
+   "neutralization": "SUBINDUSTRY",
+   "decay": 4,
+   "truncation": 0.08,
+   "expression": "rank(rank(ts_arg_min(sales_growth, 126))) + rank(ts_delta(operating_income / assets, 126))",
+   "primary_field": "sales_growth",
+   "family": "other",
+   "train_fitness": 0.21,
+   "sharpe": 0.89,
+   "extra": {
+    "Sharpe": "0.89",
+    "Turnover": "5.99%",
+    "Fitness": "0.42",
+    "Returns": "2.76%",
+    "Drawdown": "10.39%",
+    "Margin": "9.22 bps",
+    "Long Count": "1319",
+    "Short Count": "1334"
+   },
+   "turnover": 5.99,
+   "fitness": 0.42,
+   "returns": 2.76,
+   "drawdown": 10.39,
+   "margin_bps": 9.22,
+   "long_count": 1319.0,
+   "short_count": 1334.0,
+   "status": "FAIL",
+   "failed_check_codes": [
+    "F11"
+   ],
+   "failed_checks": [
+    "LOW_SHARPE",
+    "LOW_FITNESS"
+   ]
+  },
+  {
+   "result_no": 34,
+   "number_synthesised": true,
+   "line": 467,
+   "universe": "TOP3000",
+   "neutralization": "SUBINDUSTRY",
+   "decay": 7,
+   "truncation": 0.08,
+   "expression": "ts_quantile(fnd6_newqv1300_miiq / debt, 252)",
+   "primary_field": "fnd6_newqv1300_miiq",
+   "family": "fnd6 (fundamental)",
+   "train_fitness": 0.32,
+   "sharpe": 0.87,
+   "extra": {
+    "Sharpe": "0.87",
+    "Turnover": "5.41%",
+    "Fitness": "0.36",
+    "Returns": "2.20%",
+    "Drawdown": "4.23%",
+    "Margin": "8.15 bps",
+    "Long Count": "1016",
+    "Short Count": "1083"
+   },
+   "turnover": 5.41,
+   "fitness": 0.36,
+   "returns": 2.2,
+   "drawdown": 4.23,
+   "margin_bps": 8.15,
+   "long_count": 1016.0,
+   "short_count": 1083.0,
+   "status": "FAIL",
+   "failed_check_codes": [
+    "F4"
+   ],
+   "failed_checks": [
+    "LOW_SHARPE",
+    "LOW_FITNESS",
+    "LOW_SUB_UNIVERSE_SHARPE",
+    "LOW_2Y_SHARPE"
+   ]
+  },
+  {
+   "result_no": 35,
+   "number_synthesised": true,
+   "line": 480,
+   "universe": "TOP3000",
+   "neutralization": "SUBINDUSTRY",
+   "decay": 4,
+   "truncation": 0.08,
+   "expression": "ts_quantile(fnd6_newqv1300_miiq / debt, 252)",
+   "primary_field": "fnd6_newqv1300_miiq",
+   "family": "fnd6 (fundamental)",
+   "train_fitness": 0.31,
+   "sharpe": 0.87,
+   "extra": {
+    "Sharpe": "0.87",
+    "Turnover": "5.76%",
+    "Fitness": "0.36",
+    "Returns": "2.19%",
+    "Drawdown": "4.47%",
+    "Margin": "7.61 bps",
+    "Long Count": "1010",
+    "Short Count": "1064"
+   },
+   "turnover": 5.76,
+   "fitness": 0.36,
+   "returns": 2.19,
+   "drawdown": 4.47,
+   "margin_bps": 7.61,
+   "long_count": 1010.0,
+   "short_count": 1064.0,
+   "status": "FAIL",
+   "failed_check_codes": [
+    "F4"
+   ],
+   "failed_checks": [
+    "LOW_SHARPE",
+    "LOW_FITNESS",
+    "LOW_SUB_UNIVERSE_SHARPE",
+    "LOW_2Y_SHARPE"
+   ]
+  },
+  {
+   "result_no": 36,
+   "number_synthesised": true,
+   "line": 493,
+   "universe": "TOP3000",
+   "neutralization": "SUBINDUSTRY",
+   "decay": 4,
+   "truncation": 0.08,
+   "expression": "group_neutralize(ts_rank(fnd6_newqv1300_miiq / debt, 252), bucket(rank(cap), range=\"0,1,0.1\"))",
+   "primary_field": "fnd6_newqv1300_miiq",
+   "family": "fnd6 (fundamental)",
+   "train_fitness": 0.3,
+   "sharpe": 0.87,
+   "extra": {
+    "Sharpe": "0.87",
+    "Turnover": "5.23%",
+    "Fitness": "0.36",
+    "Returns": "2.12%",
+    "Drawdown": "3.69%",
+    "Margin": "8.11 bps",
+    "Long Count": "1092",
+    "Short Count": "1118"
+   },
+   "turnover": 5.23,
+   "fitness": 0.36,
+   "returns": 2.12,
+   "drawdown": 3.69,
+   "margin_bps": 8.11,
+   "long_count": 1092.0,
+   "short_count": 1118.0,
+   "status": "FAIL",
+   "failed_check_codes": [
+    "F6"
+   ],
+   "failed_checks": [
+    "LOW_SHARPE",
+    "LOW_FITNESS",
+    "LOW_SUB_UNIVERSE_SHARPE",
+    "IS_LADDER_SHARPE"
+   ]
+  },
+  {
+   "result_no": 37,
+   "number_synthesised": true,
+   "line": 506,
+   "universe": "TOP3000",
+   "neutralization": "SUBINDUSTRY",
+   "decay": 6,
+   "truncation": 0.05,
+   "expression": "zscore(rank(ts_delta(op_cash_flow_stddev, 21)) + 0.35 * rank(ts_rank(sales_growth, 126)) + 0.15 * rank(ts_quantile(fnd6_newqv1300_miiq / debt, 252)))",
+   "primary_field": "op_cash_flow_stddev",
+   "family": "other",
+   "train_fitness": 0.45,
+   "sharpe": 0.86,
+   "extra": {
+    "Sharpe": "0.86",
+    "Turnover": "15.66%",
+    "Fitness": "0.47",
+    "Returns": "4.61%",
+    "Drawdown": "7.10%",
+    "Margin": "5.89 bps",
+    "Long Count": "177",
+    "Short Count": "179"
+   },
+   "turnover": 15.66,
+   "fitness": 0.47,
+   "returns": 4.61,
+   "drawdown": 7.1,
+   "margin_bps": 5.89,
+   "long_count": 177.0,
+   "short_count": 179.0,
+   "status": "FAIL",
+   "failed_check_codes": [
+    "F1"
+   ],
+   "failed_checks": [
+    "LOW_SHARPE",
+    "LOW_FITNESS",
+    "IS_LADDER_SHARPE"
+   ]
+  },
+  {
+   "result_no": 38,
+   "number_synthesised": true,
+   "line": 519,
+   "universe": "TOP3000",
+   "neutralization": "SUBINDUSTRY",
+   "decay": 4,
+   "truncation": 0.08,
+   "expression": "ts_rank(fnd6_newqv1300_miiq / debt, 252)",
+   "primary_field": "fnd6_newqv1300_miiq",
+   "family": "fnd6 (fundamental)",
+   "train_fitness": 0.29,
+   "sharpe": 0.86,
+   "extra": {
+    "Sharpe": "0.86",
+    "Turnover": "4.72%",
+    "Fitness": "0.35",
+    "Returns": "2.11%",
+    "Drawdown": "4.77%",
+    "Margin": "8.92 bps",
+    "Long Count": "1010",
+    "Short Count": "1064"
+   },
+   "turnover": 4.72,
+   "fitness": 0.35,
+   "returns": 2.11,
+   "drawdown": 4.77,
+   "margin_bps": 8.92,
+   "long_count": 1010.0,
+   "short_count": 1064.0,
+   "status": "FAIL",
+   "failed_check_codes": [
+    "F3"
+   ],
+   "failed_checks": [
+    "LOW_SHARPE",
+    "LOW_FITNESS",
+    "LOW_2Y_SHARPE"
+   ]
+  },
+  {
+   "result_no": 39,
+   "number_synthesised": true,
+   "line": 532,
+   "universe": "TOP3000",
+   "neutralization": "SUBINDUSTRY",
+   "decay": 4,
+   "truncation": 0.08,
+   "expression": "hv_group = densify(bucket(rank(historical_volatility_120), range=\"0.1,1,0.1\")); group_neutralize(rank(ts_rank(op_cash_flow_stddev, 126)), hv_group)",
+   "primary_field": "hv_group",
+   "family": "other",
+   "train_fitness": 0.51,
+   "sharpe": 0.85,
+   "extra": {
+    "Sharpe": "0.85",
+    "Turnover": "11.50%",
+    "Fitness": "0.45",
+    "Returns": "3.56%",
+    "Drawdown": "9.56%",
+    "Margin": "6.19 bps",
+    "Long Count": "259",
+    "Short Count": "258"
+   },
+   "turnover": 11.5,
+   "fitness": 0.45,
+   "returns": 3.56,
+   "drawdown": 9.56,
+   "margin_bps": 6.19,
+   "long_count": 259.0,
+   "short_count": 258.0,
+   "status": "FAIL",
+   "failed_check_codes": [
+    "F2"
+   ],
+   "failed_checks": [
+    "LOW_SHARPE",
+    "LOW_FITNESS",
+    "CONCENTRATED_WEIGHT",
+    "IS_LADDER_SHARPE"
+   ]
+  },
+  {
+   "result_no": 40,
+   "number_synthesised": true,
+   "line": 545,
+   "universe": "TOP3000",
+   "neutralization": "SUBINDUSTRY",
+   "decay": 6,
+   "truncation": 0.08,
+   "expression": "group_neutralize(rank(ts_rank(op_cash_flow_stddev, 126)), bucket(rank(cap), range=\"0,1,0.1\"))",
+   "primary_field": "op_cash_flow_stddev",
+   "family": "other",
+   "train_fitness": 0.56,
+   "sharpe": 0.82,
+   "extra": {
+    "Sharpe": "0.82",
+    "Turnover": "8.49%",
+    "Fitness": "0.43",
+    "Returns": "3.46%",
+    "Drawdown": "8.14%",
+    "Margin": "8.15 bps",
+    "Long Count": "273",
+    "Short Count": "273"
+   },
+   "turnover": 8.49,
+   "fitness": 0.43,
+   "returns": 3.46,
+   "drawdown": 8.14,
+   "margin_bps": 8.15,
+   "long_count": 273.0,
+   "short_count": 273.0,
+   "status": "FAIL",
+   "failed_check_codes": [
+    "F1"
+   ],
+   "failed_checks": [
+    "LOW_SHARPE",
+    "LOW_FITNESS",
+    "IS_LADDER_SHARPE"
+   ]
+  },
+  {
+   "result_no": 41,
+   "number_synthesised": true,
+   "line": 558,
+   "universe": "TOP3000",
+   "neutralization": "SUBINDUSTRY",
+   "decay": 4,
+   "truncation": 0.08,
+   "expression": "group_neutralize(rank(ts_rank(operating_income / assets, 126)) + ts_delta(fnd6_newqv1300_glcea12 / assets, 252) + normalize(rank(cap)), bucket(quantile(cap), range=\"0.1,1,0.1\"))",
+   "primary_field": "operating_income",
+   "family": "other",
+   "train_fitness": 0.96,
+   "sharpe": 0.8,
+   "extra": {
+    "Sharpe": "0.80",
+    "Turnover": "9.68%",
+    "Fitness": "0.96",
+    "Returns": "18.09%",
+    "Drawdown": "19.76%",
+    "Margin": "37.39 bps",
+    "Long Count": "244",
+    "Short Count": "243"
+   },
+   "turnover": 9.68,
+   "fitness": 0.96,
+   "returns": 18.09,
+   "drawdown": 19.76,
+   "margin_bps": 37.39,
+   "long_count": 244.0,
+   "short_count": 243.0,
+   "status": "FAIL",
+   "failed_check_codes": [
+    "F2"
+   ],
+   "failed_checks": [
+    "LOW_SHARPE",
+    "LOW_FITNESS",
+    "CONCENTRATED_WEIGHT",
+    "IS_LADDER_SHARPE"
+   ]
+  },
+  {
+   "result_no": 42,
+   "number_synthesised": true,
+   "line": 571,
+   "universe": "TOP3000",
+   "neutralization": "SUBINDUSTRY",
+   "decay": 6,
+   "truncation": 0.05,
+   "expression": "zscore(rank(ts_delta(op_cash_flow_stddev, 20)) + 0.35 * rank(rank(cap)) + 0.15 * rank(ts_product(-returns, 5)))",
+   "primary_field": "op_cash_flow_stddev",
+   "family": "other",
+   "train_fitness": 0.44,
+   "sharpe": 0.77,
+   "extra": {
+    "Sharpe": "0.77",
+    "Turnover": "16.71%",
+    "Fitness": "0.41",
+    "Returns": "4.81%",
+    "Drawdown": "10.75%",
+    "Margin": "5.76 bps",
+    "Long Count": "235",
+    "Short Count": "242"
+   },
+   "turnover": 16.71,
+   "fitness": 0.41,
+   "returns": 4.81,
+   "drawdown": 10.75,
+   "margin_bps": 5.76,
+   "long_count": 235.0,
+   "short_count": 242.0,
+   "status": "FAIL",
+   "failed_check_codes": [
+    "F1"
+   ],
+   "failed_checks": [
+    "LOW_SHARPE",
+    "LOW_FITNESS",
+    "IS_LADDER_SHARPE"
+   ]
+  },
+  {
+   "result_no": 43,
+   "number_synthesised": true,
+   "line": 584,
+   "universe": "TOP3000",
+   "neutralization": "SUBINDUSTRY",
+   "decay": 4,
+   "truncation": 0.08,
+   "expression": "ts_rank(fnd6_newqv1300_miiq - debt, 252)",
+   "primary_field": "fnd6_newqv1300_miiq",
+   "family": "fnd6 (fundamental)",
+   "train_fitness": 0.21,
+   "sharpe": 0.77,
+   "extra": {
+    "Sharpe": "0.77",
+    "Turnover": "4.02%",
+    "Fitness": "0.32",
+    "Returns": "2.12%",
+    "Drawdown": "11.66%",
+    "Margin": "10.57 bps",
+    "Long Count": "1204",
+    "Short Count": "1224"
+   },
+   "turnover": 4.02,
+   "fitness": 0.32,
+   "returns": 2.12,
+   "drawdown": 11.66,
+   "margin_bps": 10.57,
+   "long_count": 1204.0,
+   "short_count": 1224.0,
+   "status": "FAIL",
+   "failed_check_codes": [
+    "F4"
+   ],
+   "failed_checks": [
+    "LOW_SHARPE",
+    "LOW_FITNESS",
+    "LOW_SUB_UNIVERSE_SHARPE",
+    "LOW_2Y_SHARPE"
+   ]
+  },
+  {
+   "result_no": 44,
+   "number_synthesised": true,
+   "line": 597,
+   "universe": "TOP3000",
+   "neutralization": "SUBINDUSTRY",
+   "decay": 8,
+   "truncation": 0.08,
+   "expression": "zscore(rank(ts_rank(op_cash_flow_stddev, 126)) + 0.25 * rank(ts_rank(sales_growth, 126)) + 0.25 * ts_sum(vec_avg(story_event_record_count_fast_d1), 120))",
+   "primary_field": "op_cash_flow_stddev",
+   "family": "other",
+   "train_fitness": 0.51,
+   "sharpe": 0.76,
+   "extra": {
+    "Sharpe": "0.76",
+    "Turnover": "5.04%",
+    "Fitness": "0.45",
+    "Returns": "4.30%",
+    "Drawdown": "9.60%",
+    "Margin": "17.08 bps",
+    "Long Count": "252",
+    "Short Count": "263"
+   },
+   "turnover": 5.04,
+   "fitness": 0.45,
+   "returns": 4.3,
+   "drawdown": 9.6,
+   "margin_bps": 17.08,
+   "long_count": 252.0,
+   "short_count": 263.0,
+   "status": "FAIL",
+   "failed_check_codes": [
+    "F6"
+   ],
+   "failed_checks": [
+    "LOW_SHARPE",
+    "LOW_FITNESS",
+    "LOW_SUB_UNIVERSE_SHARPE",
+    "IS_LADDER_SHARPE"
+   ]
+  },
+  {
+   "result_no": 45,
+   "number_synthesised": true,
+   "line": 610,
+   "universe": "TOP3000",
+   "neutralization": "SUBINDUSTRY",
+   "decay": 4,
+   "truncation": 0.08,
+   "expression": "rank(ts_sum(rank(-returns), 60)) > 0.5 ? 1 : rank(-ts_delta(close, 5))",
+   "primary_field": "returns",
+   "family": "other",
+   "train_fitness": 0.28,
+   "sharpe": 0.76,
+   "extra": {
+    "Sharpe": "0.76",
+    "Turnover": "26.01%",
+    "Fitness": "0.35",
+    "Returns": "5.64%",
+    "Drawdown": "11.89%",
+    "Margin": "4.34 bps",
+    "Long Count": "1735",
+    "Short Count": "1249"
+   },
+   "turnover": 26.01,
+   "fitness": 0.35,
+   "returns": 5.64,
+   "drawdown": 11.89,
+   "margin_bps": 4.34,
+   "long_count": 1735.0,
+   "short_count": 1249.0,
+   "status": "FAIL",
+   "failed_check_codes": [
+    "F3"
+   ],
+   "failed_checks": [
+    "LOW_SHARPE",
+    "LOW_FITNESS",
+    "LOW_2Y_SHARPE"
+   ]
+  },
+  {
+   "result_no": 46,
+   "number_synthesised": true,
+   "line": 623,
+   "universe": "TOP3000",
+   "neutralization": "SUBINDUSTRY",
+   "decay": 4,
+   "truncation": 0.08,
+   "expression": "group_neutralize(rank(ts_rank(operating_income / assets, 126)) + ts_delta(fnd6_newqv1300_glcea12 / assets, 126) + rank(ts_mean(-returns, 5)), bucket(rank(cap), range=\"0.1,1,0.1\"))",
+   "primary_field": "operating_income",
+   "family": "other",
+   "train_fitness": 0.47,
+   "sharpe": 0.73,
+   "extra": {
+    "Sharpe": "0.73",
+    "Turnover": "28.16%",
+    "Fitness": "0.47",
+    "Returns": "11.57%",
+    "Drawdown": "11.88%",
+    "Margin": "8.22 bps",
+    "Long Count": "274",
+    "Short Count": "274"
+   },
+   "turnover": 28.16,
+   "fitness": 0.47,
+   "returns": 11.57,
+   "drawdown": 11.88,
+   "margin_bps": 8.22,
+   "long_count": 274.0,
+   "short_count": 274.0,
+   "status": "FAIL",
+   "failed_check_codes": [
+    "F2"
+   ],
+   "failed_checks": [
+    "LOW_SHARPE",
+    "LOW_FITNESS",
+    "CONCENTRATED_WEIGHT",
+    "IS_LADDER_SHARPE"
+   ]
+  },
+  {
+   "result_no": 47,
+   "number_synthesised": true,
+   "line": 636,
+   "universe": "TOP3000",
+   "neutralization": "SUBINDUSTRY",
+   "decay": 0,
+   "truncation": 0.08,
+   "expression": "-ts_rank(fn_liab_fair_val_l1_a, 126)",
+   "primary_field": "fn_liab_fair_val_l1_a",
+   "family": "other",
+   "train_fitness": 0.45,
+   "sharpe": 0.72,
+   "extra": {
+    "Sharpe": "0.72",
+    "Turnover": "5.02%",
+    "Fitness": "0.40",
+    "Returns": "3.93%",
+    "Drawdown": "13.69%",
+    "Margin": "15.66 bps",
+    "Long Count": "416",
+    "Short Count": "374"
+   },
+   "turnover": 5.02,
+   "fitness": 0.4,
+   "returns": 3.93,
+   "drawdown": 13.69,
+   "margin_bps": 15.66,
+   "long_count": 416.0,
+   "short_count": 374.0,
+   "status": "FAIL",
+   "failed_check_codes": [
+    "F3"
+   ],
+   "failed_checks": [
+    "LOW_SHARPE",
+    "LOW_FITNESS",
+    "LOW_2Y_SHARPE"
+   ]
+  },
+  {
+   "result_no": 48,
+   "number_synthesised": true,
+   "line": 649,
+   "universe": "TOP3000",
+   "neutralization": "SUBINDUSTRY",
+   "decay": 4,
+   "truncation": 0.08,
+   "expression": "normalize(ts_zscore(implied_volatility_call_120 / parkinson_volatility_120, 120) * rank(fscore_quality))",
+   "primary_field": "implied_volatility_call_120",
+   "family": "other",
+   "train_fitness": 0.17,
+   "sharpe": 0.7,
+   "extra": {
+    "Sharpe": "0.70",
+    "Turnover": "9.80%",
+    "Fitness": "0.14",
+    "Returns": "0.50%",
+    "Drawdown": "1.79%",
+    "Margin": "1.03 bps",
+    "Long Count": "20",
+    "Short Count": "21"
+   },
+   "turnover": 9.8,
+   "fitness": 0.14,
+   "returns": 0.5,
+   "drawdown": 1.79,
+   "margin_bps": 1.03,
+   "long_count": 20.0,
+   "short_count": 21.0,
+   "status": "FAIL",
+   "failed_check_codes": [
+    "F2"
+   ],
+   "failed_checks": [
+    "LOW_SHARPE",
+    "LOW_FITNESS",
+    "CONCENTRATED_WEIGHT",
+    "IS_LADDER_SHARPE"
+   ]
+  },
+  {
+   "result_no": 49,
+   "number_synthesised": true,
+   "line": 662,
+   "universe": "TOP3000",
+   "neutralization": "SUBINDUSTRY",
+   "decay": 4,
+   "truncation": 0.08,
+   "expression": "group_neutralize(rank(ts_rank(operating_income / assets, 126)) + rank(ts_delta(return_assets, 252)) + rank(volume / adv20), bucket(rank(cap), range=\"0.1,1,0.1\"))",
+   "primary_field": "operating_income",
+   "family": "other",
+   "train_fitness": 0.13,
+   "sharpe": 0.68,
+   "extra": {
+    "Sharpe": "0.68",
+    "Turnover": "24.07%",
+    "Fitness": "0.20",
+    "Returns": "2.17%",
+    "Drawdown": "6.49%",
+    "Margin": "1.81 bps",
+    "Long Count": "1332",
+    "Short Count": "1320"
+   },
+   "turnover": 24.07,
+   "fitness": 0.2,
+   "returns": 2.17,
+   "drawdown": 6.49,
+   "margin_bps": 1.81,
+   "long_count": 1332.0,
+   "short_count": 1320.0,
+   "status": "FAIL",
+   "failed_check_codes": [
+    "F1"
+   ],
+   "failed_checks": [
+    "LOW_SHARPE",
+    "LOW_FITNESS",
+    "IS_LADDER_SHARPE"
+   ]
+  },
+  {
+   "result_no": 50,
+   "number_synthesised": true,
+   "line": 675,
+   "universe": "TOP3000",
+   "neutralization": "SUBINDUSTRY",
+   "decay": 0,
+   "truncation": 0.08,
+   "expression": "zscore(rank(rank(ts_delta(return_assets, 126))) * quantile(recurring_assets_fair_value_2))",
+   "primary_field": "return_assets",
+   "family": "other",
+   "train_fitness": 0.27,
+   "sharpe": 0.66,
+   "extra": {
+    "Sharpe": "0.66",
+    "Turnover": "3.47%",
+    "Fitness": "0.33",
+    "Returns": "3.12%",
+    "Drawdown": "9.93%",
+    "Margin": "18.02 bps",
+    "Long Count": "629",
+    "Short Count": "550"
+   },
+   "turnover": 3.47,
+   "fitness": 0.33,
+   "returns": 3.12,
+   "drawdown": 9.93,
+   "margin_bps": 18.02,
+   "long_count": 629.0,
+   "short_count": 550.0,
+   "status": "FAIL",
+   "failed_check_codes": [
+    "F1"
+   ],
+   "failed_checks": [
+    "LOW_SHARPE",
+    "LOW_FITNESS",
+    "IS_LADDER_SHARPE"
+   ]
+  },
+  {
+   "result_no": 51,
+   "number_synthesised": true,
+   "line": 688,
+   "universe": "TOP3000",
+   "neutralization": "SUBINDUSTRY",
+   "decay": 12,
+   "truncation": 0.08,
+   "expression": "group_neutralize(rank(ts_rank(operating_income / assets, 126)) + rank(ts_delta(return_assets, 126)) + rank(rank(operating_income / cap)), bucket(rank(cap), range=\"0.1,1,0.1\"))",
+   "primary_field": "operating_income",
+   "family": "other",
+   "train_fitness": 0.11,
+   "sharpe": 0.63,
+   "extra": {
+    "Sharpe": "0.63",
+    "Turnover": "4.77%",
+    "Fitness": "0.28",
+    "Returns": "2.44%",
+    "Drawdown": "11.10%",
+    "Margin": "10.25 bps",
+    "Long Count": "1389",
+    "Short Count": "1355"
+   },
+   "turnover": 4.77,
+   "fitness": 0.28,
+   "returns": 2.44,
+   "drawdown": 11.1,
+   "margin_bps": 10.25,
+   "long_count": 1389.0,
+   "short_count": 1355.0,
+   "status": "FAIL",
+   "failed_check_codes": [
+    "F1"
+   ],
+   "failed_checks": [
+    "LOW_SHARPE",
+    "LOW_FITNESS",
+    "IS_LADDER_SHARPE"
+   ]
+  },
+  {
+   "result_no": 52,
+   "number_synthesised": true,
+   "line": 701,
+   "universe": "TOP3000",
+   "neutralization": "SUBINDUSTRY",
+   "decay": 4,
+   "truncation": 0.08,
+   "expression": "ts_rank(fnd6_newqv1300_miiq / fnd6_newqv1300_tfvlq, 252)",
+   "primary_field": "fnd6_newqv1300_miiq",
+   "family": "fnd6 (fundamental)",
+   "train_fitness": 0.15,
+   "sharpe": 0.62,
+   "extra": {
+    "Sharpe": "0.62",
+    "Turnover": "8.56%",
+    "Fitness": "0.24",
+    "Returns": "1.86%",
+    "Drawdown": "6.55%",
+    "Margin": "4.35 bps",
+    "Long Count": "495",
+    "Short Count": "502"
+   },
+   "turnover": 8.56,
+   "fitness": 0.24,
+   "returns": 1.86,
+   "drawdown": 6.55,
+   "margin_bps": 4.35,
+   "long_count": 495.0,
+   "short_count": 502.0,
+   "status": "FAIL",
+   "failed_check_codes": [
+    "F4"
+   ],
+   "failed_checks": [
+    "LOW_SHARPE",
+    "LOW_FITNESS",
+    "LOW_SUB_UNIVERSE_SHARPE",
+    "LOW_2Y_SHARPE"
+   ]
+  },
+  {
+   "result_no": 53,
+   "number_synthesised": true,
+   "line": 714,
+   "universe": "TOP3000",
+   "neutralization": "SUBINDUSTRY",
+   "decay": 4,
+   "truncation": 0.08,
+   "expression": "rank(rank(ts_delta(op_cash_flow_stddev, 10)))",
+   "primary_field": "op_cash_flow_stddev",
+   "family": "other",
+   "train_fitness": 0.2,
+   "sharpe": 0.6,
+   "extra": {
+    "Sharpe": "0.60",
+    "Turnover": "26.42%",
+    "Fitness": "0.22",
+    "Returns": "3.58%",
+    "Drawdown": "14.99%",
+    "Margin": "2.71 bps",
+    "Long Count": "189",
+    "Short Count": "195"
+   },
+   "turnover": 26.42,
+   "fitness": 0.22,
+   "returns": 3.58,
+   "drawdown": 14.99,
+   "margin_bps": 2.71,
+   "long_count": 189.0,
+   "short_count": 195.0,
+   "status": "FAIL",
+   "failed_check_codes": [
+    "F3"
+   ],
+   "failed_checks": [
+    "LOW_SHARPE",
+    "LOW_FITNESS",
+    "LOW_2Y_SHARPE"
+   ]
+  },
+  {
+   "result_no": 54,
+   "number_synthesised": true,
+   "line": 727,
+   "universe": "TOP3000",
+   "neutralization": "SUBINDUSTRY",
+   "decay": 4,
+   "truncation": 0.08,
+   "expression": "rank(ts_delta(op_cash_flow_stddev, 10))",
+   "primary_field": "op_cash_flow_stddev",
+   "family": "other",
+   "train_fitness": 0.2,
+   "sharpe": 0.6,
+   "extra": {
+    "Sharpe": "0.60",
+    "Turnover": "26.42%",
+    "Fitness": "0.22",
+    "Returns": "3.58%",
+    "Drawdown": "14.99%",
+    "Margin": "2.71 bps",
+    "Long Count": "189",
+    "Short Count": "195"
+   },
+   "turnover": 26.42,
+   "fitness": 0.22,
+   "returns": 3.58,
+   "drawdown": 14.99,
+   "margin_bps": 2.71,
+   "long_count": 189.0,
+   "short_count": 195.0,
+   "status": "FAIL",
+   "failed_check_codes": [
+    "F3"
+   ],
+   "failed_checks": [
+    "LOW_SHARPE",
+    "LOW_FITNESS",
+    "LOW_2Y_SHARPE"
+   ]
+  },
+  {
+   "result_no": 55,
+   "number_synthesised": true,
+   "line": 740,
+   "universe": "TOP3000",
+   "neutralization": "SUBINDUSTRY",
+   "decay": 4,
+   "truncation": 0.08,
+   "expression": "quantile(recurring_assets_fair_value_2)",
+   "primary_field": "recurring_assets_fair_value_2",
+   "family": "other",
+   "train_fitness": 0.16,
+   "sharpe": 0.6,
+   "extra": {
+    "Sharpe": "0.60",
+    "Turnover": "0.79%",
+    "Fitness": "0.28",
+    "Returns": "2.78%",
+    "Drawdown": "13.60%",
+    "Margin": "70.32 bps",
+    "Long Count": "663",
+    "Short Count": "588"
+   },
+   "turnover": 0.79,
+   "fitness": 0.28,
+   "returns": 2.78,
+   "drawdown": 13.6,
+   "margin_bps": 70.32,
+   "long_count": 663.0,
+   "short_count": 588.0,
+   "status": "FAIL",
+   "failed_check_codes": [
+    "F9"
+   ],
+   "failed_checks": [
+    "LOW_SHARPE",
+    "LOW_FITNESS",
+    "LOW_TURNOVER",
+    "LOW_2Y_SHARPE"
+   ]
+  },
+  {
+   "result_no": 56,
+   "number_synthesised": true,
+   "line": 753,
+   "universe": "TOP3000",
+   "neutralization": "SUBINDUSTRY",
+   "decay": 5,
+   "truncation": 0.08,
+   "expression": "rank(recurring_assets_fair_value_2)",
+   "primary_field": "recurring_assets_fair_value_2",
+   "family": "other",
+   "train_fitness": 0.16,
+   "sharpe": 0.6,
+   "extra": {
+    "Sharpe": "0.60",
+    "Turnover": "0.78%",
+    "Fitness": "0.28",
+    "Returns": "2.70%",
+    "Drawdown": "13.98%",
+    "Margin": "69.13 bps",
+    "Long Count": "663",
+    "Short Count": "587"
+   },
+   "turnover": 0.78,
+   "fitness": 0.28,
+   "returns": 2.7,
+   "drawdown": 13.98,
+   "margin_bps": 69.13,
+   "long_count": 663.0,
+   "short_count": 587.0,
+   "status": "FAIL",
+   "failed_check_codes": [
+    "F9"
+   ],
+   "failed_checks": [
+    "LOW_SHARPE",
+    "LOW_FITNESS",
+    "LOW_TURNOVER",
+    "LOW_2Y_SHARPE"
+   ]
+  },
+  {
+   "result_no": 57,
+   "number_synthesised": true,
+   "line": 766,
+   "universe": "TOP3000",
+   "neutralization": "SUBINDUSTRY",
+   "decay": 6,
+   "truncation": 0.08,
+   "expression": "ts_rank(fnd6_acdo - debt, 252)",
+   "primary_field": "fnd6_acdo",
+   "family": "fnd6 (fundamental)",
+   "train_fitness": 0.14,
+   "sharpe": 0.6,
+   "extra": {
+    "Sharpe": "0.60",
+    "Turnover": "3.83%",
+    "Fitness": "0.22",
+    "Returns": "1.72%",
+    "Drawdown": "11.15%",
+    "Margin": "8.97 bps",
+    "Long Count": "1103",
+    "Short Count": "1109"
+   },
+   "turnover": 3.83,
+   "fitness": 0.22,
+   "returns": 1.72,
+   "drawdown": 11.15,
+   "margin_bps": 8.97,
+   "long_count": 1103.0,
+   "short_count": 1109.0,
+   "status": "FAIL",
+   "failed_check_codes": [
+    "F4"
+   ],
+   "failed_checks": [
+    "LOW_SHARPE",
+    "LOW_FITNESS",
+    "LOW_SUB_UNIVERSE_SHARPE",
+    "LOW_2Y_SHARPE"
+   ]
+  },
+  {
+   "result_no": 58,
+   "number_synthesised": true,
+   "line": 779,
+   "universe": "TOP3000",
+   "neutralization": "SUBINDUSTRY",
+   "decay": 8,
+   "truncation": 0.08,
+   "expression": "rank(recurring_assets_fair_value_2)",
+   "primary_field": "recurring_assets_fair_value_2",
+   "family": "other",
+   "train_fitness": 0.16,
+   "sharpe": 0.59,
+   "extra": {
+    "Sharpe": "0.59",
+    "Turnover": "0.77%",
+    "Fitness": "0.27",
+    "Returns": "2.68%",
+    "Drawdown": "13.95%",
+    "Margin": "69.99 bps",
+    "Long Count": "663",
+    "Short Count": "587"
+   },
+   "turnover": 0.77,
+   "fitness": 0.27,
+   "returns": 2.68,
+   "drawdown": 13.95,
+   "margin_bps": 69.99,
+   "long_count": 663.0,
+   "short_count": 587.0,
+   "status": "FAIL",
+   "failed_check_codes": [
+    "F9"
+   ],
+   "failed_checks": [
+    "LOW_SHARPE",
+    "LOW_FITNESS",
+    "LOW_TURNOVER",
+    "LOW_2Y_SHARPE"
+   ]
+  },
+  {
+   "result_no": 59,
+   "number_synthesised": true,
+   "line": 792,
+   "universe": "TOP3000",
+   "neutralization": "SUBINDUSTRY",
+   "decay": 7,
+   "truncation": 0.08,
+   "expression": "rank(recurring_assets_fair_value_2)",
+   "primary_field": "recurring_assets_fair_value_2",
+   "family": "other",
+   "train_fitness": 0.16,
+   "sharpe": 0.59,
+   "extra": {
+    "Sharpe": "0.59",
+    "Turnover": "0.77%",
+    "Fitness": "0.27",
+    "Returns": "2.69%",
+    "Drawdown": "13.96%",
+    "Margin": "69.75 bps",
+    "Long Count": "663",
+    "Short Count": "587"
+   },
+   "turnover": 0.77,
+   "fitness": 0.27,
+   "returns": 2.69,
+   "drawdown": 13.96,
+   "margin_bps": 69.75,
+   "long_count": 663.0,
+   "short_count": 587.0,
+   "status": "FAIL",
+   "failed_check_codes": [
+    "F9"
+   ],
+   "failed_checks": [
+    "LOW_SHARPE",
+    "LOW_FITNESS",
+    "LOW_TURNOVER",
+    "LOW_2Y_SHARPE"
+   ]
+  },
+  {
+   "result_no": 60,
+   "number_synthesised": true,
+   "line": 805,
+   "universe": "TOP3000",
+   "neutralization": "SUBINDUSTRY",
+   "decay": 8,
+   "truncation": 0.08,
+   "expression": "zscore(rank(ts_rank(anl4_fs_actuals_advanced_qf_nd_epsr_value, 126)) + 0.25 * rank(ts_rank(sales_growth, 126)) + 0.25 * rank(ebitda / enterprise_value))",
+   "primary_field": "anl4_fs_actuals_advanced_qf_nd_epsr_value",
+   "family": "anl4 (analyst)",
+   "train_fitness": 0.1,
+   "sharpe": 0.57,
+   "extra": {
+    "Sharpe": "0.57",
+    "Turnover": "6.61%",
+    "Fitness": "0.24",
+    "Returns": "2.29%",
+    "Drawdown": "15.32%",
+    "Margin": "6.93 bps",
+    "Long Count": "902",
+    "Short Count": "901"
+   },
+   "turnover": 6.61,
+   "fitness": 0.24,
+   "returns": 2.29,
+   "drawdown": 15.32,
+   "margin_bps": 6.93,
+   "long_count": 902.0,
+   "short_count": 901.0,
+   "status": "FAIL",
+   "failed_check_codes": [
+    "F1"
+   ],
+   "failed_checks": [
+    "LOW_SHARPE",
+    "LOW_FITNESS",
+    "IS_LADDER_SHARPE"
+   ]
+  },
+  {
+   "result_no": 61,
+   "number_synthesised": true,
+   "line": 818,
+   "universe": "TOP3000",
+   "neutralization": "SUBINDUSTRY",
+   "decay": 8,
+   "truncation": 0.08,
+   "expression": "zscore(rank(ts_rank(op_cash_flow_stddev, 126)) + 0.25 * rank(recurring_assets_fair_value_2) + 0.25 * scale(ebitda / enterprise_value))",
+   "primary_field": "op_cash_flow_stddev",
+   "family": "other",
+   "train_fitness": 0.46,
+   "sharpe": 0.56,
+   "extra": {
+    "Sharpe": "0.56",
+    "Turnover": "8.97%",
+    "Fitness": "0.33",
+    "Returns": "4.29%",
+    "Drawdown": "15.87%",
+    "Margin": "9.57 bps",
+    "Long Count": "86",
+    "Short Count": "86"
+   },
+   "turnover": 8.97,
+   "fitness": 0.33,
+   "returns": 4.29,
+   "drawdown": 15.87,
+   "margin_bps": 9.57,
+   "long_count": 86.0,
+   "short_count": 86.0,
+   "status": "FAIL",
+   "failed_check_codes": [
+    "F1"
+   ],
+   "failed_checks": [
+    "LOW_SHARPE",
+    "LOW_FITNESS",
+    "IS_LADDER_SHARPE"
+   ]
+  },
+  {
+   "result_no": 62,
+   "number_synthesised": true,
+   "line": 831,
+   "universe": "TOP3000",
+   "neutralization": "SUBINDUSTRY",
+   "decay": 12,
+   "truncation": 0.08,
+   "expression": "ts_delta(op_cash_flow_stddev, 10) + rank(-(close - vwap) / vwap)",
+   "primary_field": "op_cash_flow_stddev",
+   "family": "other",
+   "train_fitness": 0.36,
+   "sharpe": 0.56,
+   "extra": {
+    "Sharpe": "0.56",
+    "Turnover": "20.87%",
+    "Fitness": "0.27",
+    "Returns": "4.72%",
+    "Drawdown": "16.84%",
+    "Margin": "4.52 bps",
+    "Long Count": "248",
+    "Short Count": "262"
+   },
+   "turnover": 20.87,
+   "fitness": 0.27,
+   "returns": 4.72,
+   "drawdown": 16.84,
+   "margin_bps": 4.52,
+   "long_count": 248.0,
+   "short_count": 262.0,
+   "status": "FAIL",
+   "failed_check_codes": [
+    "F2"
+   ],
+   "failed_checks": [
+    "LOW_SHARPE",
+    "LOW_FITNESS",
+    "CONCENTRATED_WEIGHT",
+    "IS_LADDER_SHARPE"
+   ]
+  },
+  {
+   "result_no": 63,
+   "number_synthesised": true,
+   "line": 844,
+   "universe": "TOP3000",
+   "neutralization": "SUBINDUSTRY",
+   "decay": 3,
+   "truncation": 0.08,
+   "expression": "ts_rank(fn_liab_fair_val_l1_a, 252) + rank(ts_delta(operating_income / assets, 126))",
+   "primary_field": "fn_liab_fair_val_l1_a",
+   "family": "other",
+   "train_fitness": 0.03,
+   "sharpe": 0.55,
+   "extra": {
+    "Sharpe": "0.55",
+    "Turnover": "5.13%",
+    "Fitness": "0.24",
+    "Returns": "2.29%",
+    "Drawdown": "12.75%",
+    "Margin": "8.92 bps",
+    "Long Count": "619",
+    "Short Count": "624"
+   },
+   "turnover": 5.13,
+   "fitness": 0.24,
+   "returns": 2.29,
+   "drawdown": 12.75,
+   "margin_bps": 8.92,
+   "long_count": 619.0,
+   "short_count": 624.0,
+   "status": "FAIL",
+   "failed_check_codes": [
+    "F1"
+   ],
+   "failed_checks": [
+    "LOW_SHARPE",
+    "LOW_FITNESS",
+    "IS_LADDER_SHARPE"
+   ]
+  },
+  {
+   "result_no": 64,
+   "number_synthesised": true,
+   "line": 857,
+   "universe": "TOP3000",
+   "neutralization": "SUBINDUSTRY",
+   "decay": 4,
+   "truncation": 0.08,
+   "expression": "ts_quantile(fnd6_newqv1300_miiq / debt, 126)",
+   "primary_field": "fnd6_newqv1300_miiq",
+   "family": "fnd6 (fundamental)",
+   "train_fitness": 0.14,
+   "sharpe": 0.54,
+   "extra": {
+    "Sharpe": "0.54",
+    "Turnover": "6.75%",
+    "Fitness": "0.18",
+    "Returns": "1.34%",
+    "Drawdown": "7.82%",
+    "Margin": "3.96 bps",
+    "Long Count": "1002",
+    "Short Count": "1054"
+   },
+   "turnover": 6.75,
+   "fitness": 0.18,
+   "returns": 1.34,
+   "drawdown": 7.82,
+   "margin_bps": 3.96,
+   "long_count": 1002.0,
+   "short_count": 1054.0,
+   "status": "FAIL",
+   "failed_check_codes": [
+    "F4"
+   ],
+   "failed_checks": [
+    "LOW_SHARPE",
+    "LOW_FITNESS",
+    "LOW_SUB_UNIVERSE_SHARPE",
+    "LOW_2Y_SHARPE"
+   ]
+  },
+  {
+   "result_no": 65,
+   "number_synthesised": true,
+   "line": 870,
+   "universe": "TOP3000",
+   "neutralization": "SUBINDUSTRY",
+   "decay": 4,
+   "truncation": 0.08,
+   "expression": "zscore(rank(ts_rank(op_cash_flow_stddev, 126)) * rank(recurring_assets_fair_value_2))",
+   "primary_field": "op_cash_flow_stddev",
+   "family": "other",
+   "train_fitness": 0.32,
+   "sharpe": 0.51,
+   "extra": {
+    "Sharpe": "0.51",
+    "Turnover": "7.36%",
+    "Fitness": "0.28",
+    "Returns": "3.66%",
+    "Drawdown": "8.77%",
+    "Margin": "9.94 bps",
+    "Long Count": "94",
+    "Short Count": "113"
+   },
+   "turnover": 7.36,
+   "fitness": 0.28,
+   "returns": 3.66,
+   "drawdown": 8.77,
+   "margin_bps": 9.94,
+   "long_count": 94.0,
+   "short_count": 113.0,
+   "status": "FAIL",
+   "failed_check_codes": [
+    "F1"
+   ],
+   "failed_checks": [
+    "LOW_SHARPE",
+    "LOW_FITNESS",
+    "IS_LADDER_SHARPE"
+   ]
+  },
+  {
+   "result_no": 66,
+   "number_synthesised": true,
+   "line": 883,
+   "universe": "TOP3000",
+   "neutralization": "SUBINDUSTRY",
+   "decay": 10,
+   "truncation": 0.08,
+   "expression": "group_zscore(rank(ts_rank(operating_income / pretax_income, 126)) + rank(ts_delta(return_assets, 126)) + rank(ts_rank(fnd6_newqv1300_miiq / debt, 252)), bucket(rank(open), range=\"0.1,1,0.1\"))",
+   "primary_field": "operating_income",
+   "family": "other",
+   "train_fitness": 0.13,
+   "sharpe": 0.51,
+   "extra": {
+    "Sharpe": "0.51",
+    "Turnover": "5.83%",
+    "Fitness": "0.17",
+    "Returns": "1.34%",
+    "Drawdown": "4.18%",
+    "Margin": "4.61 bps",
+    "Long Count": "1057",
+    "Short Count": "1043"
+   },
+   "turnover": 5.83,
+   "fitness": 0.17,
+   "returns": 1.34,
+   "drawdown": 4.18,
+   "margin_bps": 4.61,
+   "long_count": 1057.0,
+   "short_count": 1043.0,
+   "status": "FAIL",
+   "failed_check_codes": [
+    "F1"
+   ],
+   "failed_checks": [
+    "LOW_SHARPE",
+    "LOW_FITNESS",
+    "IS_LADDER_SHARPE"
+   ]
+  },
+  {
+   "result_no": 67,
+   "number_synthesised": true,
+   "line": 896,
+   "universe": "TOP3000",
+   "neutralization": "SUBINDUSTRY",
+   "decay": 4,
+   "truncation": 0.08,
+   "expression": "ts_rank(fnd6_newqv1300_miiq / fnd6_cptmfmq_lctq, 252)",
+   "primary_field": "fnd6_newqv1300_miiq",
+   "family": "fnd6 (fundamental)",
+   "train_fitness": 0.19,
+   "sharpe": 0.48,
+   "extra": {
+    "Sharpe": "0.48",
+    "Turnover": "4.16%",
+    "Fitness": "0.15",
+    "Returns": "1.27%",
+    "Drawdown": "5.40%",
+    "Margin": "6.10 bps",
+    "Long Count": "998",
+    "Short Count": "1025"
+   },
+   "turnover": 4.16,
+   "fitness": 0.15,
+   "returns": 1.27,
+   "drawdown": 5.4,
+   "margin_bps": 6.1,
+   "long_count": 998.0,
+   "short_count": 1025.0,
+   "status": "FAIL",
+   "failed_check_codes": [
+    "F4"
+   ],
+   "failed_checks": [
+    "LOW_SHARPE",
+    "LOW_FITNESS",
+    "LOW_SUB_UNIVERSE_SHARPE",
+    "LOW_2Y_SHARPE"
+   ]
+  },
+  {
+   "result_no": 68,
+   "number_synthesised": true,
+   "line": 909,
+   "universe": "TOP3000",
+   "neutralization": "SUBINDUSTRY",
+   "decay": 8,
+   "truncation": 0.08,
+   "expression": "iv_signal = ts_rank(sales_growth, 126) + winsorize(implied_volatility_call_120 / historical_volatility_120); cap_group = bucket(rank(cap), range=\"0.1,1,0.1\"); group_neutralize(iv_signal, cap_group)",
+   "primary_field": "iv_signal",
+   "family": "other",
+   "train_fitness": 0.11,
+   "sharpe": 0.47,
+   "extra": {
+    "Sharpe": "0.47",
+    "Turnover": "13.98%",
+    "Fitness": "0.16",
+    "Returns": "1.59%",
+    "Drawdown": "7.13%",
+    "Margin": "2.28 bps",
+    "Long Count": "1228",
+    "Short Count": "1240"
+   },
+   "turnover": 13.98,
+   "fitness": 0.16,
+   "returns": 1.59,
+   "drawdown": 7.13,
+   "margin_bps": 2.28,
+   "long_count": 1228.0,
+   "short_count": 1240.0,
+   "status": "FAIL",
+   "failed_check_codes": [
+    "F2"
+   ],
+   "failed_checks": [
+    "LOW_SHARPE",
+    "LOW_FITNESS",
+    "CONCENTRATED_WEIGHT",
+    "IS_LADDER_SHARPE"
+   ]
+  },
+  {
+   "result_no": 69,
+   "number_synthesised": true,
+   "line": 922,
+   "universe": "TOP3000",
+   "neutralization": "SUBINDUSTRY",
+   "decay": 0,
+   "truncation": 0.08,
+   "expression": "ts_delay(pcr_oi_360, 120)",
+   "primary_field": "pcr_oi_360",
+   "family": "other",
+   "train_fitness": 0.01,
+   "sharpe": 0.47,
+   "extra": {
+    "Sharpe": "0.47",
+    "Turnover": "22.49%",
+    "Fitness": "0.17",
+    "Returns": "2.99%",
+    "Drawdown": "22.00%",
+    "Margin": "2.66 bps",
+    "Long Count": "782",
+    "Short Count": "1944"
+   },
+   "turnover": 22.49,
+   "fitness": 0.17,
+   "returns": 2.99,
+   "drawdown": 22.0,
+   "margin_bps": 2.66,
+   "long_count": 782.0,
+   "short_count": 1944.0,
+   "status": "FAIL",
+   "failed_check_codes": [
+    "F15"
+   ],
+   "failed_checks": [
+    "LOW_SHARPE",
+    "LOW_FITNESS",
+    "CONCENTRATED_WEIGHT",
+    "LOW_SUB_UNIVERSE_SHARPE"
+   ]
+  },
+  {
+   "result_no": 70,
+   "number_synthesised": true,
+   "line": 935,
+   "universe": "TOP3000",
+   "neutralization": "SUBINDUSTRY",
+   "decay": 4,
+   "truncation": 0.08,
+   "expression": "rank(ts_rank(cashflow_op / assets, 252)) + ts_rank(op_cash_flow_stddev, 126)",
+   "primary_field": "cashflow_op",
+   "family": "other",
+   "train_fitness": 0.25,
+   "sharpe": 0.44,
+   "extra": {
+    "Sharpe": "0.44",
+    "Turnover": "8.37%",
+    "Fitness": "0.18",
+    "Returns": "2.08%",
+    "Drawdown": "10.95%",
+    "Margin": "4.96 bps",
+    "Long Count": "258",
+    "Short Count": "258"
+   },
+   "turnover": 8.37,
+   "fitness": 0.18,
+   "returns": 2.08,
+   "drawdown": 10.95,
+   "margin_bps": 4.96,
+   "long_count": 258.0,
+   "short_count": 258.0,
+   "status": "FAIL",
+   "failed_check_codes": [
+    "F1"
+   ],
+   "failed_checks": [
+    "LOW_SHARPE",
+    "LOW_FITNESS",
+    "IS_LADDER_SHARPE"
+   ]
+  },
+  {
+   "result_no": 71,
+   "number_synthesised": true,
+   "line": 948,
+   "universe": "TOP3000",
+   "neutralization": "SUBINDUSTRY",
+   "decay": 6,
+   "truncation": 0.05,
+   "expression": "zscore(ts_delta(op_cash_flow_stddev, 10) + 0.35 * rank(ts_rank(sales_growth, 126)) + 0.15 * rank(ts_mean(-returns, 5)))",
+   "primary_field": "op_cash_flow_stddev",
+   "family": "other",
+   "train_fitness": 0.09,
+   "sharpe": 0.41,
+   "extra": {
+    "Sharpe": "0.41",
+    "Turnover": "25.04%",
+    "Fitness": "0.15",
+    "Returns": "3.25%",
+    "Drawdown": "15.49%",
+    "Margin": "2.59 bps",
+    "Long Count": "236",
+    "Short Count": "246"
+   },
+   "turnover": 25.04,
+   "fitness": 0.15,
+   "returns": 3.25,
+   "drawdown": 15.49,
+   "margin_bps": 2.59,
+   "long_count": 236.0,
+   "short_count": 246.0,
+   "status": "FAIL",
+   "failed_check_codes": [
+    "F2"
+   ],
+   "failed_checks": [
+    "LOW_SHARPE",
+    "LOW_FITNESS",
+    "CONCENTRATED_WEIGHT",
+    "IS_LADDER_SHARPE"
+   ]
+  },
+  {
+   "result_no": 72,
+   "number_synthesised": true,
+   "line": 961,
+   "universe": "TOP3000",
+   "neutralization": "SUBINDUSTRY",
+   "decay": 0,
+   "truncation": 0.08,
+   "expression": "ts_delay(pcr_oi_1080, 120)",
+   "primary_field": "pcr_oi_1080",
+   "family": "other",
+   "train_fitness": 0.05,
+   "sharpe": 0.4,
+   "extra": {
+    "Sharpe": "0.40",
+    "Turnover": "20.98%",
+    "Fitness": "0.15",
+    "Returns": "2.82%",
+    "Drawdown": "21.10%",
+    "Margin": "2.69 bps",
+    "Long Count": "758",
+    "Short Count": "1969"
+   },
+   "turnover": 20.98,
+   "fitness": 0.15,
+   "returns": 2.82,
+   "drawdown": 21.1,
+   "margin_bps": 2.69,
+   "long_count": 758.0,
+   "short_count": 1969.0,
+   "status": "FAIL",
+   "failed_check_codes": [
+    "F5"
+   ],
+   "failed_checks": [
+    "LOW_SHARPE",
+    "LOW_FITNESS",
+    "CONCENTRATED_WEIGHT",
+    "LOW_SUB_UNIVERSE_SHARPE",
+    "LOW_2Y_SHARPE"
+   ]
+  },
+  {
+   "result_no": 73,
+   "number_synthesised": true,
+   "line": 974,
+   "universe": "TOP3000",
+   "neutralization": "SUBINDUSTRY",
+   "decay": 4,
+   "truncation": 0.08,
+   "expression": "ts_rank(fnd6_cptnewqv1300_epsf12 / debt, 252)",
+   "primary_field": "fnd6_cptnewqv1300_epsf12",
+   "family": "fnd6 (fundamental)",
+   "train_fitness": 0.16,
+   "sharpe": 0.38,
+   "extra": {
+    "Sharpe": "0.38",
+    "Turnover": "3.98%",
+    "Fitness": "0.12",
+    "Returns": "1.23%",
+    "Drawdown": "5.75%",
+    "Margin": "6.18 bps",
+    "Long Count": "1173",
+    "Short Count": "1138"
+   },
+   "turnover": 3.98,
+   "fitness": 0.12,
+   "returns": 1.23,
+   "drawdown": 5.75,
+   "margin_bps": 6.18,
+   "long_count": 1173.0,
+   "short_count": 1138.0,
+   "status": "FAIL",
+   "failed_check_codes": [
+    "F3"
+   ],
+   "failed_checks": [
+    "LOW_SHARPE",
+    "LOW_FITNESS",
+    "LOW_2Y_SHARPE"
+   ]
+  },
+  {
+   "result_no": 74,
+   "number_synthesised": true,
+   "line": 987,
+   "universe": "TOP3000",
+   "neutralization": "SUBINDUSTRY",
+   "decay": 6,
+   "truncation": 0.08,
+   "expression": "rank(ts_mean(operating_income / cap, 250))",
+   "primary_field": "operating_income",
+   "family": "other",
+   "train_fitness": 0.05,
+   "sharpe": 0.37,
+   "extra": {
+    "Sharpe": "0.37",
+    "Turnover": "1.12%",
+    "Fitness": "0.19",
+    "Returns": "3.45%",
+    "Drawdown": "40.69%",
+    "Margin": "61.51 bps",
+    "Long Count": "1437",
+    "Short Count": "1513"
+   },
+   "turnover": 1.12,
+   "fitness": 0.19,
+   "returns": 3.45,
+   "drawdown": 40.69,
+   "margin_bps": 61.51,
+   "long_count": 1437.0,
+   "short_count": 1513.0,
+   "status": "FAIL",
+   "failed_check_codes": [
+    "F6"
+   ],
+   "failed_checks": [
+    "LOW_SHARPE",
+    "LOW_FITNESS",
+    "LOW_SUB_UNIVERSE_SHARPE",
+    "IS_LADDER_SHARPE"
+   ]
+  },
+  {
+   "result_no": 75,
+   "number_synthesised": true,
+   "line": 1000,
+   "universe": "TOP3000",
+   "neutralization": "SUBINDUSTRY",
+   "decay": 4,
+   "truncation": 0.08,
+   "expression": "ts_delta(op_cash_flow_stddev, 10) + rank(ts_rank(op_cash_flow_stddev, 126))",
+   "primary_field": "op_cash_flow_stddev",
+   "family": "other",
+   "train_fitness": 0.09,
+   "sharpe": 0.36,
+   "extra": {
+    "Sharpe": "0.36",
+    "Turnover": "27.24%",
+    "Fitness": "0.12",
+    "Returns": "3.20%",
+    "Drawdown": "18.31%",
+    "Margin": "2.35 bps",
+    "Long Count": "246",
+    "Short Count": "257"
+   },
+   "turnover": 27.24,
+   "fitness": 0.12,
+   "returns": 3.2,
+   "drawdown": 18.31,
+   "margin_bps": 2.35,
+   "long_count": 246.0,
+   "short_count": 257.0,
+   "status": "FAIL",
+   "failed_check_codes": [
+    "F7"
+   ],
+   "failed_checks": [
+    "LOW_SHARPE",
+    "LOW_FITNESS",
+    "CONCENTRATED_WEIGHT",
+    "LOW_2Y_SHARPE"
+   ]
+  },
+  {
+   "result_no": 76,
+   "number_synthesised": true,
+   "line": 1013,
+   "universe": "TOP3000",
+   "neutralization": "SUBINDUSTRY",
+   "decay": 4,
+   "truncation": 0.08,
+   "expression": "group_neutralize(rank(ts_rank(operating_income / assets, 126)) + rank(ts_delta(fnd6_aqs, 126)) + rank(ts_mean(-returns, 5)), bucket(rank(cap), range=\"0.1,1,0.1\"))",
+   "primary_field": "operating_income",
+   "family": "other",
+   "train_fitness": 0.2,
+   "sharpe": 0.33,
+   "extra": {
+    "Sharpe": "0.33",
+    "Turnover": "26.86%",
+    "Fitness": "0.11",
+    "Returns": "3.25%",
+    "Drawdown": "21.16%",
+    "Margin": "2.42 bps",
+    "Long Count": "72",
+    "Short Count": "70"
+   },
+   "turnover": 26.86,
+   "fitness": 0.11,
+   "returns": 3.25,
+   "drawdown": 21.16,
+   "margin_bps": 2.42,
+   "long_count": 72.0,
+   "short_count": 70.0,
+   "status": "FAIL",
+   "failed_check_codes": [
+    "F1"
+   ],
+   "failed_checks": [
+    "LOW_SHARPE",
+    "LOW_FITNESS",
+    "IS_LADDER_SHARPE"
+   ]
+  },
+  {
+   "result_no": 77,
+   "number_synthesised": true,
+   "line": 1026,
+   "universe": "TOP3000",
+   "neutralization": "SUBINDUSTRY",
+   "decay": 4,
+   "truncation": 0.08,
+   "expression": "group_neutralize(rank(ts_rank(operating_income / assets, 126)) + rank(fscore_quality) + rank(ts_mean(-returns, 5)), bucket(rank(cap), range=\"0.1,1,0.1\"))",
+   "primary_field": "operating_income",
+   "family": "other",
+   "train_fitness": 0.03,
+   "sharpe": 0.29,
+   "extra": {
+    "Sharpe": "0.29",
+    "Turnover": "9.80%",
+    "Fitness": "0.04",
+    "Returns": "0.24%",
+    "Drawdown": "1.59%",
+    "Margin": "0.49 bps",
+    "Long Count": "20",
+    "Short Count": "20"
+   },
+   "turnover": 9.8,
+   "fitness": 0.04,
+   "returns": 0.24,
+   "drawdown": 1.59,
+   "margin_bps": 0.49,
+   "long_count": 20.0,
+   "short_count": 20.0,
+   "status": "FAIL",
+   "failed_check_codes": [
+    "F2"
+   ],
+   "failed_checks": [
+    "LOW_SHARPE",
+    "LOW_FITNESS",
+    "CONCENTRATED_WEIGHT",
+    "IS_LADDER_SHARPE"
+   ]
+  },
+  {
+   "result_no": 78,
+   "number_synthesised": true,
+   "line": 1039,
+   "universe": "TOP3000",
+   "neutralization": "SUBINDUSTRY",
+   "decay": 6,
+   "truncation": 0.08,
+   "expression": "ts_sum(rank(ts_mean(-returns, 5)), 120)",
+   "primary_field": "returns",
+   "family": "other",
+   "train_fitness": 0.01,
+   "sharpe": 0.29,
+   "extra": {
+    "Sharpe": "0.29",
+    "Turnover": "5.15%",
+    "Fitness": "0.14",
+    "Returns": "2.87%",
+    "Drawdown": "20.50%",
+    "Margin": "11.14 bps",
+    "Long Count": "1774",
+    "Short Count": "1287"
+   },
+   "turnover": 5.15,
+   "fitness": 0.14,
+   "returns": 2.87,
+   "drawdown": 20.5,
+   "margin_bps": 11.14,
+   "long_count": 1774.0,
+   "short_count": 1287.0,
+   "status": "FAIL",
+   "failed_check_codes": [
+    "F3"
+   ],
+   "failed_checks": [
+    "LOW_SHARPE",
+    "LOW_FITNESS",
+    "LOW_2Y_SHARPE"
+   ]
+  },
+  {
+   "result_no": 79,
+   "number_synthesised": true,
+   "line": 1052,
+   "universe": "TOP3000",
+   "neutralization": "SUBINDUSTRY",
+   "decay": 0,
+   "truncation": 0.08,
+   "expression": "ts_decay_linear(pcr_oi_1080, 120)",
+   "primary_field": "pcr_oi_1080",
+   "family": "other",
+   "train_fitness": 0.0,
+   "sharpe": 0.29,
+   "extra": {
+    "Sharpe": "0.29",
+    "Turnover": "3.76%",
+    "Fitness": "0.11",
+    "Returns": "1.92%",
+    "Drawdown": "18.51%",
+    "Margin": "10.22 bps",
+    "Long Count": "809",
+    "Short Count": "2022"
+   },
+   "turnover": 3.76,
+   "fitness": 0.11,
+   "returns": 1.92,
+   "drawdown": 18.51,
+   "margin_bps": 10.22,
+   "long_count": 809.0,
+   "short_count": 2022.0,
+   "status": "FAIL",
+   "failed_check_codes": [
+    "F5"
+   ],
+   "failed_checks": [
+    "LOW_SHARPE",
+    "LOW_FITNESS",
+    "CONCENTRATED_WEIGHT",
+    "LOW_SUB_UNIVERSE_SHARPE",
+    "LOW_2Y_SHARPE"
+   ]
+  },
+  {
+   "result_no": 80,
+   "number_synthesised": true,
+   "line": 1065,
+   "universe": "TOP3000",
+   "neutralization": "SUBINDUSTRY",
+   "decay": 4,
+   "truncation": 0.08,
+   "expression": "rank(vec_avg(story_event_record_count_fast_d1))",
+   "primary_field": "story_event_record_count_fast_d1",
+   "family": "other",
+   "train_fitness": 0.01,
+   "sharpe": 0.28,
+   "extra": {
+    "Sharpe": "0.28",
+    "Turnover": "78.08%",
+    "Fitness": "0.03",
+    "Returns": "0.95%",
+    "Drawdown": "11.83%",
+    "Margin": "0.24 bps",
+    "Long Count": "1312",
+    "Short Count": "1289"
+   },
+   "turnover": 78.08,
+   "fitness": 0.03,
+   "returns": 0.95,
+   "drawdown": 11.83,
+   "margin_bps": 0.24,
+   "long_count": 1312.0,
+   "short_count": 1289.0,
+   "status": "FAIL",
+   "failed_check_codes": [
+    "F13"
+   ],
+   "failed_checks": [
+    "LOW_SHARPE",
+    "LOW_FITNESS",
+    "HIGH_TURNOVER",
+    "LOW_SUB_UNIVERSE_SHARPE",
+    "LOW_2Y_SHARPE"
+   ]
+  },
+  {
+   "result_no": 81,
+   "number_synthesised": true,
+   "line": 1078,
+   "universe": "TOP3000",
+   "neutralization": "SUBINDUSTRY",
+   "decay": 6,
+   "truncation": 0.08,
+   "expression": "group_neutralize(rank(ts_mean(operating_income / cap, 250)), bucket(rank(cap), range=\"0,1,0.1\"))",
+   "primary_field": "operating_income",
+   "family": "other",
+   "train_fitness": 0.01,
+   "sharpe": 0.28,
+   "extra": {
+    "Sharpe": "0.28",
+    "Turnover": "1.82%",
+    "Fitness": "0.11",
+    "Returns": "2.10%",
+    "Drawdown": "35.95%",
+    "Margin": "23.10 bps",
+    "Long Count": "1391",
+    "Short Count": "1560"
+   },
+   "turnover": 1.82,
+   "fitness": 0.11,
+   "returns": 2.1,
+   "drawdown": 35.95,
+   "margin_bps": 23.1,
+   "long_count": 1391.0,
+   "short_count": 1560.0,
+   "status": "FAIL",
+   "failed_check_codes": [
+    "F6"
+   ],
+   "failed_checks": [
+    "LOW_SHARPE",
+    "LOW_FITNESS",
+    "LOW_SUB_UNIVERSE_SHARPE",
+    "IS_LADDER_SHARPE"
+   ]
+  },
+  {
+   "result_no": 82,
+   "number_synthesised": true,
+   "line": 1091,
+   "universe": "TOP3000",
+   "neutralization": "SUBINDUSTRY",
+   "decay": 4,
+   "truncation": 0.01,
+   "expression": "ts_decay_linear(fnd6_acdo / debt, 252)",
+   "primary_field": "fnd6_acdo",
+   "family": "fnd6 (fundamental)",
+   "train_fitness": 0.0,
+   "sharpe": 0.28,
+   "extra": {
+    "Sharpe": "0.28",
+    "Turnover": "2.99%",
+    "Fitness": "0.14",
+    "Returns": "3.04%",
+    "Drawdown": "31.52%",
+    "Margin": "20.33 bps",
+    "Long Count": "150",
+    "Short Count": "728"
+   },
+   "turnover": 2.99,
+   "fitness": 0.14,
+   "returns": 3.04,
+   "drawdown": 31.52,
+   "margin_bps": 20.33,
+   "long_count": 150.0,
+   "short_count": 728.0,
+   "status": "FAIL",
+   "failed_check_codes": [
+    "F7"
+   ],
+   "failed_checks": [
+    "LOW_SHARPE",
+    "LOW_FITNESS",
+    "CONCENTRATED_WEIGHT",
+    "LOW_2Y_SHARPE"
+   ]
+  },
+  {
+   "result_no": 83,
+   "number_synthesised": true,
+   "line": 1104,
+   "universe": "TOP3000",
+   "neutralization": "SUBINDUSTRY",
+   "decay": 6,
+   "truncation": 0.05,
+   "expression": "zscore(rank(ts_delta(sales_estimate_average_quarterly, 20)) + 0.35 * rank(ts_rank(sales_growth, 126)) + 0.15 * ts_rank(fnd6_acdo / debt, 252))",
+   "primary_field": "sales_estimate_average_quarterly",
+   "family": "other",
+   "train_fitness": 0.02,
+   "sharpe": 0.25,
+   "extra": {
+    "Sharpe": "0.25",
+    "Turnover": "13.30%",
+    "Fitness": "0.06",
+    "Returns": "0.88%",
+    "Drawdown": "19.88%",
+    "Margin": "1.32 bps",
+    "Long Count": "911",
+    "Short Count": "990"
+   },
+   "turnover": 13.3,
+   "fitness": 0.06,
+   "returns": 0.88,
+   "drawdown": 19.88,
+   "margin_bps": 1.32,
+   "long_count": 911.0,
+   "short_count": 990.0,
+   "status": "FAIL",
+   "failed_check_codes": [
+    "F1"
+   ],
+   "failed_checks": [
+    "LOW_SHARPE",
+    "LOW_FITNESS",
+    "IS_LADDER_SHARPE"
+   ]
+  },
+  {
+   "result_no": 84,
+   "number_synthesised": true,
+   "line": 1117,
+   "universe": "TOP3000",
+   "neutralization": "SUBINDUSTRY",
+   "decay": 6,
+   "truncation": 0.05,
+   "expression": "zscore(rank(ts_rank(sales_growth, 126)) + 0.35 * rank(ts_rank(sales_growth, 126)) + 0.15 * rank(ts_mean(-returns, 5)))",
+   "primary_field": "sales_growth",
+   "family": "other",
+   "train_fitness": -0.01,
+   "sharpe": 0.25,
+   "extra": {
+    "Sharpe": "0.25",
+    "Turnover": "7.67%",
+    "Fitness": "0.06",
+    "Returns": "0.62%",
+    "Drawdown": "9.59%",
+    "Margin": "1.62 bps",
+    "Long Count": "1383",
+    "Short Count": "1381"
+   },
+   "turnover": 7.67,
+   "fitness": 0.06,
+   "returns": 0.62,
+   "drawdown": 9.59,
+   "margin_bps": 1.62,
+   "long_count": 1383.0,
+   "short_count": 1381.0,
+   "status": "FAIL",
+   "failed_check_codes": [
+    "F1"
+   ],
+   "failed_checks": [
+    "LOW_SHARPE",
+    "LOW_FITNESS",
+    "IS_LADDER_SHARPE"
+   ]
+  },
+  {
+   "result_no": 85,
+   "number_synthesised": true,
+   "line": 1130,
+   "universe": "TOP3000",
+   "neutralization": "SUBINDUSTRY",
+   "decay": 4,
+   "truncation": 0.08,
+   "expression": "group_neutralize(rank(rank(fscore_quality)), bucket(rank(cap), range=\"0,1,0.1\"))",
+   "primary_field": "fscore_quality",
+   "family": "other",
+   "train_fitness": 0.0,
+   "sharpe": 0.22,
+   "extra": {
+    "Sharpe": "0.22",
+    "Turnover": "9.80%",
+    "Fitness": "0.03",
+    "Returns": "0.21%",
+    "Drawdown": "2.59%",
+    "Margin": "0.42 bps",
+    "Long Count": "21",
+    "Short Count": "21"
+   },
+   "turnover": 9.8,
+   "fitness": 0.03,
+   "returns": 0.21,
+   "drawdown": 2.59,
+   "margin_bps": 0.42,
+   "long_count": 21.0,
+   "short_count": 21.0,
+   "status": "FAIL",
+   "failed_check_codes": [
+    "F2"
+   ],
+   "failed_checks": [
+    "LOW_SHARPE",
+    "LOW_FITNESS",
+    "CONCENTRATED_WEIGHT",
+    "IS_LADDER_SHARPE"
+   ]
+  },
+  {
+   "result_no": 86,
+   "number_synthesised": true,
+   "line": 1143,
+   "universe": "TOP3000",
+   "neutralization": "SUBINDUSTRY",
+   "decay": 6,
+   "truncation": 0.05,
+   "expression": "zscore(zscore(ts_rank(fnd6_txdbca / assets, 126)) + 0.35 * rank(ts_rank(sales_growth, 126)) + 0.15 * rank(ts_mean(-returns, 5)))",
+   "primary_field": "fnd6_txdbca",
+   "family": "fnd6 (fundamental)",
+   "train_fitness": -0.01,
+   "sharpe": 0.22,
+   "extra": {
+    "Sharpe": "0.22",
+    "Turnover": "8.00%",
+    "Fitness": "0.07",
+    "Returns": "1.34%",
+    "Drawdown": "21.05%",
+    "Margin": "3.34 bps",
+    "Long Count": "1130",
+    "Short Count": "1025"
+   },
+   "turnover": 8.0,
+   "fitness": 0.07,
+   "returns": 1.34,
+   "drawdown": 21.05,
+   "margin_bps": 3.34,
+   "long_count": 1130.0,
+   "short_count": 1025.0,
+   "status": "FAIL",
+   "failed_check_codes": [
+    "F6"
+   ],
+   "failed_checks": [
+    "LOW_SHARPE",
+    "LOW_FITNESS",
+    "LOW_SUB_UNIVERSE_SHARPE",
+    "IS_LADDER_SHARPE"
+   ]
+  },
+  {
+   "result_no": 87,
+   "number_synthesised": true,
+   "line": 1156,
+   "universe": "TOP3000",
+   "neutralization": "SUBINDUSTRY",
+   "decay": 4,
+   "truncation": 0.08,
+   "expression": "rank(ts_sum(vec_avg(nws12_afterhsz_sl), 63)) > 0.5 ? 1 : rank(ts_rank(op_cash_flow_stddev, 126))",
+   "primary_field": "nws12_afterhsz_sl",
+   "family": "other",
+   "train_fitness": 0.09,
+   "sharpe": 0.2,
+   "extra": {
+    "Sharpe": "0.20",
+    "Turnover": "10.07%",
+    "Fitness": "0.05",
+    "Returns": "0.77%",
+    "Drawdown": "14.18%",
+    "Margin": "1.54 bps",
+    "Long Count": "799",
+    "Short Count": "286"
+   },
+   "turnover": 10.07,
+   "fitness": 0.05,
+   "returns": 0.77,
+   "drawdown": 14.18,
+   "margin_bps": 1.54,
+   "long_count": 799.0,
+   "short_count": 286.0,
+   "status": "FAIL",
+   "failed_check_codes": [
+    "F1"
+   ],
+   "failed_checks": [
+    "LOW_SHARPE",
+    "LOW_FITNESS",
+    "IS_LADDER_SHARPE"
+   ]
+  },
+  {
+   "result_no": 88,
+   "number_synthesised": true,
+   "line": 1169,
+   "universe": "TOP3000",
+   "neutralization": "SUBINDUSTRY",
+   "decay": 10,
+   "truncation": 0.08,
+   "expression": "ts_rank(fnd6_acdo / debt, 252)",
+   "primary_field": "fnd6_acdo",
+   "family": "fnd6 (fundamental)",
+   "train_fitness": -0.01,
+   "sharpe": 0.17,
+   "extra": {
+    "Sharpe": "0.17",
+    "Turnover": "3.70%",
+    "Fitness": "0.05",
+    "Returns": "1.10%",
+    "Drawdown": "22.36%",
+    "Margin": "5.97 bps",
+    "Long Count": "861",
+    "Short Count": "953"
+   },
+   "turnover": 3.7,
+   "fitness": 0.05,
+   "returns": 1.1,
+   "drawdown": 22.36,
+   "margin_bps": 5.97,
+   "long_count": 861.0,
+   "short_count": 953.0,
+   "status": "FAIL",
+   "failed_check_codes": [
+    "F3"
+   ],
+   "failed_checks": [
+    "LOW_SHARPE",
+    "LOW_FITNESS",
+    "LOW_2Y_SHARPE"
+   ]
+  },
+  {
+   "result_no": 89,
+   "number_synthesised": true,
+   "line": 1182,
+   "universe": "TOP3000",
+   "neutralization": "SUBINDUSTRY",
+   "decay": 8,
+   "truncation": 0.08,
+   "expression": "group_neutralize(rank(rank(ts_rank(sales_growth, 126))), bucket(rank(cap), range=\"0,1,0.1\"))",
+   "primary_field": "sales_growth",
+   "family": "other",
+   "train_fitness": -0.01,
+   "sharpe": 0.16,
+   "extra": {
+    "Sharpe": "0.16",
+    "Turnover": "6.45%",
+    "Fitness": "0.03",
+    "Returns": "0.37%",
+    "Drawdown": "10.28%",
+    "Margin": "1.14 bps",
+    "Long Count": "1382",
+    "Short Count": "1382"
+   },
+   "turnover": 6.45,
+   "fitness": 0.03,
+   "returns": 0.37,
+   "drawdown": 10.28,
+   "margin_bps": 1.14,
+   "long_count": 1382.0,
+   "short_count": 1382.0,
+   "status": "FAIL",
+   "failed_check_codes": [
+    "F1"
+   ],
+   "failed_checks": [
+    "LOW_SHARPE",
+    "LOW_FITNESS",
+    "IS_LADDER_SHARPE"
+   ]
+  },
+  {
+   "result_no": 90,
+   "number_synthesised": true,
+   "line": 1195,
+   "universe": "TOP3000",
+   "neutralization": "SUBINDUSTRY",
+   "decay": 4,
+   "truncation": 0.08,
+   "expression": "scale(operating_income / cap) + ts_rank(fnd6_acdo / debt, 252)",
+   "primary_field": "operating_income",
+   "family": "other",
+   "train_fitness": -0.02,
+   "sharpe": 0.14,
+   "extra": {
+    "Sharpe": "0.14",
+    "Turnover": "4.02%",
+    "Fitness": "0.04",
+    "Returns": "0.89%",
+    "Drawdown": "22.98%",
+    "Margin": "4.43 bps",
+    "Long Count": "1058",
+    "Short Count": "939"
+   },
+   "turnover": 4.02,
+   "fitness": 0.04,
+   "returns": 0.89,
+   "drawdown": 22.98,
+   "margin_bps": 4.43,
+   "long_count": 1058.0,
+   "short_count": 939.0,
+   "status": "FAIL",
+   "failed_check_codes": [
+    "F1"
+   ],
+   "failed_checks": [
+    "LOW_SHARPE",
+    "LOW_FITNESS",
+    "IS_LADDER_SHARPE"
+   ]
+  },
+  {
+   "result_no": 91,
+   "number_synthesised": true,
+   "line": 1208,
+   "universe": "TOP3000",
+   "neutralization": "SUBINDUSTRY",
+   "decay": 4,
+   "truncation": 0.08,
+   "expression": "ts_delay(fnd6_newqv1300_miiq / debt, 252)",
+   "primary_field": "fnd6_newqv1300_miiq",
+   "family": "fnd6 (fundamental)",
+   "train_fitness": 0.0,
+   "sharpe": 0.13,
+   "extra": {
+    "Sharpe": "0.13",
+    "Turnover": "4.74%",
+    "Fitness": "0.05",
+    "Returns": "1.76%",
+    "Drawdown": "63.07%",
+    "Margin": "7.41 bps",
+    "Long Count": "721",
+    "Short Count": "1143"
+   },
+   "turnover": 4.74,
+   "fitness": 0.05,
+   "returns": 1.76,
+   "drawdown": 63.07,
+   "margin_bps": 7.41,
+   "long_count": 721.0,
+   "short_count": 1143.0,
+   "status": "FAIL",
+   "failed_check_codes": [
+    "F7"
+   ],
+   "failed_checks": [
+    "LOW_SHARPE",
+    "LOW_FITNESS",
+    "CONCENTRATED_WEIGHT",
+    "LOW_2Y_SHARPE"
+   ]
+  },
+  {
+   "result_no": 92,
+   "number_synthesised": true,
+   "line": 1221,
+   "universe": "TOP3000",
+   "neutralization": "SUBINDUSTRY",
+   "decay": 0,
+   "truncation": 0.08,
+   "expression": "rank(ts_rank(cashflow_op / assets, 252)) + ts_rank(fn_liab_fair_val_l1_a, 252)",
+   "primary_field": "cashflow_op",
+   "family": "other",
+   "train_fitness": 0.03,
+   "sharpe": 0.12,
+   "extra": {
+    "Sharpe": "0.12",
+    "Turnover": "5.03%",
+    "Fitness": "0.02",
+    "Returns": "0.40%",
+    "Drawdown": "9.02%",
+    "Margin": "1.57 bps",
+    "Long Count": "614",
+    "Short Count": "626"
+   },
+   "turnover": 5.03,
+   "fitness": 0.02,
+   "returns": 0.4,
+   "drawdown": 9.02,
+   "margin_bps": 1.57,
+   "long_count": 614.0,
+   "short_count": 626.0,
+   "status": "FAIL",
+   "failed_check_codes": [
+    "F6"
+   ],
+   "failed_checks": [
+    "LOW_SHARPE",
+    "LOW_FITNESS",
+    "LOW_SUB_UNIVERSE_SHARPE",
+    "IS_LADDER_SHARPE"
+   ]
+  },
+  {
+   "result_no": 93,
+   "number_synthesised": true,
+   "line": 1234,
+   "universe": "TOP3000",
+   "neutralization": "SUBINDUSTRY",
+   "decay": 6,
+   "truncation": 0.08,
+   "expression": "hv_group = densify(bucket(quantile(historical_volatility_120), range=\"0.1,1,0.1\")); group_neutralize(rank(cap), hv_group)",
+   "primary_field": "hv_group",
+   "family": "other",
+   "train_fitness": 0.0,
+   "sharpe": 0.12,
+   "extra": {
+    "Sharpe": "0.12",
+    "Turnover": "6.54%",
+    "Fitness": "0.03",
+    "Returns": "0.83%",
+    "Drawdown": "24.30%",
+    "Margin": "2.54 bps",
+    "Long Count": "1412",
+    "Short Count": "1338"
+   },
+   "turnover": 6.54,
+   "fitness": 0.03,
+   "returns": 0.83,
+   "drawdown": 24.3,
+   "margin_bps": 2.54,
+   "long_count": 1412.0,
+   "short_count": 1338.0,
+   "status": "FAIL",
+   "failed_check_codes": [
+    "F2"
+   ],
+   "failed_checks": [
+    "LOW_SHARPE",
+    "LOW_FITNESS",
+    "CONCENTRATED_WEIGHT",
+    "IS_LADDER_SHARPE"
+   ]
+  },
+  {
+   "result_no": 94,
+   "number_synthesised": true,
+   "line": 1247,
+   "universe": "TOP3000",
+   "neutralization": "SUBINDUSTRY",
+   "decay": 16,
+   "truncation": 0.08,
+   "expression": "rank(rank(vwap / adv20))",
+   "primary_field": "vwap",
+   "family": "other",
+   "train_fitness": -0.01,
+   "sharpe": 0.12,
+   "extra": {
+    "Sharpe": "0.12",
+    "Turnover": "1.89%",
+    "Fitness": "0.03",
+    "Returns": "1.05%",
+    "Drawdown": "47.66%",
+    "Margin": "11.13 bps",
+    "Long Count": "1510",
+    "Short Count": "1549"
+   },
+   "turnover": 1.89,
+   "fitness": 0.03,
+   "returns": 1.05,
+   "drawdown": 47.66,
+   "margin_bps": 11.13,
+   "long_count": 1510.0,
+   "short_count": 1549.0,
+   "status": "FAIL",
+   "failed_check_codes": [
+    "F4"
+   ],
+   "failed_checks": [
+    "LOW_SHARPE",
+    "LOW_FITNESS",
+    "LOW_SUB_UNIVERSE_SHARPE",
+    "LOW_2Y_SHARPE"
+   ]
+  },
+  {
+   "result_no": 95,
+   "number_synthesised": true,
+   "line": 1260,
+   "universe": "TOP3000",
+   "neutralization": "SUBINDUSTRY",
+   "decay": 0,
+   "truncation": 0.01,
+   "expression": "ts_product(fnd6_acdo / debt, 252)",
+   "primary_field": "fnd6_acdo",
+   "family": "fnd6 (fundamental)",
+   "train_fitness": 0.05,
+   "sharpe": 0.11,
+   "extra": {
+    "Sharpe": "0.11",
+    "Turnover": "6.16%",
+    "Fitness": "0.06",
+    "Returns": "3.22%",
+    "Drawdown": "87.17%",
+    "Margin": "10.43 bps",
+    "Long Count": "637",
+    "Short Count": "1198"
+   },
+   "turnover": 6.16,
+   "fitness": 0.06,
+   "returns": 3.22,
+   "drawdown": 87.17,
+   "margin_bps": 10.43,
+   "long_count": 637.0,
+   "short_count": 1198.0,
+   "status": "FAIL",
+   "failed_check_codes": [
+    "F5"
+   ],
+   "failed_checks": [
+    "LOW_SHARPE",
+    "LOW_FITNESS",
+    "CONCENTRATED_WEIGHT",
+    "LOW_SUB_UNIVERSE_SHARPE",
+    "LOW_2Y_SHARPE"
+   ]
+  },
+  {
+   "result_no": 96,
+   "number_synthesised": true,
+   "line": 1273,
+   "universe": "TOP3000",
+   "neutralization": "SUBINDUSTRY",
+   "decay": 4,
+   "truncation": 0.08,
+   "expression": "rank(rank(ts_delta(operating_income + assets, 126)))",
+   "primary_field": "operating_income",
+   "family": "other",
+   "train_fitness": 0.01,
+   "sharpe": 0.1,
+   "extra": {
+    "Sharpe": "0.10",
+    "Turnover": "3.76%",
+    "Fitness": "0.02",
+    "Returns": "0.39%",
+    "Drawdown": "16.64%",
+    "Margin": "2.05 bps",
+    "Long Count": "1376",
+    "Short Count": "1349"
+   },
+   "turnover": 3.76,
+   "fitness": 0.02,
+   "returns": 0.39,
+   "drawdown": 16.64,
+   "margin_bps": 2.05,
+   "long_count": 1376.0,
+   "short_count": 1349.0,
+   "status": "FAIL",
+   "failed_check_codes": [
+    "F3"
+   ],
+   "failed_checks": [
+    "LOW_SHARPE",
+    "LOW_FITNESS",
+    "LOW_2Y_SHARPE"
+   ]
+  },
+  {
+   "result_no": 97,
+   "number_synthesised": true,
+   "line": 1286,
+   "universe": "TOP3000",
+   "neutralization": "SUBINDUSTRY",
+   "decay": 4,
+   "truncation": 0.08,
+   "expression": "scale(ts_sum(vec_avg(nws12_afterhsz_sl), 60)) > 0.5 ? 1 : ts_decay_linear(fnd6_acdo / fnd6_newqv1300_ancq, 252)",
+   "primary_field": "nws12_afterhsz_sl",
+   "family": "other",
+   "train_fitness": -0.02,
+   "sharpe": 0.06,
+   "extra": {
+    "Sharpe": "0.06",
+    "Turnover": "2.26%",
+    "Fitness": "0.02",
+    "Returns": "0.99%",
+    "Drawdown": "51.29%",
+    "Margin": "8.72 bps",
+    "Long Count": "274",
+    "Short Count": "965"
+   },
+   "turnover": 2.26,
+   "fitness": 0.02,
+   "returns": 0.99,
+   "drawdown": 51.29,
+   "margin_bps": 8.72,
+   "long_count": 274.0,
+   "short_count": 965.0,
+   "status": "FAIL",
+   "failed_check_codes": [
+    "F2"
+   ],
+   "failed_checks": [
+    "LOW_SHARPE",
+    "LOW_FITNESS",
+    "CONCENTRATED_WEIGHT",
+    "IS_LADDER_SHARPE"
+   ]
+  },
+  {
+   "result_no": 98,
+   "number_synthesised": true,
+   "line": 1299,
+   "universe": "TOP3000",
+   "neutralization": "SUBINDUSTRY",
+   "decay": 8,
+   "truncation": 0.08,
+   "expression": "zscore(rank(ts_rank(op_cash_flow_stddev, 126)) + 0.25 * last_diff_value(fnd6_newqv1300_miiq / debt, 252) + 0.25 * rank(ebitda / enterprise_value))",
+   "primary_field": "op_cash_flow_stddev",
+   "family": "other",
+   "train_fitness": 0.04,
+   "sharpe": 0.04,
+   "extra": {
+    "Sharpe": "0.04",
+    "Turnover": "9.80%",
+    "Fitness": "0.01",
+    "Returns": "0.34%",
+    "Drawdown": "26.39%",
+    "Margin": "0.70 bps",
+    "Long Count": "75",
+    "Short Count": "75"
+   },
+   "turnover": 9.8,
+   "fitness": 0.01,
+   "returns": 0.34,
+   "drawdown": 26.39,
+   "margin_bps": 0.7,
+   "long_count": 75.0,
+   "short_count": 75.0,
+   "status": "FAIL",
+   "failed_check_codes": [
+    "F1"
+   ],
+   "failed_checks": [
+    "LOW_SHARPE",
+    "LOW_FITNESS",
+    "IS_LADDER_SHARPE"
+   ]
+  },
+  {
+   "result_no": 99,
+   "number_synthesised": true,
+   "line": 1312,
+   "universe": "TOP3000",
+   "neutralization": "SUBINDUSTRY",
+   "decay": 4,
+   "truncation": 0.08,
+   "expression": "ts_decay_linear(fnd6_acdo / debt, 252)",
+   "primary_field": "fnd6_acdo",
+   "family": "fnd6 (fundamental)",
+   "train_fitness": -0.1,
+   "sharpe": 0.04,
+   "extra": {
+    "Sharpe": "0.04",
+    "Turnover": "3.19%",
+    "Fitness": "0.01",
+    "Returns": "0.69%",
+    "Drawdown": "62.45%",
+    "Margin": "4.31 bps",
+    "Long Count": "149",
+    "Short Count": "729"
+   },
+   "turnover": 3.19,
+   "fitness": 0.01,
+   "returns": 0.69,
+   "drawdown": 62.45,
+   "margin_bps": 4.31,
+   "long_count": 149.0,
+   "short_count": 729.0,
+   "status": "FAIL",
+   "failed_check_codes": [
+    "F5"
+   ],
+   "failed_checks": [
+    "LOW_SHARPE",
+    "LOW_FITNESS",
+    "CONCENTRATED_WEIGHT",
+    "LOW_SUB_UNIVERSE_SHARPE",
+    "LOW_2Y_SHARPE"
+   ]
+  },
+  {
+   "result_no": 100,
+   "number_synthesised": true,
+   "line": 1325,
+   "universe": "TOP3000",
+   "neutralization": "SUBINDUSTRY",
+   "decay": 3,
+   "truncation": 0.08,
+   "expression": "rank(rank(ts_rank(sales_growth, 126)))",
+   "primary_field": "sales_growth",
+   "family": "other",
+   "train_fitness": -0.06,
+   "sharpe": 0.01,
+   "extra": {
+    "Sharpe": "0.01",
+    "Turnover": "7.57%",
+    "Fitness": "0.00",
+    "Returns": "0.03%",
+    "Drawdown": "11.09%",
+    "Margin": "0.09 bps",
+    "Long Count": "1383",
+    "Short Count": "1381"
+   },
+   "turnover": 7.57,
+   "fitness": 0.0,
+   "returns": 0.03,
+   "drawdown": 11.09,
+   "margin_bps": 0.09,
+   "long_count": 1383.0,
+   "short_count": 1381.0,
+   "status": "FAIL",
+   "failed_check_codes": [
+    "F3"
+   ],
+   "failed_checks": [
+    "LOW_SHARPE",
+    "LOW_FITNESS",
+    "LOW_2Y_SHARPE"
+   ]
+  },
+  {
+   "result_no": 101,
+   "number_synthesised": true,
+   "line": 1338,
+   "universe": "TOP3000",
+   "neutralization": "SUBINDUSTRY",
+   "decay": 4,
+   "truncation": 0.08,
+   "expression": "ts_rank(fnd6_acdo / fnd6_newqv1300_cogsq, 252)",
+   "primary_field": "fnd6_acdo",
+   "family": "fnd6 (fundamental)",
+   "train_fitness": -0.09,
+   "sharpe": -0.01,
+   "extra": {
+    "Sharpe": "-0.01",
+    "Turnover": "2.93%",
+    "Fitness": "0.00",
+    "Returns": "-0.06%",
+    "Drawdown": "28.81%",
+    "Margin": "-0.42 bps",
+    "Long Count": "543",
+    "Short Count": "360"
+   },
+   "turnover": 2.93,
+   "fitness": 0.0,
+   "returns": -0.06,
+   "drawdown": 28.81,
+   "margin_bps": -0.42,
+   "long_count": 543.0,
+   "short_count": 360.0,
+   "status": "FAIL",
+   "failed_check_codes": [
+    "F3"
+   ],
+   "failed_checks": [
+    "LOW_SHARPE",
+    "LOW_FITNESS",
+    "LOW_2Y_SHARPE"
+   ]
+  },
+  {
+   "result_no": 102,
+   "number_synthesised": true,
+   "line": 1351,
+   "universe": "TOP3000",
+   "neutralization": "SUBINDUSTRY",
+   "decay": 8,
+   "truncation": 0.08,
+   "expression": "zscore(rank(ts_rank(min_gross_income_guidance, 126)) + 0.25 * ts_rank(operating_income - assets, 126) + 0.25 * rank(ebitda / enterprise_value))",
+   "primary_field": "min_gross_income_guidance",
+   "family": "other",
+   "train_fitness": 0.03,
+   "sharpe": -0.02,
+   "extra": {
+    "Sharpe": "-0.02",
+    "Turnover": "5.66%",
+    "Fitness": "0.00",
+    "Returns": "-0.14%",
+    "Drawdown": "23.24%",
+    "Margin": "-0.49 bps",
+    "Long Count": "1048",
+    "Short Count": "927"
+   },
+   "turnover": 5.66,
+   "fitness": 0.0,
+   "returns": -0.14,
+   "drawdown": 23.24,
+   "margin_bps": -0.49,
+   "long_count": 1048.0,
+   "short_count": 927.0,
+   "status": "FAIL",
+   "failed_check_codes": [
+    "F1"
+   ],
+   "failed_checks": [
+    "LOW_SHARPE",
+    "LOW_FITNESS",
+    "IS_LADDER_SHARPE"
+   ]
+  },
+  {
+   "result_no": 103,
+   "number_synthesised": true,
+   "line": 1364,
+   "universe": "TOP3000",
+   "neutralization": "SUBINDUSTRY",
+   "decay": 10,
+   "truncation": 0.08,
+   "expression": "group_neutralize(rank(ts_rank(operating_income / assets, 126)) + ts_delta(fnd6_newqv1300_glcea12 / assets, 252) + rank(rank(operating_income / cap)), bucket(quantile(cap), range=\"0.1,1,0.1\"))",
+   "primary_field": "operating_income",
+   "family": "other",
+   "train_fitness": -0.01,
+   "sharpe": -0.05,
+   "extra": {
+    "Sharpe": "-0.05",
+    "Turnover": "8.87%",
+    "Fitness": "-0.01",
+    "Returns": "-0.99%",
+    "Drawdown": "39.92%",
+    "Margin": "-2.24 bps",
+    "Long Count": "245",
+    "Short Count": "242"
+   },
+   "turnover": 8.87,
+   "fitness": -0.01,
+   "returns": -0.99,
+   "drawdown": 39.92,
+   "margin_bps": -2.24,
+   "long_count": 245.0,
+   "short_count": 242.0,
+   "status": "FAIL",
+   "failed_check_codes": [
+    "F2"
+   ],
+   "failed_checks": [
+    "LOW_SHARPE",
+    "LOW_FITNESS",
+    "CONCENTRATED_WEIGHT",
+    "IS_LADDER_SHARPE"
+   ]
+  },
+  {
+   "result_no": 104,
+   "number_synthesised": true,
+   "line": 1377,
+   "universe": "TOP3000",
+   "neutralization": "SUBINDUSTRY",
+   "decay": 4,
+   "truncation": 0.08,
+   "expression": "zscore(rank(historical_volatility_120) + 0.25 * rank(ts_rank(fnd6_txbcof, 126)) + 0.25 * rank(ebitda / enterprise_value))",
+   "primary_field": "historical_volatility_120",
+   "family": "other",
+   "train_fitness": 0.01,
+   "sharpe": -0.08,
+   "extra": {
+    "Sharpe": "-0.08",
+    "Turnover": "7.47%",
+    "Fitness": "-0.03",
+    "Returns": "-1.28%",
+    "Drawdown": "59.14%",
+    "Margin": "-3.43 bps",
+    "Long Count": "917",
+    "Short Count": "881"
+   },
+   "turnover": 7.47,
+   "fitness": -0.03,
+   "returns": -1.28,
+   "drawdown": 59.14,
+   "margin_bps": -3.43,
+   "long_count": 917.0,
+   "short_count": 881.0,
+   "status": "FAIL",
+   "failed_check_codes": [
+    "F2"
+   ],
+   "failed_checks": [
+    "LOW_SHARPE",
+    "LOW_FITNESS",
+    "CONCENTRATED_WEIGHT",
+    "IS_LADDER_SHARPE"
+   ]
+  },
+  {
+   "result_no": 105,
+   "number_synthesised": true,
+   "line": 1390,
+   "universe": "TOP3000",
+   "neutralization": "SUBINDUSTRY",
+   "decay": 6,
+   "truncation": 0.08,
+   "expression": "group_neutralize(vec_avg(story_event_record_count_fast_d1), bucket(rank(cap), range=\"0,1,0.1\"))",
+   "primary_field": "story_event_record_count_fast_d1",
+   "family": "other",
+   "train_fitness": -0.04,
+   "sharpe": -0.09,
+   "extra": {
+    "Sharpe": "-0.09",
+    "Turnover": "71.81%",
+    "Fitness": "-0.01",
+    "Returns": "-0.30%",
+    "Drawdown": "20.85%",
+    "Margin": "-0.08 bps",
+    "Long Count": "1050",
+    "Short Count": "1551"
+   },
+   "turnover": 71.81,
+   "fitness": -0.01,
+   "returns": -0.3,
+   "drawdown": 20.85,
+   "margin_bps": -0.08,
+   "long_count": 1050.0,
+   "short_count": 1551.0,
+   "status": "FAIL",
+   "failed_check_codes": [
+    "F23"
+   ],
+   "failed_checks": [
+    "LOW_SHARPE",
+    "LOW_FITNESS",
+    "HIGH_TURNOVER",
+    "LOW_SUB_UNIVERSE_SHARPE",
+    "IS_LADDER_SHARPE"
+   ]
+  },
+  {
+   "result_no": 106,
+   "number_synthesised": true,
+   "line": 1403,
+   "universe": "TOP3000",
+   "neutralization": "SUBINDUSTRY",
+   "decay": 4,
+   "truncation": 0.08,
+   "expression": "group_neutralize(rank(ts_rank(operating_income * assets, 126)) + zscore(ts_delta(return_assets, 126)) + ts_rank(fnd6_acdo / debt, 126), bucket(rank(cap), range=\"0.1,1,0.1\"))",
+   "primary_field": "operating_income",
+   "family": "other",
+   "train_fitness": -0.01,
+   "sharpe": -0.1,
+   "extra": {
+    "Sharpe": "-0.10",
+    "Turnover": "7.64%",
+    "Fitness": "-0.02",
+    "Returns": "-0.70%",
+    "Drawdown": "22.37%",
+    "Margin": "-1.84 bps",
+    "Long Count": "971",
+    "Short Count": "968"
+   },
+   "turnover": 7.64,
+   "fitness": -0.02,
+   "returns": -0.7,
+   "drawdown": 22.37,
+   "margin_bps": -1.84,
+   "long_count": 971.0,
+   "short_count": 968.0,
+   "status": "FAIL",
+   "failed_check_codes": [
+    "F1"
+   ],
+   "failed_checks": [
+    "LOW_SHARPE",
+    "LOW_FITNESS",
+    "IS_LADDER_SHARPE"
+   ]
+  },
+  {
+   "result_no": 107,
+   "number_synthesised": true,
+   "line": 1416,
+   "universe": "TOP3000",
+   "neutralization": "SUBINDUSTRY",
+   "decay": 8,
+   "truncation": 0.08,
+   "expression": "rank(quantile(historical_volatility_120))",
+   "primary_field": "historical_volatility_120",
+   "family": "other",
+   "train_fitness": 0.0,
+   "sharpe": -0.18,
+   "extra": {
+    "Sharpe": "-0.18",
+    "Turnover": "5.89%",
+    "Fitness": "-0.08",
+    "Returns": "-2.72%",
+    "Drawdown": "71.56%",
+    "Margin": "-9.24 bps",
+    "Long Count": "1366",
+    "Short Count": "1384"
+   },
+   "turnover": 5.89,
+   "fitness": -0.08,
+   "returns": -2.72,
+   "drawdown": 71.56,
+   "margin_bps": -9.24,
+   "long_count": 1366.0,
+   "short_count": 1384.0,
+   "status": "FAIL",
+   "failed_check_codes": [
+    "F5"
+   ],
+   "failed_checks": [
+    "LOW_SHARPE",
+    "LOW_FITNESS",
+    "CONCENTRATED_WEIGHT",
+    "LOW_SUB_UNIVERSE_SHARPE",
+    "LOW_2Y_SHARPE"
+   ]
+  },
+  {
+   "result_no": 108,
+   "number_synthesised": true,
+   "line": 1429,
+   "universe": "TOP3000",
+   "neutralization": "SUBINDUSTRY",
+   "decay": 12,
+   "truncation": 0.08,
+   "expression": "ts_rank(fn_liab_fair_val_l1_a, 252) + rank(-(high - vwap) / vwap)",
+   "primary_field": "fn_liab_fair_val_l1_a",
+   "family": "other",
+   "train_fitness": -0.33,
+   "sharpe": -0.19,
+   "extra": {
+    "Sharpe": "-0.19",
+    "Turnover": "13.82%",
+    "Fitness": "-0.08",
+    "Returns": "-2.39%",
+    "Drawdown": "83.96%",
+    "Margin": "-3.46 bps",
+    "Long Count": "665",
+    "Short Count": "675"
+   },
+   "turnover": 13.82,
+   "fitness": -0.08,
+   "returns": -2.39,
+   "drawdown": 83.96,
+   "margin_bps": -3.46,
+   "long_count": 665.0,
+   "short_count": 675.0,
+   "status": "FAIL",
+   "failed_check_codes": [
+    "F6"
+   ],
+   "failed_checks": [
+    "LOW_SHARPE",
+    "LOW_FITNESS",
+    "LOW_SUB_UNIVERSE_SHARPE",
+    "IS_LADDER_SHARPE"
+   ]
+  },
+  {
+   "result_no": 109,
+   "number_synthesised": true,
+   "line": 1442,
+   "universe": "TOP3000",
+   "neutralization": "SUBINDUSTRY",
+   "decay": 0,
+   "truncation": 0.08,
+   "expression": "group_neutralize(ts_rank(fnd6_acdo * debt, 252), bucket(rank(cap), range=\"0,1,0.1\"))",
+   "primary_field": "fnd6_acdo",
+   "family": "fnd6 (fundamental)",
+   "train_fitness": -0.13,
+   "sharpe": -0.25,
+   "extra": {
+    "Sharpe": "-0.25",
+    "Turnover": "8.11%",
+    "Fitness": "-0.08",
+    "Returns": "-1.41%",
+    "Drawdown": "23.74%",
+    "Margin": "-3.49 bps",
+    "Long Count": "1136",
+    "Short Count": "1053"
+   },
+   "turnover": 8.11,
+   "fitness": -0.08,
+   "returns": -1.41,
+   "drawdown": 23.74,
+   "margin_bps": -3.49,
+   "long_count": 1136.0,
+   "short_count": 1053.0,
+   "status": "FAIL",
+   "failed_check_codes": [
+    "F1"
+   ],
+   "failed_checks": [
+    "LOW_SHARPE",
+    "LOW_FITNESS",
+    "IS_LADDER_SHARPE"
+   ]
+  },
+  {
+   "result_no": 110,
+   "number_synthesised": true,
+   "line": 1455,
+   "universe": "TOP3000",
+   "neutralization": "SUBINDUSTRY",
+   "decay": 4,
+   "truncation": 0.05,
+   "expression": "zscore(ts_delta(op_cash_flow_stddev, 10) - 0.35 * rank(rank(recurring_assets_fair_value_2)) + 0.15 * rank(ts_mean(-returns, 5)))",
+   "primary_field": "op_cash_flow_stddev",
+   "family": "other",
+   "train_fitness": -0.1,
+   "sharpe": -0.29,
+   "extra": {
+    "Sharpe": "-0.29",
+    "Turnover": "27.89%",
+    "Fitness": "-0.10",
+    "Returns": "-3.15%",
+    "Drawdown": "55.05%",
+    "Margin": "-2.26 bps",
+    "Long Count": "95",
+    "Short Count": "98"
+   },
+   "turnover": 27.89,
+   "fitness": -0.1,
+   "returns": -3.15,
+   "drawdown": 55.05,
+   "margin_bps": -2.26,
+   "long_count": 95.0,
+   "short_count": 98.0,
+   "status": "FAIL",
+   "failed_check_codes": [
+    "F2"
+   ],
+   "failed_checks": [
+    "LOW_SHARPE",
+    "LOW_FITNESS",
+    "CONCENTRATED_WEIGHT",
+    "IS_LADDER_SHARPE"
+   ]
+  },
+  {
+   "result_no": 111,
+   "number_synthesised": true,
+   "line": 1468,
+   "universe": "TOP3000",
+   "neutralization": "SUBINDUSTRY",
+   "decay": 4,
+   "truncation": 0.08,
+   "expression": "rank(ts_zscore(implied_volatility_call_120 / parkinson_volatility_120, 120)) / rank(ts_delta(operating_income / fnd6_tfvce, 126))",
+   "primary_field": "implied_volatility_call_120",
+   "family": "other",
+   "train_fitness": -0.07,
+   "sharpe": -0.33,
+   "extra": {
+    "Sharpe": "-0.33",
+    "Turnover": "29.53%",
+    "Fitness": "-0.13",
+    "Returns": "-4.81%",
+    "Drawdown": "78.99%",
+    "Margin": "-3.26 bps",
+    "Long Count": "11",
+    "Short Count": "14"
+   },
+   "turnover": 29.53,
+   "fitness": -0.13,
+   "returns": -4.81,
+   "drawdown": 78.99,
+   "margin_bps": -3.26,
+   "long_count": 11.0,
+   "short_count": 14.0,
+   "status": "FAIL",
+   "failed_check_codes": [
+    "F8"
+   ],
+   "failed_checks": [
+    "LOW_SHARPE",
+    "LOW_FITNESS",
+    "CONCENTRATED_WEIGHT",
+    "LOW_SUB_UNIVERSE_SHARPE",
+    "IS_LADDER_SHARPE"
+   ]
+  },
+  {
+   "result_no": 112,
+   "number_synthesised": true,
+   "line": 1481,
+   "universe": "TOP3000",
+   "neutralization": "SUBINDUSTRY",
+   "decay": 4,
+   "truncation": 0.08,
+   "expression": "ts_rank(fnd6_acdo / fnd6_newqv1300_lul3q, 252)",
+   "primary_field": "fnd6_acdo",
+   "family": "fnd6 (fundamental)",
+   "train_fitness": -0.21,
+   "sharpe": -0.35,
+   "extra": {
+    "Sharpe": "-0.35",
+    "Turnover": "8.97%",
+    "Fitness": "-0.27",
+    "Returns": "-7.19%",
+    "Drawdown": "113.46%",
+    "Margin": "-16.02 bps",
+    "Long Count": "42",
+    "Short Count": "27"
+   },
+   "turnover": 8.97,
+   "fitness": -0.27,
+   "returns": -7.19,
+   "drawdown": 113.46,
+   "margin_bps": -16.02,
+   "long_count": 42.0,
+   "short_count": 27.0,
+   "status": "FAIL",
+   "failed_check_codes": [
+    "F7"
+   ],
+   "failed_checks": [
+    "LOW_SHARPE",
+    "LOW_FITNESS",
+    "CONCENTRATED_WEIGHT",
+    "LOW_2Y_SHARPE"
+   ]
+  },
+  {
+   "result_no": 113,
+   "number_synthesised": true,
+   "line": 1494,
+   "universe": "TOP3000",
+   "neutralization": "SUBINDUSTRY",
+   "decay": 4,
+   "truncation": 0.08,
+   "expression": "zscore(rank(vec_avg(nws12_afterhsz_sl)) * rank(fscore_quality))",
+   "primary_field": "nws12_afterhsz_sl",
+   "family": "other",
+   "train_fitness": -0.19,
+   "sharpe": -0.37,
+   "extra": {
+    "Sharpe": "-0.37",
+    "Turnover": "10.00%",
+    "Fitness": "-0.09",
+    "Returns": "-0.67%",
+    "Drawdown": "10.90%",
+    "Margin": "-1.33 bps",
+    "Long Count": "3",
+    "Short Count": "3"
+   },
+   "turnover": 10.0,
+   "fitness": -0.09,
+   "returns": -0.67,
+   "drawdown": 10.9,
+   "margin_bps": -1.33,
+   "long_count": 3.0,
+   "short_count": 3.0,
+   "status": "FAIL",
+   "failed_check_codes": [
+    "F2"
+   ],
+   "failed_checks": [
+    "LOW_SHARPE",
+    "LOW_FITNESS",
+    "CONCENTRATED_WEIGHT",
+    "IS_LADDER_SHARPE"
+   ]
+  },
+  {
+   "result_no": 114,
+   "number_synthesised": true,
+   "line": 1507,
+   "universe": "TOP3000",
+   "neutralization": "SUBINDUSTRY",
+   "decay": 0,
+   "truncation": 0.08,
+   "expression": "group_neutralize(rank(ts_rank(fn_liab_fair_val_l1_a, 252)), bucket(rank(cap), range=\"0,1,0.1\"))",
+   "primary_field": "fn_liab_fair_val_l1_a",
+   "family": "other",
+   "train_fitness": -0.26,
+   "sharpe": -0.45,
+   "extra": {
+    "Sharpe": "-0.45",
+    "Turnover": "3.84%",
+    "Fitness": "-0.15",
+    "Returns": "-1.30%",
+    "Drawdown": "17.57%",
+    "Margin": "-6.78 bps",
+    "Long Count": "629",
+    "Short Count": "699"
+   },
+   "turnover": 3.84,
+   "fitness": -0.15,
+   "returns": -1.3,
+   "drawdown": 17.57,
+   "margin_bps": -6.78,
+   "long_count": 629.0,
+   "short_count": 699.0,
+   "status": "FAIL",
+   "failed_check_codes": [
+    "F1"
+   ],
+   "failed_checks": [
+    "LOW_SHARPE",
+    "LOW_FITNESS",
+    "IS_LADDER_SHARPE"
+   ]
+  },
+  {
+   "result_no": 115,
+   "number_synthesised": true,
+   "line": 1520,
+   "universe": "TOP3000",
+   "neutralization": "SUBINDUSTRY",
+   "decay": 4,
+   "truncation": 0.08,
+   "expression": "group_neutralize(rank(ts_delta(operating_income / assets, 126)) + rank(ts_delta(return_assets, 126)) - rank(ts_mean(-returns, 5)), bucket(rank(cap), range=\"0.1,1,0.1\"))",
+   "primary_field": "operating_income",
+   "family": "other",
+   "train_fitness": -0.22,
+   "sharpe": -0.48,
+   "extra": {
+    "Sharpe": "-0.48",
+    "Turnover": "17.78%",
+    "Fitness": "-0.17",
+    "Returns": "-2.13%",
+    "Drawdown": "27.14%",
+    "Margin": "-2.39 bps",
+    "Long Count": "1358",
+    "Short Count": "1367"
+   },
+   "turnover": 17.78,
+   "fitness": -0.17,
+   "returns": -2.13,
+   "drawdown": 27.14,
+   "margin_bps": -2.39,
+   "long_count": 1358.0,
+   "short_count": 1367.0,
+   "status": "FAIL",
+   "failed_check_codes": [
+    "F1"
+   ],
+   "failed_checks": [
+    "LOW_SHARPE",
+    "LOW_FITNESS",
+    "IS_LADDER_SHARPE"
+   ]
+  },
+  {
+   "result_no": 116,
+   "number_synthesised": true,
+   "line": 1533,
+   "universe": "TOP3000",
+   "neutralization": "SUBINDUSTRY",
+   "decay": 0,
+   "truncation": 0.08,
+   "expression": "rank(ts_rank(fn_liab_fair_val_l1_a, 252))",
+   "primary_field": "fn_liab_fair_val_l1_a",
+   "family": "other",
+   "train_fitness": -0.33,
+   "sharpe": -0.48,
+   "extra": {
+    "Sharpe": "-0.48",
+    "Turnover": "1.62%",
+    "Fitness": "-0.17",
+    "Returns": "-1.49%",
+    "Drawdown": "20.63%",
+    "Margin": "-18.44 bps",
+    "Long Count": "537",
+    "Short Count": "620"
+   },
+   "turnover": 1.62,
+   "fitness": -0.17,
+   "returns": -1.49,
+   "drawdown": 20.63,
+   "margin_bps": -18.44,
+   "long_count": 537.0,
+   "short_count": 620.0,
+   "status": "FAIL",
+   "failed_check_codes": [
+    "F3"
+   ],
+   "failed_checks": [
+    "LOW_SHARPE",
+    "LOW_FITNESS",
+    "LOW_2Y_SHARPE"
+   ]
+  },
+  {
+   "result_no": 117,
+   "number_synthesised": true,
+   "line": 1546,
+   "universe": "TOP3000",
+   "neutralization": "SUBINDUSTRY",
+   "decay": 4,
+   "truncation": 0.08,
+   "expression": "-rank(recurring_assets_fair_value_2)",
+   "primary_field": "recurring_assets_fair_value_2",
+   "family": "other",
+   "train_fitness": -0.16,
+   "sharpe": -0.6,
+   "extra": {
+    "Sharpe": "-0.60",
+    "Turnover": "0.79%",
+    "Fitness": "-0.28",
+    "Returns": "-2.71%",
+    "Drawdown": "31.09%",
+    "Margin": "-68.66 bps",
+    "Long Count": "587",
+    "Short Count": "663"
+   },
+   "turnover": 0.79,
+   "fitness": -0.28,
+   "returns": -2.71,
+   "drawdown": 31.09,
+   "margin_bps": -68.66,
+   "long_count": 587.0,
+   "short_count": 663.0,
+   "status": "FAIL",
+   "failed_check_codes": [
+    "F12"
+   ],
+   "failed_checks": [
+    "LOW_SHARPE",
+    "LOW_FITNESS",
+    "LOW_TURNOVER",
+    "LOW_SUB_UNIVERSE_SHARPE",
+    "LOW_2Y_SHARPE"
+   ]
+  },
+  {
+   "result_no": 118,
+   "number_synthesised": true,
+   "line": 1559,
+   "universe": "TOP3000",
+   "neutralization": "SUBINDUSTRY",
+   "decay": 0,
+   "truncation": 0.08,
+   "expression": "-rank(recurring_assets_fair_value_2)",
+   "primary_field": "recurring_assets_fair_value_2",
+   "family": "other",
+   "train_fitness": -0.17,
+   "sharpe": -0.6,
+   "extra": {
+    "Sharpe": "-0.60",
+    "Turnover": "0.84%",
+    "Fitness": "-0.28",
+    "Returns": "-2.73%",
+    "Drawdown": "31.26%",
+    "Margin": "-64.65 bps",
+    "Long Count": "587",
+    "Short Count": "663"
+   },
+   "turnover": 0.84,
+   "fitness": -0.28,
+   "returns": -2.73,
+   "drawdown": 31.26,
+   "margin_bps": -64.65,
+   "long_count": 587.0,
+   "short_count": 663.0,
+   "status": "FAIL",
+   "failed_check_codes": [
+    "F12"
+   ],
+   "failed_checks": [
+    "LOW_SHARPE",
+    "LOW_FITNESS",
+    "LOW_TURNOVER",
+    "LOW_SUB_UNIVERSE_SHARPE",
+    "LOW_2Y_SHARPE"
+   ]
+  },
+  {
+   "result_no": 119,
+   "number_synthesised": true,
+   "line": 1574,
+   "universe": "TOP3000",
+   "neutralization": "INDUSTRY",
+   "decay": 4,
+   "truncation": 0.08,
+   "expression": "iv_difference = implied_volatility_call_120 - implied_volatility_put_120; hv_group = bucket(rank(ts_rank(sales_growth, 126)), range=\"0.1,1,0.1\"); group_neutralize(iv_difference, hv_group)",
+   "primary_field": "iv_difference",
+   "family": "other",
+   "train_fitness": 1.13,
+   "sharpe": 1.88,
+   "extra": {
+    "Sharpe": "1.88",
+    "Turnover": "46.53%",
+    "Fitness": "1.07",
+    "Returns": "14.95%",
+    "Drawdown": "10.56%",
+    "Margin": "6.43 bps",
+    "Long Count": "1508",
+    "Short Count": "1007"
+   },
+   "turnover": 46.53,
+   "fitness": 1.07,
+   "returns": 14.95,
+   "drawdown": 10.56,
+   "margin_bps": 6.43,
+   "long_count": 1508.0,
+   "short_count": 1007.0,
+   "status": "FAIL",
+   "failed_check_codes": [
+    "F17"
+   ],
+   "failed_checks": [
+    "CONCENTRATED_WEIGHT",
+    "LOW_SUB_UNIVERSE_SHARPE",
+    "IS_LADDER_SHARPE"
+   ]
+  },
+  {
+   "result_no": 120,
+   "number_synthesised": true,
+   "line": 1587,
+   "universe": "TOP3000",
+   "neutralization": "INDUSTRY",
+   "decay": 0,
+   "truncation": 0.08,
+   "expression": "group_neutralize(rank(ts_rank(operating_income * assets, 126)) + rank(ts_delta(return_assets, 126)) + rank(ts_sum(-returns, 5)), bucket(ts_decay_linear(pcr_oi_1080, 120), range=\"0.1,1,0.1\"))",
+   "primary_field": "operating_income",
+   "family": "other",
+   "train_fitness": 0.51,
+   "sharpe": 1.49,
+   "extra": {
+    "Sharpe": "1.49",
+    "Turnover": "33.84%",
+    "Fitness": "0.73",
+    "Returns": "8.19%",
+    "Drawdown": "7.79%",
+    "Margin": "4.84 bps",
+    "Long Count": "1343",
+    "Short Count": "1314"
+   },
+   "turnover": 33.84,
+   "fitness": 0.73,
+   "returns": 8.19,
+   "drawdown": 7.79,
+   "margin_bps": 4.84,
+   "long_count": 1343.0,
+   "short_count": 1314.0,
+   "status": "FAIL",
+   "failed_check_codes": [
+    "F22"
+   ],
+   "failed_checks": [
+    "LOW_SHARPE",
+    "LOW_FITNESS",
+    "CONCENTRATED_WEIGHT"
+   ]
+  },
+  {
+   "result_no": 121,
+   "number_synthesised": true,
+   "line": 1600,
+   "universe": "TOP3000",
+   "neutralization": "INDUSTRY",
+   "decay": 4,
+   "truncation": 0.08,
+   "expression": "iv_signal = zscore(implied_volatility_call_120 - implied_volatility_put_120) + rank(-returns) + ts_sum(vec_avg(story_event_record_count_fast_d1), 120); cap_group = bucket(rank(cap), range=\"0.1,1,0.1\"); group_neutralize(iv_signal, cap_group)",
+   "primary_field": "iv_signal",
+   "family": "other",
+   "train_fitness": 0.74,
+   "sharpe": 1.36,
+   "extra": {
+    "Sharpe": "1.36",
+    "Turnover": "9.29%",
+    "Fitness": "0.94",
+    "Returns": "5.93%",
+    "Drawdown": "7.09%",
+    "Margin": "12.77 bps",
+    "Long Count": "1281",
+    "Short Count": "1437"
+   },
+   "turnover": 9.29,
+   "fitness": 0.94,
+   "returns": 5.93,
+   "drawdown": 7.09,
+   "margin_bps": 12.77,
+   "long_count": 1281.0,
+   "short_count": 1437.0,
+   "status": "FAIL",
+   "failed_check_codes": [
+    "F15"
+   ],
+   "failed_checks": [
+    "LOW_SHARPE",
+    "LOW_FITNESS",
+    "CONCENTRATED_WEIGHT",
+    "LOW_SUB_UNIVERSE_SHARPE"
+   ]
+  },
+  {
+   "result_no": 122,
+   "number_synthesised": true,
+   "line": 1613,
+   "universe": "TOP3000",
+   "neutralization": "INDUSTRY",
+   "decay": 8,
+   "truncation": 0.08,
+   "expression": "group_neutralize(rank(ts_rank(sales_growth, 126)) + ts_delta(fnd6_newqv1300_glcea12 / assets, 252) + rank(ts_rank(operating_income / cap, 250)), bucket(quantile(cap), range=\"0.1,1,0.1\"))",
+   "primary_field": "sales_growth",
+   "family": "other",
+   "train_fitness": 1.13,
+   "sharpe": 1.16,
+   "extra": {
+    "Sharpe": "1.16",
+    "Turnover": "10.55%",
+    "Fitness": "1.13",
+    "Returns": "11.92%",
+    "Drawdown": "9.08%",
+    "Margin": "22.61 bps",
+    "Long Count": "258",
+    "Short Count": "259"
+   },
+   "turnover": 10.55,
+   "fitness": 1.13,
+   "returns": 11.92,
+   "drawdown": 9.08,
+   "margin_bps": 22.61,
+   "long_count": 258.0,
+   "short_count": 259.0,
+   "status": "FAIL",
+   "failed_check_codes": [
+    "F14"
+   ],
+   "failed_checks": [
+    "LOW_SHARPE",
+    "CONCENTRATED_WEIGHT",
+    "IS_LADDER_SHARPE"
+   ]
+  },
+  {
+   "result_no": 123,
+   "number_synthesised": true,
+   "line": 1626,
+   "universe": "TOP3000",
+   "neutralization": "INDUSTRY",
+   "decay": 4,
+   "truncation": 0.08,
+   "expression": "zscore(rank(ts_sum(vec_avg(nws12_afterhsz_sl), 63)) * rank(recurring_assets_fair_value_2))",
+   "primary_field": "nws12_afterhsz_sl",
+   "family": "other",
+   "train_fitness": 0.5,
+   "sharpe": 0.95,
+   "extra": {
+    "Sharpe": "0.95",
+    "Turnover": "5.12%",
+    "Fitness": "0.49",
+    "Returns": "3.29%",
+    "Drawdown": "5.15%",
+    "Margin": "12.86 bps",
+    "Long Count": "552",
+    "Short Count": "784"
+   },
+   "turnover": 5.12,
+   "fitness": 0.49,
+   "returns": 3.29,
+   "drawdown": 5.15,
+   "margin_bps": 12.86,
+   "long_count": 552.0,
+   "short_count": 784.0,
+   "status": "FAIL",
+   "failed_check_codes": [
+    "F1"
+   ],
+   "failed_checks": [
+    "LOW_SHARPE",
+    "LOW_FITNESS",
+    "IS_LADDER_SHARPE"
+   ]
+  },
+  {
+   "result_no": 124,
+   "number_synthesised": true,
+   "line": 1639,
+   "universe": "TOP3000",
+   "neutralization": "INDUSTRY",
+   "decay": 4,
+   "truncation": 0.08,
+   "expression": "group_neutralize(rank(ts_rank(operating_income / cap, 250)), bucket(vec_avg(nws12_afterhsz_sl), range=\"0,1,0.1\"))",
+   "primary_field": "operating_income",
+   "family": "other",
+   "train_fitness": 0.24,
+   "sharpe": 0.85,
+   "extra": {
+    "Sharpe": "0.85",
+    "Turnover": "108.91%",
+    "Fitness": "0.21",
+    "Returns": "6.89%",
+    "Drawdown": "14.13%",
+    "Margin": "1.27 bps",
+    "Long Count": "193",
+    "Short Count": "191"
+   },
+   "turnover": 108.91,
+   "fitness": 0.21,
+   "returns": 6.89,
+   "drawdown": 14.13,
+   "margin_bps": 1.27,
+   "long_count": 193.0,
+   "short_count": 191.0,
+   "status": "FAIL",
+   "failed_check_codes": [
+    "F16"
+   ],
+   "failed_checks": [
+    "LOW_SHARPE",
+    "LOW_FITNESS",
+    "HIGH_TURNOVER",
+    "CONCENTRATED_WEIGHT",
+    "IS_LADDER_SHARPE"
+   ]
+  },
+  {
+   "result_no": 125,
+   "number_synthesised": true,
+   "line": 1652,
+   "universe": "TOP3000",
+   "neutralization": "INDUSTRY",
+   "decay": 4,
+   "truncation": 0.08,
+   "expression": "zscore(rank(ts_rank(op_cash_flow_stddev, 126)) * rank(recurring_assets_fair_value_2))",
+   "primary_field": "op_cash_flow_stddev",
+   "family": "other",
+   "train_fitness": 0.54,
+   "sharpe": 0.7,
+   "extra": {
+    "Sharpe": "0.70",
+    "Turnover": "6.81%",
+    "Fitness": "0.43",
+    "Returns": "4.78%",
+    "Drawdown": "12.82%",
+    "Margin": "14.03 bps",
+    "Long Count": "112",
+    "Short Count": "149"
+   },
+   "turnover": 6.81,
+   "fitness": 0.43,
+   "returns": 4.78,
+   "drawdown": 12.82,
+   "margin_bps": 14.03,
+   "long_count": 112.0,
+   "short_count": 149.0,
+   "status": "FAIL",
+   "failed_check_codes": [
+    "F1"
+   ],
+   "failed_checks": [
+    "LOW_SHARPE",
+    "LOW_FITNESS",
+    "IS_LADDER_SHARPE"
+   ]
+  },
+  {
+   "result_no": 126,
+   "number_synthesised": true,
+   "line": 1665,
+   "universe": "TOP3000",
+   "neutralization": "INDUSTRY",
+   "decay": 4,
+   "truncation": 0.08,
+   "expression": "rank(recurring_assets_fair_value_2)",
+   "primary_field": "recurring_assets_fair_value_2",
+   "family": "other",
+   "train_fitness": 0.17,
+   "sharpe": 0.61,
+   "extra": {
+    "Sharpe": "0.61",
+    "Turnover": "0.71%",
+    "Fitness": "0.29",
+    "Returns": "2.91%",
+    "Drawdown": "14.93%",
+    "Margin": "82.49 bps",
+    "Long Count": "687",
+    "Short Count": "649"
+   },
+   "turnover": 0.71,
+   "fitness": 0.29,
+   "returns": 2.91,
+   "drawdown": 14.93,
+   "margin_bps": 82.49,
+   "long_count": 687.0,
+   "short_count": 649.0,
+   "status": "FAIL",
+   "failed_check_codes": [
+    "F9"
+   ],
+   "failed_checks": [
+    "LOW_SHARPE",
+    "LOW_FITNESS",
+    "LOW_TURNOVER",
+    "LOW_2Y_SHARPE"
+   ]
+  },
+  {
+   "result_no": 127,
+   "number_synthesised": true,
+   "line": 1678,
+   "universe": "TOP3000",
+   "neutralization": "INDUSTRY",
+   "decay": 0,
+   "truncation": 0.08,
+   "expression": "ts_arg_max(pcr_oi_1080, 120)",
+   "primary_field": "pcr_oi_1080",
+   "family": "other",
+   "train_fitness": 0.13,
+   "sharpe": 0.36,
+   "extra": {
+    "Sharpe": "0.36",
+    "Turnover": "5.67%",
+    "Fitness": "0.09",
+    "Returns": "0.75%",
+    "Drawdown": "4.19%",
+    "Margin": "2.63 bps",
+    "Long Count": "1471",
+    "Short Count": "1447"
+   },
+   "turnover": 5.67,
+   "fitness": 0.09,
+   "returns": 0.75,
+   "drawdown": 4.19,
+   "margin_bps": 2.63,
+   "long_count": 1471.0,
+   "short_count": 1447.0,
+   "status": "FAIL",
+   "failed_check_codes": [
+    "F4"
+   ],
+   "failed_checks": [
+    "LOW_SHARPE",
+    "LOW_FITNESS",
+    "LOW_SUB_UNIVERSE_SHARPE",
+    "LOW_2Y_SHARPE"
+   ]
+  },
+  {
+   "result_no": 128,
+   "number_synthesised": true,
+   "line": 1691,
+   "universe": "TOP3000",
+   "neutralization": "INDUSTRY",
+   "decay": 0,
+   "truncation": 0.08,
+   "expression": "ts_delay(pcr_oi_1080, 120)",
+   "primary_field": "pcr_oi_1080",
+   "family": "other",
+   "train_fitness": 0.04,
+   "sharpe": 0.33,
+   "extra": {
+    "Sharpe": "0.33",
+    "Turnover": "19.74%",
+    "Fitness": "0.11",
+    "Returns": "2.34%",
+    "Drawdown": "20.79%",
+    "Margin": "2.37 bps",
+    "Long Count": "565",
+    "Short Count": "2232"
+   },
+   "turnover": 19.74,
+   "fitness": 0.11,
+   "returns": 2.34,
+   "drawdown": 20.79,
+   "margin_bps": 2.37,
+   "long_count": 565.0,
+   "short_count": 2232.0,
+   "status": "FAIL",
+   "failed_check_codes": [
+    "F5"
+   ],
+   "failed_checks": [
+    "LOW_SHARPE",
+    "LOW_FITNESS",
+    "CONCENTRATED_WEIGHT",
+    "LOW_SUB_UNIVERSE_SHARPE",
+    "LOW_2Y_SHARPE"
+   ]
+  },
+  {
+   "result_no": 129,
+   "number_synthesised": true,
+   "line": 1704,
+   "universe": "TOP3000",
+   "neutralization": "INDUSTRY",
+   "decay": 4,
+   "truncation": 0.08,
+   "expression": "rank(rank(ebitda / enterprise_value))",
+   "primary_field": "ebitda",
+   "family": "other",
+   "train_fitness": 0.01,
+   "sharpe": 0.33,
+   "extra": {
+    "Sharpe": "0.33",
+    "Turnover": "3.18%",
+    "Fitness": "0.18",
+    "Returns": "3.78%",
+    "Drawdown": "47.91%",
+    "Margin": "23.73 bps",
+    "Long Count": "974",
+    "Short Count": "1082"
+   },
+   "turnover": 3.18,
+   "fitness": 0.18,
+   "returns": 3.78,
+   "drawdown": 47.91,
+   "margin_bps": 23.73,
+   "long_count": 974.0,
+   "short_count": 1082.0,
+   "status": "FAIL",
+   "failed_check_codes": [
+    "F3"
+   ],
+   "failed_checks": [
+    "LOW_SHARPE",
+    "LOW_FITNESS",
+    "LOW_2Y_SHARPE"
+   ]
+  },
+  {
+   "result_no": 130,
+   "number_synthesised": true,
+   "line": 1717,
+   "universe": "TOP3000",
+   "neutralization": "INDUSTRY",
+   "decay": 12,
+   "truncation": 0.08,
+   "expression": "ts_decay_linear(pcr_oi_1080, 120) + rank(-(close - vwap) / vwap)",
+   "primary_field": "pcr_oi_1080",
+   "family": "other",
+   "train_fitness": -0.04,
+   "sharpe": 0.32,
+   "extra": {
+    "Sharpe": "0.32",
+    "Turnover": "3.87%",
+    "Fitness": "0.13",
+    "Returns": "2.12%",
+    "Drawdown": "17.66%",
+    "Margin": "10.96 bps",
+    "Long Count": "633",
+    "Short Count": "2266"
+   },
+   "turnover": 3.87,
+   "fitness": 0.13,
+   "returns": 2.12,
+   "drawdown": 17.66,
+   "margin_bps": 10.96,
+   "long_count": 633.0,
+   "short_count": 2266.0,
+   "status": "FAIL",
+   "failed_check_codes": [
+    "F2"
+   ],
+   "failed_checks": [
+    "LOW_SHARPE",
+    "LOW_FITNESS",
+    "CONCENTRATED_WEIGHT",
+    "IS_LADDER_SHARPE"
+   ]
+  },
+  {
+   "result_no": 131,
+   "number_synthesised": true,
+   "line": 1730,
+   "universe": "TOP3000",
+   "neutralization": "INDUSTRY",
+   "decay": 4,
+   "truncation": 0.08,
+   "expression": "rank(vec_avg(story_event_record_count_fast_d1))",
+   "primary_field": "story_event_record_count_fast_d1",
+   "family": "other",
+   "train_fitness": 0.01,
+   "sharpe": 0.28,
+   "extra": {
+    "Sharpe": "0.28",
+    "Turnover": "75.55%",
+    "Fitness": "0.03",
+    "Returns": "1.03%",
+    "Drawdown": "12.06%",
+    "Margin": "0.27 bps",
+    "Long Count": "1354",
+    "Short Count": "1319"
+   },
+   "turnover": 75.55,
+   "fitness": 0.03,
+   "returns": 1.03,
+   "drawdown": 12.06,
+   "margin_bps": 0.27,
+   "long_count": 1354.0,
+   "short_count": 1319.0,
+   "status": "FAIL",
+   "failed_check_codes": [
+    "F13"
+   ],
+   "failed_checks": [
+    "LOW_SHARPE",
+    "LOW_FITNESS",
+    "HIGH_TURNOVER",
+    "LOW_SUB_UNIVERSE_SHARPE",
+    "LOW_2Y_SHARPE"
+   ]
+  },
+  {
+   "result_no": 132,
+   "number_synthesised": true,
+   "line": 1743,
+   "universe": "TOP3000",
+   "neutralization": "INDUSTRY",
+   "decay": 8,
+   "truncation": 0.08,
+   "expression": "ts_decay_linear(pcr_oi_1080, 120)",
+   "primary_field": "pcr_oi_1080",
+   "family": "other",
+   "train_fitness": -0.06,
+   "sharpe": 0.28,
+   "extra": {
+    "Sharpe": "0.28",
+    "Turnover": "3.34%",
+    "Fitness": "0.11",
+    "Returns": "1.88%",
+    "Drawdown": "19.03%",
+    "Margin": "11.25 bps",
+    "Long Count": "631",
+    "Short Count": "2268"
+   },
+   "turnover": 3.34,
+   "fitness": 0.11,
+   "returns": 1.88,
+   "drawdown": 19.03,
+   "margin_bps": 11.25,
+   "long_count": 631.0,
+   "short_count": 2268.0,
+   "status": "FAIL",
+   "failed_check_codes": [
+    "F7"
+   ],
+   "failed_checks": [
+    "LOW_SHARPE",
+    "LOW_FITNESS",
+    "CONCENTRATED_WEIGHT",
+    "LOW_2Y_SHARPE"
+   ]
+  },
+  {
+   "result_no": 133,
+   "number_synthesised": true,
+   "line": 1756,
+   "universe": "TOP3000",
+   "neutralization": "INDUSTRY",
+   "decay": 16,
+   "truncation": 0.08,
+   "expression": "ts_decay_linear(pcr_oi_1080, 120)",
+   "primary_field": "pcr_oi_1080",
+   "family": "other",
+   "train_fitness": -0.06,
+   "sharpe": 0.27,
+   "extra": {
+    "Sharpe": "0.27",
+    "Turnover": "3.23%",
+    "Fitness": "0.10",
+    "Returns": "1.78%",
+    "Drawdown": "19.15%",
+    "Margin": "11.01 bps",
+    "Long Count": "632",
+    "Short Count": "2267"
+   },
+   "turnover": 3.23,
+   "fitness": 0.1,
+   "returns": 1.78,
+   "drawdown": 19.15,
+   "margin_bps": 11.01,
+   "long_count": 632.0,
+   "short_count": 2267.0,
+   "status": "FAIL",
+   "failed_check_codes": [
+    "F7"
+   ],
+   "failed_checks": [
+    "LOW_SHARPE",
+    "LOW_FITNESS",
+    "CONCENTRATED_WEIGHT",
+    "LOW_2Y_SHARPE"
+   ]
+  },
+  {
+   "result_no": 134,
+   "number_synthesised": true,
+   "line": 1769,
+   "universe": "TOP3000",
+   "neutralization": "INDUSTRY",
+   "decay": 0,
+   "truncation": 0.08,
+   "expression": "zscore(rank(ts_rank(op_cash_flow_stddev, 126)) + 0.25 * rank(ts_rank(sales_growth, 126)) + 0.25 * rank(fscore_quality))",
+   "primary_field": "op_cash_flow_stddev",
+   "family": "other",
+   "train_fitness": 0.06,
+   "sharpe": 0.25,
+   "extra": {
+    "Sharpe": "0.25",
+    "Turnover": "9.78%",
+    "Fitness": "0.04",
+    "Returns": "0.28%",
+    "Drawdown": "2.75%",
+    "Margin": "0.57 bps",
+    "Long Count": "6",
+    "Short Count": "6"
+   },
+   "turnover": 9.78,
+   "fitness": 0.04,
+   "returns": 0.28,
+   "drawdown": 2.75,
+   "margin_bps": 0.57,
+   "long_count": 6.0,
+   "short_count": 6.0,
+   "status": "FAIL",
+   "failed_check_codes": [
+    "F2"
+   ],
+   "failed_checks": [
+    "LOW_SHARPE",
+    "LOW_FITNESS",
+    "CONCENTRATED_WEIGHT",
+    "IS_LADDER_SHARPE"
+   ]
+  },
+  {
+   "result_no": 135,
+   "number_synthesised": true,
+   "line": 1782,
+   "universe": "TOP3000",
+   "neutralization": "INDUSTRY",
+   "decay": 4,
+   "truncation": 0.08,
+   "expression": "zscore(rank(rank(volume / adv20)) - rank(fscore_quality))",
+   "primary_field": "volume",
+   "family": "other",
+   "train_fitness": 0.11,
+   "sharpe": 0.22,
+   "extra": {
+    "Sharpe": "0.22",
+    "Turnover": "9.83%",
+    "Fitness": "0.03",
+    "Returns": "0.23%",
+    "Drawdown": "3.38%",
+    "Margin": "0.46 bps",
+    "Long Count": "23",
+    "Short Count": "23"
+   },
+   "turnover": 9.83,
+   "fitness": 0.03,
+   "returns": 0.23,
+   "drawdown": 3.38,
+   "margin_bps": 0.46,
+   "long_count": 23.0,
+   "short_count": 23.0,
+   "status": "FAIL",
+   "failed_check_codes": [
+    "F8"
+   ],
+   "failed_checks": [
+    "LOW_SHARPE",
+    "LOW_FITNESS",
+    "CONCENTRATED_WEIGHT",
+    "LOW_SUB_UNIVERSE_SHARPE",
+    "IS_LADDER_SHARPE"
+   ]
+  },
+  {
+   "result_no": 136,
+   "number_synthesised": true,
+   "line": 1795,
+   "universe": "TOP3000",
+   "neutralization": "INDUSTRY",
+   "decay": 4,
+   "truncation": 0.01,
+   "expression": "ts_decay_linear(fnd6_acdo / debt, 252)",
+   "primary_field": "fnd6_acdo",
+   "family": "fnd6 (fundamental)",
+   "train_fitness": -0.01,
+   "sharpe": 0.17,
+   "extra": {
+    "Sharpe": "0.17",
+    "Turnover": "2.82%",
+    "Fitness": "0.07",
+    "Returns": "1.85%",
+    "Drawdown": "32.84%",
+    "Margin": "13.11 bps",
+    "Long Count": "144",
+    "Short Count": "1525"
+   },
+   "turnover": 2.82,
+   "fitness": 0.07,
+   "returns": 1.85,
+   "drawdown": 32.84,
+   "margin_bps": 13.11,
+   "long_count": 144.0,
+   "short_count": 1525.0,
+   "status": "FAIL",
+   "failed_check_codes": [
+    "F7"
+   ],
+   "failed_checks": [
+    "LOW_SHARPE",
+    "LOW_FITNESS",
+    "CONCENTRATED_WEIGHT",
+    "LOW_2Y_SHARPE"
+   ]
+  },
+  {
+   "result_no": 137,
+   "number_synthesised": true,
+   "line": 1808,
+   "universe": "TOP3000",
+   "neutralization": "INDUSTRY",
+   "decay": 0,
+   "truncation": 0.08,
+   "expression": "ts_av_diff(pcr_oi_1080, 120)",
+   "primary_field": "pcr_oi_1080",
+   "family": "other",
+   "train_fitness": -0.01,
+   "sharpe": 0.14,
+   "extra": {
+    "Sharpe": "0.14",
+    "Turnover": "19.33%",
+    "Fitness": "0.04",
+    "Returns": "1.21%",
+    "Drawdown": "15.01%",
+    "Margin": "1.25 bps",
+    "Long Count": "1491",
+    "Short Count": "1408"
+   },
+   "turnover": 19.33,
+   "fitness": 0.04,
+   "returns": 1.21,
+   "drawdown": 15.01,
+   "margin_bps": 1.25,
+   "long_count": 1491.0,
+   "short_count": 1408.0,
+   "status": "FAIL",
+   "failed_check_codes": [
+    "F5"
+   ],
+   "failed_checks": [
+    "LOW_SHARPE",
+    "LOW_FITNESS",
+    "CONCENTRATED_WEIGHT",
+    "LOW_SUB_UNIVERSE_SHARPE",
+    "LOW_2Y_SHARPE"
+   ]
+  },
+  {
+   "result_no": 138,
+   "number_synthesised": true,
+   "line": 1821,
+   "universe": "TOP3000",
+   "neutralization": "INDUSTRY",
+   "decay": 4,
+   "truncation": 0.08,
+   "expression": "ts_sum(ts_delta(op_cash_flow_stddev, 10), 120)",
+   "primary_field": "op_cash_flow_stddev",
+   "family": "other",
+   "train_fitness": 0.02,
+   "sharpe": 0.11,
+   "extra": {
+    "Sharpe": "0.11",
+    "Turnover": "3.43%",
+    "Fitness": "0.02",
+    "Returns": "0.64%",
+    "Drawdown": "22.78%",
+    "Margin": "3.75 bps",
+    "Long Count": "1190",
+    "Short Count": "1610"
+   },
+   "turnover": 3.43,
+   "fitness": 0.02,
+   "returns": 0.64,
+   "drawdown": 22.78,
+   "margin_bps": 3.75,
+   "long_count": 1190.0,
+   "short_count": 1610.0,
+   "status": "FAIL",
+   "failed_check_codes": [
+    "F4"
+   ],
+   "failed_checks": [
+    "LOW_SHARPE",
+    "LOW_FITNESS",
+    "LOW_SUB_UNIVERSE_SHARPE",
+    "LOW_2Y_SHARPE"
+   ]
+  },
+  {
+   "result_no": 139,
+   "number_synthesised": true,
+   "line": 1834,
+   "universe": "TOP3000",
+   "neutralization": "INDUSTRY",
+   "decay": 6,
+   "truncation": 0.08,
+   "expression": "group_neutralize(rank(ts_sum(anl4_fs_guidances_advanced_qf_nd_cfi_maxguidance, 126)), bucket(rank(cap), range=\"0,1,0.1\"))",
+   "primary_field": "anl4_fs_guidances_advanced_qf_nd_cfi_maxguidance",
+   "family": "anl4 (analyst)",
+   "train_fitness": -0.03,
+   "sharpe": 0.09,
+   "extra": {
+    "Sharpe": "0.09",
+    "Turnover": "2.65%",
+    "Fitness": "0.02",
+    "Returns": "0.56%",
+    "Drawdown": "27.73%",
+    "Margin": "4.23 bps",
+    "Long Count": "1497",
+    "Short Count": "1629"
+   },
+   "turnover": 2.65,
+   "fitness": 0.02,
+   "returns": 0.56,
+   "drawdown": 27.73,
+   "margin_bps": 4.23,
+   "long_count": 1497.0,
+   "short_count": 1629.0,
+   "status": "FAIL",
+   "failed_check_codes": [
+    "F1"
+   ],
+   "failed_checks": [
+    "LOW_SHARPE",
+    "LOW_FITNESS",
+    "IS_LADDER_SHARPE"
+   ]
+  },
+  {
+   "result_no": 140,
+   "number_synthesised": true,
+   "line": 1847,
+   "universe": "TOP3000",
+   "neutralization": "INDUSTRY",
+   "decay": 0,
+   "truncation": 0.08,
+   "expression": "ts_arg_min(pcr_oi_1080, 120)",
+   "primary_field": "pcr_oi_1080",
+   "family": "other",
+   "train_fitness": -0.04,
+   "sharpe": 0.09,
+   "extra": {
+    "Sharpe": "0.09",
+    "Turnover": "5.81%",
+    "Fitness": "0.01",
+    "Returns": "0.23%",
+    "Drawdown": "10.26%",
+    "Margin": "0.79 bps",
+    "Long Count": "1595",
+    "Short Count": "1323"
+   },
+   "turnover": 5.81,
+   "fitness": 0.01,
+   "returns": 0.23,
+   "drawdown": 10.26,
+   "margin_bps": 0.79,
+   "long_count": 1595.0,
+   "short_count": 1323.0,
+   "status": "FAIL",
+   "failed_check_codes": [
+    "F4"
+   ],
+   "failed_checks": [
+    "LOW_SHARPE",
+    "LOW_FITNESS",
+    "LOW_SUB_UNIVERSE_SHARPE",
+    "LOW_2Y_SHARPE"
+   ]
+  },
+  {
+   "result_no": 141,
+   "number_synthesised": true,
+   "line": 1860,
+   "universe": "TOP3000",
+   "neutralization": "INDUSTRY",
+   "decay": 4,
+   "truncation": 0.08,
+   "expression": "ts_rank(fnd6_acdo / income_beforeextra, 252)",
+   "primary_field": "fnd6_acdo",
+   "family": "fnd6 (fundamental)",
+   "train_fitness": -0.02,
+   "sharpe": 0.0,
+   "extra": {
+    "Sharpe": "0.00",
+    "Turnover": "3.30%",
+    "Fitness": "0.00",
+    "Returns": "-0.02%",
+    "Drawdown": "32.38%",
+    "Margin": "-0.12 bps",
+    "Long Count": "1174",
+    "Short Count": "803"
+   },
+   "turnover": 3.3,
+   "fitness": 0.0,
+   "returns": -0.02,
+   "drawdown": 32.38,
+   "margin_bps": -0.12,
+   "long_count": 1174.0,
+   "short_count": 803.0,
+   "status": "FAIL",
+   "failed_check_codes": [
+    "F3"
+   ],
+   "failed_checks": [
+    "LOW_SHARPE",
+    "LOW_FITNESS",
+    "LOW_2Y_SHARPE"
+   ]
+  },
+  {
+   "result_no": 142,
+   "number_synthesised": true,
+   "line": 1873,
+   "universe": "TOP3000",
+   "neutralization": "INDUSTRY",
+   "decay": 4,
+   "truncation": 0.08,
+   "expression": "zscore(rank(fscore_quality) - rank(fscore_quality))",
+   "primary_field": "fscore_quality",
+   "family": "other",
+   "train_fitness": -10.0,
+   "sharpe": 0.0,
+   "extra": {
+    "Sharpe": "0.00",
+    "Turnover": "0.00%",
+    "Fitness": "\u2014",
+    "Returns": "0.00%",
+    "Drawdown": "0.00%",
+    "Margin": "0.00 bps",
+    "Long Count": "0",
+    "Short Count": "0"
+   },
+   "turnover": 0.0,
+   "fitness": null,
+   "returns": 0.0,
+   "drawdown": 0.0,
+   "margin_bps": 0.0,
+   "long_count": 0.0,
+   "short_count": 0.0,
+   "status": "FAIL",
+   "failed_check_codes": [
+    "F24"
+   ],
+   "failed_checks": [
+    "LOW_SHARPE",
+    "LOW_FITNESS",
+    "LOW_TURNOVER",
+    "CONCENTRATED_WEIGHT",
+    "LOW_SUB_UNIVERSE_SHARPE",
+    "CLUSTER_TEST"
+   ]
+  },
+  {
+   "result_no": 143,
+   "number_synthesised": true,
+   "line": 1886,
+   "universe": "TOP3000",
+   "neutralization": "INDUSTRY",
+   "decay": 8,
+   "truncation": 0.08,
+   "expression": "zscore(rank(ts_rank(op_cash_flow_stddev, 126)) + 0.25 * rank(ts_rank(sales_growth, 63)) + 0.25 * vec_avg(story_event_record_count_fast_d1))",
+   "primary_field": "op_cash_flow_stddev",
+   "family": "other",
+   "train_fitness": 0.0,
+   "sharpe": -0.21,
+   "extra": {
+    "Sharpe": "-0.21",
+    "Turnover": "59.23%",
+    "Fitness": "-0.03",
+    "Returns": "-1.62%",
+    "Drawdown": "31.86%",
+    "Margin": "-0.55 bps",
+    "Long Count": "218",
+    "Short Count": "312"
+   },
+   "turnover": 59.23,
+   "fitness": -0.03,
+   "returns": -1.62,
+   "drawdown": 31.86,
+   "margin_bps": -0.55,
+   "long_count": 218.0,
+   "short_count": 312.0,
+   "status": "FAIL",
+   "failed_check_codes": [
+    "F1"
+   ],
+   "failed_checks": [
+    "LOW_SHARPE",
+    "LOW_FITNESS",
+    "IS_LADDER_SHARPE"
+   ]
+  },
+  {
+   "result_no": 144,
+   "number_synthesised": true,
+   "line": 1899,
+   "universe": "TOP3000",
+   "neutralization": "INDUSTRY",
+   "decay": 4,
+   "truncation": 0.08,
+   "expression": "ts_decay_linear(vec_avg(story_event_record_count_fast_d1), 120)",
+   "primary_field": "story_event_record_count_fast_d1",
+   "family": "other",
+   "train_fitness": -0.16,
+   "sharpe": -0.28,
+   "extra": {
+    "Sharpe": "-0.28",
+    "Turnover": "50.70%",
+    "Fitness": "-0.04",
+    "Returns": "-1.17%",
+    "Drawdown": "32.31%",
+    "Margin": "-0.46 bps",
+    "Long Count": "1018",
+    "Short Count": "1655"
+   },
+   "turnover": 50.7,
+   "fitness": -0.04,
+   "returns": -1.17,
+   "drawdown": 32.31,
+   "margin_bps": -0.46,
+   "long_count": 1018.0,
+   "short_count": 1655.0,
+   "status": "FAIL",
+   "failed_check_codes": [
+    "F4"
+   ],
+   "failed_checks": [
+    "LOW_SHARPE",
+    "LOW_FITNESS",
+    "LOW_SUB_UNIVERSE_SHARPE",
+    "LOW_2Y_SHARPE"
+   ]
+  },
+  {
+   "result_no": 145,
+   "number_synthesised": true,
+   "line": 1912,
+   "universe": "TOP3000",
+   "neutralization": "INDUSTRY",
+   "decay": 0,
+   "truncation": 0.08,
+   "expression": "-rank(rank(volume / adv20))",
+   "primary_field": "volume",
+   "family": "other",
+   "train_fitness": -0.09,
+   "sharpe": -0.63,
+   "extra": {
+    "Sharpe": "-0.63",
+    "Turnover": "92.84%",
+    "Fitness": "-0.10",
+    "Returns": "-2.36%",
+    "Drawdown": "25.81%",
+    "Margin": "-0.51 bps",
+    "Long Count": "1568",
+    "Short Count": "1558"
+   },
+   "turnover": 92.84,
+   "fitness": -0.1,
+   "returns": -2.36,
+   "drawdown": 25.81,
+   "margin_bps": -0.51,
+   "long_count": 1568.0,
+   "short_count": 1558.0,
+   "status": "FAIL",
+   "failed_check_codes": [
+    "F13"
+   ],
+   "failed_checks": [
+    "LOW_SHARPE",
+    "LOW_FITNESS",
+    "HIGH_TURNOVER",
+    "LOW_SUB_UNIVERSE_SHARPE",
+    "LOW_2Y_SHARPE"
+   ]
+  },
+  {
+   "result_no": 146,
+   "number_synthesised": true,
+   "line": 1927,
+   "universe": "TOP3000",
+   "neutralization": "NONE",
+   "decay": 8,
+   "truncation": 0.08,
+   "expression": "hv_group = densify(bucket(rank(historical_volatility_120), range=\"0.1,1,0.1\")); group_neutralize(rank(implied_volatility_call_120 / implied_volatility_put_120), hv_group)",
+   "primary_field": "hv_group",
+   "family": "other",
+   "train_fitness": 0.96,
+   "sharpe": 1.52,
+   "extra": {
+    "Sharpe": "1.52",
+    "Turnover": "28.52%",
+    "Fitness": "0.84",
+    "Returns": "8.73%",
+    "Drawdown": "9.82%",
+    "Margin": "6.12 bps",
+    "Long Count": "1492",
+    "Short Count": "1225"
+   },
+   "turnover": 28.52,
+   "fitness": 0.84,
+   "returns": 8.73,
+   "drawdown": 9.82,
+   "margin_bps": 6.12,
+   "long_count": 1492.0,
+   "short_count": 1225.0,
+   "status": "FAIL",
+   "failed_check_codes": [
+    "F5"
+   ],
+   "failed_checks": [
+    "LOW_SHARPE",
+    "LOW_FITNESS",
+    "CONCENTRATED_WEIGHT",
+    "LOW_SUB_UNIVERSE_SHARPE",
+    "LOW_2Y_SHARPE"
+   ]
+  },
+  {
+   "result_no": 147,
+   "number_synthesised": true,
+   "line": 1940,
+   "universe": "TOP3000",
+   "neutralization": "NONE",
+   "decay": 8,
+   "truncation": 0.08,
+   "expression": "hv_group = densify(bucket(quantile(historical_volatility_120), range=\"0.1,1,0.1\")); group_neutralize(rank(implied_volatility_call_120 - implied_volatility_put_120), hv_group)",
+   "primary_field": "hv_group",
+   "family": "other",
+   "train_fitness": 0.97,
+   "sharpe": 1.48,
+   "extra": {
+    "Sharpe": "1.48",
+    "Turnover": "28.84%",
+    "Fitness": "0.80",
+    "Returns": "8.36%",
+    "Drawdown": "9.52%",
+    "Margin": "5.79 bps",
+    "Long Count": "1496",
+    "Short Count": "1222"
+   },
+   "turnover": 28.84,
+   "fitness": 0.8,
+   "returns": 8.36,
+   "drawdown": 9.52,
+   "margin_bps": 5.79,
+   "long_count": 1496.0,
+   "short_count": 1222.0,
+   "status": "FAIL",
+   "failed_check_codes": [
+    "F5"
+   ],
+   "failed_checks": [
+    "LOW_SHARPE",
+    "LOW_FITNESS",
+    "CONCENTRATED_WEIGHT",
+    "LOW_SUB_UNIVERSE_SHARPE",
+    "LOW_2Y_SHARPE"
+   ]
+  },
+  {
+   "result_no": 148,
+   "number_synthesised": true,
+   "line": 1953,
+   "universe": "TOP3000",
+   "neutralization": "NONE",
+   "decay": 4,
+   "truncation": 0.08,
+   "expression": "hv_group = densify(bucket(ts_rank(op_cash_flow_stddev, 126), range=\"0.1,1,0.1\")); group_neutralize(rank(implied_volatility_call_120 - implied_volatility_put_120), hv_group)",
+   "primary_field": "hv_group",
+   "family": "other",
+   "train_fitness": 0.49,
+   "sharpe": 0.82,
+   "extra": {
+    "Sharpe": "0.82",
+    "Turnover": "39.67%",
+    "Fitness": "0.35",
+    "Returns": "7.25%",
+    "Drawdown": "24.01%",
+    "Margin": "3.66 bps",
+    "Long Count": "326",
+    "Short Count": "256"
+   },
+   "turnover": 39.67,
+   "fitness": 0.35,
+   "returns": 7.25,
+   "drawdown": 24.01,
+   "margin_bps": 3.66,
+   "long_count": 326.0,
+   "short_count": 256.0,
+   "status": "FAIL",
+   "failed_check_codes": [
+    "F8"
+   ],
+   "failed_checks": [
+    "LOW_SHARPE",
+    "LOW_FITNESS",
+    "CONCENTRATED_WEIGHT",
+    "LOW_SUB_UNIVERSE_SHARPE",
+    "IS_LADDER_SHARPE"
+   ]
+  },
+  {
+   "result_no": 149,
+   "number_synthesised": true,
+   "line": 1966,
+   "universe": "TOP3000",
+   "neutralization": "NONE",
+   "decay": 4,
+   "truncation": 0.08,
+   "expression": "ts_sum(rank(implied_volatility_call_120 - implied_volatility_put_120), 120)",
+   "primary_field": "implied_volatility_call_120",
+   "family": "other",
+   "train_fitness": 1.35,
+   "sharpe": 0.62,
+   "extra": {
+    "Sharpe": "0.62",
+    "Turnover": "0.48%",
+    "Fitness": "0.88",
+    "Returns": "25.41%",
+    "Drawdown": "75.55%",
+    "Margin": "1056.67 bps",
+    "Long Count": "2907",
+    "Short Count": "0"
+   },
+   "turnover": 0.48,
+   "fitness": 0.88,
+   "returns": 25.41,
+   "drawdown": 75.55,
+   "margin_bps": 1056.67,
+   "long_count": 2907.0,
+   "short_count": 0.0,
+   "status": "FAIL",
+   "failed_check_codes": [
+    "F12"
+   ],
+   "failed_checks": [
+    "LOW_SHARPE",
+    "LOW_FITNESS",
+    "LOW_TURNOVER",
+    "LOW_SUB_UNIVERSE_SHARPE",
+    "LOW_2Y_SHARPE"
+   ]
+  },
+  {
+   "result_no": 150,
+   "number_synthesised": true,
+   "line": 1979,
+   "universe": "TOP3000",
+   "neutralization": "NONE",
+   "decay": 0,
+   "truncation": 0.08,
+   "expression": "hv_group = densify(bucket(rank(parkinson_volatility_60), range=\"0.1,1,0.1\")); group_neutralize(ts_rank(fn_liab_fair_val_l1_a, 252), hv_group)",
+   "primary_field": "hv_group",
+   "family": "other",
+   "train_fitness": -0.32,
+   "sharpe": -0.41,
+   "extra": {
+    "Sharpe": "-0.41",
+    "Turnover": "9.57%",
+    "Fitness": "-0.14",
+    "Returns": "-1.54%",
+    "Drawdown": "25.01%",
+    "Margin": "-3.23 bps",
+    "Long Count": "549",
+    "Short Count": "786"
+   },
+   "turnover": 9.57,
+   "fitness": -0.14,
+   "returns": -1.54,
+   "drawdown": 25.01,
+   "margin_bps": -3.23,
+   "long_count": 549.0,
+   "short_count": 786.0,
+   "status": "FAIL",
+   "failed_check_codes": [
+    "F2"
+   ],
+   "failed_checks": [
+    "LOW_SHARPE",
+    "LOW_FITNESS",
+    "CONCENTRATED_WEIGHT",
+    "IS_LADDER_SHARPE"
+   ]
+  },
+  {
+   "result_no": 151,
+   "number_synthesised": true,
+   "line": 1994,
+   "universe": "TOP3000",
+   "neutralization": "MARKET",
+   "decay": 4,
+   "truncation": 0.08,
+   "expression": "group_neutralize(rank(rank(ts_rank(sales_growth, 126))) + rank(ts_delta(return_assets, 126)) + rank(ts_mean(-returns, 5)), bucket(rank(cap), range=\"0.1,1,0.1\"))",
+   "primary_field": "sales_growth",
+   "family": "other",
+   "train_fitness": 0.39,
+   "sharpe": 0.9,
+   "extra": {
+    "Sharpe": "0.90",
+    "Turnover": "21.37%",
+    "Fitness": "0.51",
+    "Returns": "6.95%",
+    "Drawdown": "10.38%",
+    "Margin": "6.51 bps",
+    "Long Count": "1374",
+    "Short Count": "1373"
+   },
+   "turnover": 21.37,
+   "fitness": 0.51,
+   "returns": 6.95,
+   "drawdown": 10.38,
+   "margin_bps": 6.51,
+   "long_count": 1374.0,
+   "short_count": 1373.0,
+   "status": "FAIL",
+   "failed_check_codes": [
+    "F1"
+   ],
+   "failed_checks": [
+    "LOW_SHARPE",
+    "LOW_FITNESS",
+    "IS_LADDER_SHARPE"
+   ]
+  },
+  {
+   "result_no": 152,
+   "number_synthesised": true,
+   "line": 2007,
+   "universe": "TOP3000",
+   "neutralization": "MARKET",
+   "decay": 4,
+   "truncation": 0.08,
+   "expression": "group_neutralize(ts_rank(sales_growth, 126) + rank(ts_delta(return_assets, 126)) + rank(ts_mean(-returns, 5)), bucket(rank(cap), range=\"0.1,1,0.1\"))",
+   "primary_field": "sales_growth",
+   "family": "other",
+   "train_fitness": 0.39,
+   "sharpe": 0.88,
+   "extra": {
+    "Sharpe": "0.88",
+    "Turnover": "20.21%",
+    "Fitness": "0.50",
+    "Returns": "6.53%",
+    "Drawdown": "10.19%",
+    "Margin": "6.47 bps",
+    "Long Count": "1370",
+    "Short Count": "1378"
+   },
+   "turnover": 20.21,
+   "fitness": 0.5,
+   "returns": 6.53,
+   "drawdown": 10.19,
+   "margin_bps": 6.47,
+   "long_count": 1370.0,
+   "short_count": 1378.0,
+   "status": "FAIL",
+   "failed_check_codes": [
+    "F1"
+   ],
+   "failed_checks": [
+    "LOW_SHARPE",
+    "LOW_FITNESS",
+    "IS_LADDER_SHARPE"
+   ]
+  },
+  {
+   "result_no": 153,
+   "number_synthesised": true,
+   "line": 2020,
+   "universe": "TOP3000",
+   "neutralization": "MARKET",
+   "decay": 4,
+   "truncation": 0.08,
+   "expression": "rank(rank(volume / adv20)) + rank(ts_delta(operating_income / assets, 126))",
+   "primary_field": "volume",
+   "family": "other",
+   "train_fitness": 0.24,
+   "sharpe": 0.86,
+   "extra": {
+    "Sharpe": "0.86",
+    "Turnover": "31.12%",
+    "Fitness": "0.35",
+    "Returns": "5.16%",
+    "Drawdown": "19.44%",
+    "Margin": "3.31 bps",
+    "Long Count": "1420",
+    "Short Count": "1377"
+   },
+   "turnover": 31.12,
+   "fitness": 0.35,
+   "returns": 5.16,
+   "drawdown": 19.44,
+   "margin_bps": 3.31,
+   "long_count": 1420.0,
+   "short_count": 1377.0,
+   "status": "FAIL",
+   "failed_check_codes": [
+    "F1"
+   ],
+   "failed_checks": [
+    "LOW_SHARPE",
+    "LOW_FITNESS",
+    "IS_LADDER_SHARPE"
+   ]
+  },
+  {
+   "result_no": 154,
+   "number_synthesised": true,
+   "line": 2033,
+   "universe": "TOP3000",
+   "neutralization": "MARKET",
+   "decay": 8,
+   "truncation": 0.05,
+   "expression": "zscore(rank(ts_delta(op_cash_flow_stddev, 20)) + 0.35 * rank(rank(cap)) + 0.15 * ts_mean(-returns, 5))",
+   "primary_field": "op_cash_flow_stddev",
+   "family": "other",
+   "train_fitness": 0.53,
+   "sharpe": 0.65,
+   "extra": {
+    "Sharpe": "0.65",
+    "Turnover": "11.00%",
+    "Fitness": "0.43",
+    "Returns": "5.42%",
+    "Drawdown": "25.20%",
+    "Margin": "9.86 bps",
+    "Long Count": "273",
+    "Short Count": "278"
+   },
+   "turnover": 11.0,
+   "fitness": 0.43,
+   "returns": 5.42,
+   "drawdown": 25.2,
+   "margin_bps": 9.86,
+   "long_count": 273.0,
+   "short_count": 278.0,
+   "status": "FAIL",
+   "failed_check_codes": [
+    "F1"
+   ],
+   "failed_checks": [
+    "LOW_SHARPE",
+    "LOW_FITNESS",
+    "IS_LADDER_SHARPE"
+   ]
+  },
+  {
+   "result_no": 155,
+   "number_synthesised": true,
+   "line": 2046,
+   "universe": "TOP3000",
+   "neutralization": "MARKET",
+   "decay": 8,
+   "truncation": 0.08,
+   "expression": "rank(ts_mean(-returns, 5))",
+   "primary_field": "returns",
+   "family": "other",
+   "train_fitness": 0.28,
+   "sharpe": 0.6,
+   "extra": {
+    "Sharpe": "0.60",
+    "Turnover": "30.08%",
+    "Fitness": "0.31",
+    "Returns": "8.23%",
+    "Drawdown": "22.78%",
+    "Margin": "5.47 bps",
+    "Long Count": "1561",
+    "Short Count": "1569"
+   },
+   "turnover": 30.08,
+   "fitness": 0.31,
+   "returns": 8.23,
+   "drawdown": 22.78,
+   "margin_bps": 5.47,
+   "long_count": 1561.0,
+   "short_count": 1569.0,
+   "status": "FAIL",
+   "failed_check_codes": [
+    "F3"
+   ],
+   "failed_checks": [
+    "LOW_SHARPE",
+    "LOW_FITNESS",
+    "LOW_2Y_SHARPE"
+   ]
+  },
+  {
+   "result_no": 156,
+   "number_synthesised": true,
+   "line": 2059,
+   "universe": "TOP3000",
+   "neutralization": "MARKET",
+   "decay": 8,
+   "truncation": 0.05,
+   "expression": "zscore(ts_delta(op_cash_flow_stddev, 10) - 0.35 * rank(ts_rank(sales_growth, 126)) + 0.15 * rank(ts_mean(-returns, 5)))",
+   "primary_field": "op_cash_flow_stddev",
+   "family": "other",
+   "train_fitness": 0.33,
+   "sharpe": 0.58,
+   "extra": {
+    "Sharpe": "0.58",
+    "Turnover": "22.68%",
+    "Fitness": "0.29",
+    "Returns": "5.52%",
+    "Drawdown": "15.79%",
+    "Margin": "4.86 bps",
+    "Long Count": "241",
+    "Short Count": "315"
+   },
+   "turnover": 22.68,
+   "fitness": 0.29,
+   "returns": 5.52,
+   "drawdown": 15.79,
+   "margin_bps": 4.86,
+   "long_count": 241.0,
+   "short_count": 315.0,
+   "status": "FAIL",
+   "failed_check_codes": [
+    "F2"
+   ],
+   "failed_checks": [
+    "LOW_SHARPE",
+    "LOW_FITNESS",
+    "CONCENTRATED_WEIGHT",
+    "IS_LADDER_SHARPE"
+   ]
+  },
+  {
+   "result_no": 157,
+   "number_synthesised": true,
+   "line": 2072,
+   "universe": "TOP3000",
+   "neutralization": "MARKET",
+   "decay": 8,
+   "truncation": 0.05,
+   "expression": "zscore(ts_delta(op_cash_flow_stddev, 10) - 0.35 * rank(ts_rank(fnd6_nopio, 126)) + 0.15 * rank(ts_mean(-returns, 5)))",
+   "primary_field": "op_cash_flow_stddev",
+   "family": "other",
+   "train_fitness": 0.31,
+   "sharpe": 0.53,
+   "extra": {
+    "Sharpe": "0.53",
+    "Turnover": "22.70%",
+    "Fitness": "0.25",
+    "Returns": "5.10%",
+    "Drawdown": "16.47%",
+    "Margin": "4.49 bps",
+    "Long Count": "247",
+    "Short Count": "321"
+   },
+   "turnover": 22.7,
+   "fitness": 0.25,
+   "returns": 5.1,
+   "drawdown": 16.47,
+   "margin_bps": 4.49,
+   "long_count": 247.0,
+   "short_count": 321.0,
+   "status": "FAIL",
+   "failed_check_codes": [
+    "F2"
+   ],
+   "failed_checks": [
+    "LOW_SHARPE",
+    "LOW_FITNESS",
+    "CONCENTRATED_WEIGHT",
+    "IS_LADDER_SHARPE"
+   ]
+  },
+  {
+   "result_no": 158,
+   "number_synthesised": true,
+   "line": 2085,
+   "universe": "TOP3000",
+   "neutralization": "MARKET",
+   "decay": 8,
+   "truncation": 0.05,
+   "expression": "zscore(ts_delta(op_cash_flow_stddev, 10) - 0.35 * rank(recurring_assets_fair_value_2) + 0.15 * rank(ts_mean(-returns, 5)))",
+   "primary_field": "op_cash_flow_stddev",
+   "family": "other",
+   "train_fitness": 0.35,
+   "sharpe": 0.51,
+   "extra": {
+    "Sharpe": "0.51",
+    "Turnover": "22.78%",
+    "Fitness": "0.26",
+    "Returns": "5.96%",
+    "Drawdown": "25.47%",
+    "Margin": "5.23 bps",
+    "Long Count": "116",
+    "Short Count": "142"
+   },
+   "turnover": 22.78,
+   "fitness": 0.26,
+   "returns": 5.96,
+   "drawdown": 25.47,
+   "margin_bps": 5.23,
+   "long_count": 116.0,
+   "short_count": 142.0,
+   "status": "FAIL",
+   "failed_check_codes": [
+    "F2"
+   ],
+   "failed_checks": [
+    "LOW_SHARPE",
+    "LOW_FITNESS",
+    "CONCENTRATED_WEIGHT",
+    "IS_LADDER_SHARPE"
+   ]
+  },
+  {
+   "result_no": 159,
+   "number_synthesised": true,
+   "line": 2098,
+   "universe": "TOP3000",
+   "neutralization": "MARKET",
+   "decay": 4,
+   "truncation": 0.05,
+   "expression": "winsorize(ts_delta(op_cash_flow_stddev, 10) - 0.35 * vec_avg(nws12_afterhsz_sl) + 0.15 * rank(ts_mean(-returns, 5)))",
+   "primary_field": "op_cash_flow_stddev",
+   "family": "other",
+   "train_fitness": 0.08,
+   "sharpe": 0.38,
+   "extra": {
+    "Sharpe": "0.38",
+    "Turnover": "95.13%",
+    "Fitness": "0.10",
+    "Returns": "5.98%",
+    "Drawdown": "37.00%",
+    "Margin": "1.26 bps",
+    "Long Count": "45",
+    "Short Count": "59"
+   },
+   "turnover": 95.13,
+   "fitness": 0.1,
+   "returns": 5.98,
+   "drawdown": 37.0,
+   "margin_bps": 1.26,
+   "long_count": 45.0,
+   "short_count": 59.0,
+   "status": "FAIL",
+   "failed_check_codes": [
+    "F16"
+   ],
+   "failed_checks": [
+    "LOW_SHARPE",
+    "LOW_FITNESS",
+    "HIGH_TURNOVER",
+    "CONCENTRATED_WEIGHT",
+    "IS_LADDER_SHARPE"
+   ]
+  },
+  {
+   "result_no": 160,
+   "number_synthesised": true,
+   "line": 2111,
+   "universe": "TOP3000",
+   "neutralization": "MARKET",
+   "decay": 8,
+   "truncation": 0.08,
+   "expression": "ts_quantile(fnd6_newqv1300_miiq / fnd6_mfma1_aoloch, 252)",
+   "primary_field": "fnd6_newqv1300_miiq",
+   "family": "fnd6 (fundamental)",
+   "train_fitness": 0.3,
+   "sharpe": 0.36,
+   "extra": {
+    "Sharpe": "0.36",
+    "Turnover": "3.68%",
+    "Fitness": "0.10",
+    "Returns": "0.99%",
+    "Drawdown": "9.31%",
+    "Margin": "5.41 bps",
+    "Long Count": "1312",
+    "Short Count": "1399"
+   },
+   "turnover": 3.68,
+   "fitness": 0.1,
+   "returns": 0.99,
+   "drawdown": 9.31,
+   "margin_bps": 5.41,
+   "long_count": 1312.0,
+   "short_count": 1399.0,
+   "status": "FAIL",
+   "failed_check_codes": [
+    "F3"
+   ],
+   "failed_checks": [
+    "LOW_SHARPE",
+    "LOW_FITNESS",
+    "LOW_2Y_SHARPE"
+   ]
+  },
+  {
+   "result_no": 161,
+   "number_synthesised": true,
+   "line": 2124,
+   "universe": "TOP3000",
+   "neutralization": "MARKET",
+   "decay": 5,
+   "truncation": 0.08,
+   "expression": "rank(ts_sum(vec_avg(nws12_afterhsz_sl), 60)) > 0.5 ? 1 : rank(ts_mean(op_cash_flow_stddev, 21))",
+   "primary_field": "nws12_afterhsz_sl",
+   "family": "other",
+   "train_fitness": 0.13,
+   "sharpe": 0.28,
+   "extra": {
+    "Sharpe": "0.28",
+    "Turnover": "5.25%",
+    "Fitness": "0.10",
+    "Returns": "1.63%",
+    "Drawdown": "12.84%",
+    "Margin": "6.22 bps",
+    "Long Count": "1226",
+    "Short Count": "353"
+   },
+   "turnover": 5.25,
+   "fitness": 0.1,
+   "returns": 1.63,
+   "drawdown": 12.84,
+   "margin_bps": 6.22,
+   "long_count": 1226.0,
+   "short_count": 353.0,
+   "status": "FAIL",
+   "failed_check_codes": [
+    "F1"
+   ],
+   "failed_checks": [
+    "LOW_SHARPE",
+    "LOW_FITNESS",
+    "IS_LADDER_SHARPE"
+   ]
+  },
+  {
+   "result_no": 162,
+   "number_synthesised": true,
+   "line": 2137,
+   "universe": "TOP3000",
+   "neutralization": "MARKET",
+   "decay": 4,
+   "truncation": 0.08,
+   "expression": "rank(rank(volume / adv20)) + rank(ts_rank(fn_liab_fair_val_l1_a, 252))",
+   "primary_field": "volume",
+   "family": "other",
+   "train_fitness": 0.0,
+   "sharpe": 0.19,
+   "extra": {
+    "Sharpe": "0.19",
+    "Turnover": "34.04%",
+    "Fitness": "0.03",
+    "Returns": "0.88%",
+    "Drawdown": "23.30%",
+    "Margin": "0.52 bps",
+    "Long Count": "710",
+    "Short Count": "711"
+   },
+   "turnover": 34.04,
+   "fitness": 0.03,
+   "returns": 0.88,
+   "drawdown": 23.3,
+   "margin_bps": 0.52,
+   "long_count": 710.0,
+   "short_count": 711.0,
+   "status": "FAIL",
+   "failed_check_codes": [
+    "F1"
+   ],
+   "failed_checks": [
+    "LOW_SHARPE",
+    "LOW_FITNESS",
+    "IS_LADDER_SHARPE"
+   ]
+  },
+  {
+   "result_no": 163,
+   "number_synthesised": true,
+   "line": 2150,
+   "universe": "TOP3000",
+   "neutralization": "MARKET",
+   "decay": 12,
+   "truncation": 0.08,
+   "expression": "ts_std_dev(sales_growth, 126) + rank(-(close - vwap) / vwap)",
+   "primary_field": "sales_growth",
+   "family": "other",
+   "train_fitness": 0.0,
+   "sharpe": 0.09,
+   "extra": {
+    "Sharpe": "0.09",
+    "Turnover": "11.44%",
+    "Fitness": "0.04",
+    "Returns": "2.45%",
+    "Drawdown": "96.55%",
+    "Margin": "4.29 bps",
+    "Long Count": "388",
+    "Short Count": "2478"
+   },
+   "turnover": 11.44,
+   "fitness": 0.04,
+   "returns": 2.45,
+   "drawdown": 96.55,
+   "margin_bps": 4.29,
+   "long_count": 388.0,
+   "short_count": 2478.0,
+   "status": "FAIL",
+   "failed_check_codes": [
+    "F2"
+   ],
+   "failed_checks": [
+    "LOW_SHARPE",
+    "LOW_FITNESS",
+    "CONCENTRATED_WEIGHT",
+    "IS_LADDER_SHARPE"
+   ]
+  },
+  {
+   "result_no": 164,
+   "number_synthesised": true,
+   "line": 2163,
+   "universe": "TOP3000",
+   "neutralization": "MARKET",
+   "decay": 4,
+   "truncation": 0.08,
+   "expression": "rank(rank(volume / adv20)) + quantile(historical_volatility_120)",
+   "primary_field": "volume",
+   "family": "other",
+   "train_fitness": 0.0,
+   "sharpe": -0.12,
+   "extra": {
+    "Sharpe": "-0.12",
+    "Turnover": "14.38%",
+    "Fitness": "-0.05",
+    "Returns": "-2.60%",
+    "Drawdown": "77.14%",
+    "Margin": "-3.62 bps",
+    "Long Count": "1410",
+    "Short Count": "1411"
+   },
+   "turnover": 14.38,
+   "fitness": -0.05,
+   "returns": -2.6,
+   "drawdown": 77.14,
+   "margin_bps": -3.62,
+   "long_count": 1410.0,
+   "short_count": 1411.0,
+   "status": "FAIL",
+   "failed_check_codes": [
+    "F2"
+   ],
+   "failed_checks": [
+    "LOW_SHARPE",
+    "LOW_FITNESS",
+    "CONCENTRATED_WEIGHT",
+    "IS_LADDER_SHARPE"
+   ]
+  },
+  {
+   "result_no": 165,
+   "number_synthesised": true,
+   "line": 2176,
+   "universe": "TOP3000",
+   "neutralization": "MARKET",
+   "decay": 6,
+   "truncation": 0.05,
+   "expression": "zscore(ts_delta(op_cash_flow_stddev, 10) - 0.35 * normalize(recurring_assets_fair_value_2) + 0.15 * rank(ts_rank(operating_income / assets, 126)))",
+   "primary_field": "op_cash_flow_stddev",
+   "family": "other",
+   "train_fitness": -0.12,
+   "sharpe": -0.2,
+   "extra": {
+    "Sharpe": "-0.20",
+    "Turnover": "3.29%",
+    "Fitness": "-0.09",
+    "Returns": "-2.31%",
+    "Drawdown": "53.74%",
+    "Margin": "-14.00 bps",
+    "Long Count": "208",
+    "Short Count": "46"
+   },
+   "turnover": 3.29,
+   "fitness": -0.09,
+   "returns": -2.31,
+   "drawdown": 53.74,
+   "margin_bps": -14.0,
+   "long_count": 208.0,
+   "short_count": 46.0,
+   "status": "FAIL",
+   "failed_check_codes": [
+    "F6"
+   ],
+   "failed_checks": [
+    "LOW_SHARPE",
+    "LOW_FITNESS",
+    "LOW_SUB_UNIVERSE_SHARPE",
+    "IS_LADDER_SHARPE"
+   ]
+  },
+  {
+   "result_no": 166,
+   "number_synthesised": true,
+   "line": 2191,
+   "universe": "TOP3000",
+   "neutralization": "SECTOR",
+   "decay": 4,
+   "truncation": 0.08,
+   "expression": "group_neutralize((rank(ts_rank(operating_income / assets, 126)) + rank(ts_delta(return_assets, 126))) * rank(ts_delay(fnd6_acdo / debt, 252)), bucket(rank(cap), range=\"0.1,1,0.1\"))",
+   "primary_field": "operating_income",
+   "family": "other",
+   "train_fitness": 0.15,
+   "sharpe": 0.55,
+   "extra": {
+    "Sharpe": "0.55",
+    "Turnover": "5.37%",
+    "Fitness": "0.24",
+    "Returns": "2.38%",
+    "Drawdown": "7.65%",
+    "Margin": "8.87 bps",
+    "Long Count": "915",
+    "Short Count": "950"
+   },
+   "turnover": 5.37,
+   "fitness": 0.24,
+   "returns": 2.38,
+   "drawdown": 7.65,
+   "margin_bps": 8.87,
+   "long_count": 915.0,
+   "short_count": 950.0,
+   "status": "FAIL",
+   "failed_check_codes": [
+    "F1"
+   ],
+   "failed_checks": [
+    "LOW_SHARPE",
+    "LOW_FITNESS",
+    "IS_LADDER_SHARPE"
+   ]
+  },
+  {
+   "result_no": 167,
+   "number_synthesised": true,
+   "line": 2204,
+   "universe": "TOP3000",
+   "neutralization": "SECTOR",
+   "decay": 12,
+   "truncation": 0.08,
+   "expression": "ts_decay_linear(fnd6_acdo * debt, 252) + rank(-(close - open) / vwap)",
+   "primary_field": "fnd6_acdo",
+   "family": "fnd6 (fundamental)",
+   "train_fitness": -0.01,
+   "sharpe": 0.14,
+   "extra": {
+    "Sharpe": "0.14",
+    "Turnover": "2.04%",
+    "Fitness": "0.05",
+    "Returns": "1.85%",
+    "Drawdown": "33.38%",
+    "Margin": "18.10 bps",
+    "Long Count": "51",
+    "Short Count": "2239"
+   },
+   "turnover": 2.04,
+   "fitness": 0.05,
+   "returns": 1.85,
+   "drawdown": 33.38,
+   "margin_bps": 18.1,
+   "long_count": 51.0,
+   "short_count": 2239.0,
+   "status": "FAIL",
+   "failed_check_codes": [
+    "F2"
+   ],
+   "failed_checks": [
+    "LOW_SHARPE",
+    "LOW_FITNESS",
+    "CONCENTRATED_WEIGHT",
+    "IS_LADDER_SHARPE"
+   ]
+  },
+  {
+   "result_no": 168,
+   "number_synthesised": true,
+   "line": 2217,
+   "universe": "TOP3000",
+   "neutralization": "SECTOR",
+   "decay": 4,
+   "truncation": 0.01,
+   "expression": "ts_decay_linear(fnd6_acdo + debt, 252)",
+   "primary_field": "fnd6_acdo",
+   "family": "fnd6 (fundamental)",
+   "train_fitness": -0.01,
+   "sharpe": 0.14,
+   "extra": {
+    "Sharpe": "0.14",
+    "Turnover": "1.94%",
+    "Fitness": "0.05",
+    "Returns": "1.57%",
+    "Drawdown": "45.09%",
+    "Margin": "16.21 bps",
+    "Long Count": "455",
+    "Short Count": "1836"
+   },
+   "turnover": 1.94,
+   "fitness": 0.05,
+   "returns": 1.57,
+   "drawdown": 45.09,
+   "margin_bps": 16.21,
+   "long_count": 455.0,
+   "short_count": 1836.0,
+   "status": "FAIL",
+   "failed_check_codes": [
+    "F4"
+   ],
+   "failed_checks": [
+    "LOW_SHARPE",
+    "LOW_FITNESS",
+    "LOW_SUB_UNIVERSE_SHARPE",
+    "LOW_2Y_SHARPE"
+   ]
+  },
+  {
+   "result_no": 169,
+   "number_synthesised": true,
+   "line": 2230,
+   "universe": "TOP3000",
+   "neutralization": "SECTOR",
+   "decay": 4,
+   "truncation": 0.01,
+   "expression": "ts_decay_linear(fnd6_acdo / fnd6_cptmfmq_actq, 252)",
+   "primary_field": "fnd6_acdo",
+   "family": "fnd6 (fundamental)",
+   "train_fitness": 0.0,
+   "sharpe": 0.12,
+   "extra": {
+    "Sharpe": "0.12",
+    "Turnover": "1.57%",
+    "Fitness": "0.04",
+    "Returns": "1.08%",
+    "Drawdown": "40.89%",
+    "Margin": "13.82 bps",
+    "Long Count": "71",
+    "Short Count": "2137"
+   },
+   "turnover": 1.57,
+   "fitness": 0.04,
+   "returns": 1.08,
+   "drawdown": 40.89,
+   "margin_bps": 13.82,
+   "long_count": 71.0,
+   "short_count": 2137.0,
+   "status": "FAIL",
+   "failed_check_codes": [
+    "F3"
+   ],
+   "failed_checks": [
+    "LOW_SHARPE",
+    "LOW_FITNESS",
+    "LOW_2Y_SHARPE"
+   ]
+  },
+  {
+   "result_no": 170,
+   "number_synthesised": true,
+   "line": 2243,
+   "universe": "TOP3000",
+   "neutralization": "SECTOR",
+   "decay": 4,
+   "truncation": 0.01,
+   "expression": "ts_decay_linear(fnd6_acdo / fnd6_newqv1300_cogsq, 252)",
+   "primary_field": "fnd6_acdo",
+   "family": "fnd6 (fundamental)",
+   "train_fitness": -0.05,
+   "sharpe": 0.07,
+   "extra": {
+    "Sharpe": "0.07",
+    "Turnover": "1.58%",
+    "Fitness": "0.02",
+    "Returns": "0.85%",
+    "Drawdown": "54.74%",
+    "Margin": "10.71 bps",
+    "Long Count": "63",
+    "Short Count": "2488"
+   },
+   "turnover": 1.58,
+   "fitness": 0.02,
+   "returns": 0.85,
+   "drawdown": 54.74,
+   "margin_bps": 10.71,
+   "long_count": 63.0,
+   "short_count": 2488.0,
+   "status": "FAIL",
+   "failed_check_codes": [
+    "F5"
+   ],
+   "failed_checks": [
+    "LOW_SHARPE",
+    "LOW_FITNESS",
+    "CONCENTRATED_WEIGHT",
+    "LOW_SUB_UNIVERSE_SHARPE",
+    "LOW_2Y_SHARPE"
+   ]
+  },
+  {
+   "result_no": 171,
+   "number_synthesised": true,
+   "line": 2256,
+   "universe": "TOP3000",
+   "neutralization": "SECTOR",
+   "decay": 4,
+   "truncation": 0.01,
+   "expression": "ts_decay_linear(fnd6_mfma1_dpc / debt, 252)",
+   "primary_field": "fnd6_mfma1_dpc",
+   "family": "fnd6 (fundamental)",
+   "train_fitness": -0.04,
+   "sharpe": -0.01,
+   "extra": {
+    "Sharpe": "-0.01",
+    "Turnover": "3.02%",
+    "Fitness": "0.00",
+    "Returns": "-0.11%",
+    "Drawdown": "18.28%",
+    "Margin": "-0.72 bps",
+    "Long Count": "319",
+    "Short Count": "1926"
+   },
+   "turnover": 3.02,
+   "fitness": 0.0,
+   "returns": -0.11,
+   "drawdown": 18.28,
+   "margin_bps": -0.72,
+   "long_count": 319.0,
+   "short_count": 1926.0,
+   "status": "FAIL",
+   "failed_check_codes": [
+    "F4"
+   ],
+   "failed_checks": [
+    "LOW_SHARPE",
+    "LOW_FITNESS",
+    "LOW_SUB_UNIVERSE_SHARPE",
+    "LOW_2Y_SHARPE"
+   ]
+  },
+  {
+   "result_no": 172,
+   "number_synthesised": true,
+   "line": 2269,
+   "universe": "TOP3000",
+   "neutralization": "SECTOR",
+   "decay": 12,
+   "truncation": 0.08,
+   "expression": "ts_decay_linear(fnd6_newqv1300_optfvgrq / debt, 252) + rank(-(close - vwap) / vwap)",
+   "primary_field": "fnd6_newqv1300_optfvgrq",
+   "family": "fnd6 (fundamental)",
+   "train_fitness": -0.05,
+   "sharpe": -0.06,
+   "extra": {
+    "Sharpe": "-0.06",
+    "Turnover": "7.59%",
+    "Fitness": "-0.02",
+    "Returns": "-1.32%",
+    "Drawdown": "51.31%",
+    "Margin": "-3.47 bps",
+    "Long Count": "77",
+    "Short Count": "389"
+   },
+   "turnover": 7.59,
+   "fitness": -0.02,
+   "returns": -1.32,
+   "drawdown": 51.31,
+   "margin_bps": -3.47,
+   "long_count": 77.0,
+   "short_count": 389.0,
+   "status": "FAIL",
+   "failed_check_codes": [
+    "F8"
+   ],
+   "failed_checks": [
+    "LOW_SHARPE",
+    "LOW_FITNESS",
+    "CONCENTRATED_WEIGHT",
+    "LOW_SUB_UNIVERSE_SHARPE",
+    "IS_LADDER_SHARPE"
+   ]
+  },
+  {
+   "result_no": 173,
+   "number_synthesised": true,
+   "line": 2282,
+   "universe": "TOP3000",
+   "neutralization": "SECTOR",
+   "decay": 4,
+   "truncation": 0.08,
+   "expression": "ts_rank(fnd6_acdo / debt, 252)",
+   "primary_field": "fnd6_acdo",
+   "family": "fnd6 (fundamental)",
+   "train_fitness": -0.05,
+   "sharpe": -0.11,
+   "extra": {
+    "Sharpe": "-0.11",
+    "Turnover": "3.92%",
+    "Fitness": "-0.03",
+    "Returns": "-1.01%",
+    "Drawdown": "29.29%",
+    "Margin": "-5.14 bps",
+    "Long Count": "1228",
+    "Short Count": "833"
+   },
+   "turnover": 3.92,
+   "fitness": -0.03,
+   "returns": -1.01,
+   "drawdown": 29.29,
+   "margin_bps": -5.14,
+   "long_count": 1228.0,
+   "short_count": 833.0,
+   "status": "FAIL",
+   "failed_check_codes": [
+    "F3"
+   ],
+   "failed_checks": [
+    "LOW_SHARPE",
+    "LOW_FITNESS",
+    "LOW_2Y_SHARPE"
+   ]
+  },
+  {
+   "result_no": 174,
+   "number_synthesised": true,
+   "line": 2295,
+   "universe": "TOP3000",
+   "neutralization": "SECTOR",
+   "decay": 16,
+   "truncation": 0.01,
+   "expression": "ts_decay_linear(fnd6_acdo / revenue, 126)",
+   "primary_field": "fnd6_acdo",
+   "family": "fnd6 (fundamental)",
+   "train_fitness": -0.2,
+   "sharpe": -0.18,
+   "extra": {
+    "Sharpe": "-0.18",
+    "Turnover": "1.71%",
+    "Fitness": "-0.09",
+    "Returns": "-3.18%",
+    "Drawdown": "69.94%",
+    "Margin": "-37.17 bps",
+    "Long Count": "77",
+    "Short Count": "2484"
+   },
+   "turnover": 1.71,
+   "fitness": -0.09,
+   "returns": -3.18,
+   "drawdown": 69.94,
+   "margin_bps": -37.17,
+   "long_count": 77.0,
+   "short_count": 2484.0,
+   "status": "FAIL",
+   "failed_check_codes": [
+    "F5"
+   ],
+   "failed_checks": [
+    "LOW_SHARPE",
+    "LOW_FITNESS",
+    "CONCENTRATED_WEIGHT",
+    "LOW_SUB_UNIVERSE_SHARPE",
+    "LOW_2Y_SHARPE"
+   ]
+  }
+ ]
+}

@@ -1,0 +1,12 @@
+# Documentation build dependencies.
+#
+# Used by .github/workflows/docs-ci.yml and by anyone previewing the wiki locally:
+#
+#   python3 -m venv .venv-docs
+#   .venv-docs/bin/pip install -r requirements-docs.txt
+#   .venv-docs/bin/mkdocs build --strict
+#
+# Pinned exactly, so a documentation build that passed once keeps passing. The site uses
+# MkDocs' built-in theme, so there is no theme package to keep in step, and the wiki itself
+# remains plain Markdown that reads correctly on GitHub without any of this.
+mkdocs==1.6.1

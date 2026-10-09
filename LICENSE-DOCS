@@ -1,0 +1,37 @@
+# Documentation licence
+
+The prose in this repository — `docs/`, `README.md`, `Commands.md`, the notes under `Research/`,
+`Data/`, `Operators/` and `Troubleshooting/`, and the explanatory text in `simulations/` — is
+licensed under the **Creative Commons Attribution 4.0 International Licence (CC BY 4.0)**.
+
+You may share and adapt this material for any purpose, including commercially, provided that you:
+
+- **give appropriate credit** — name BRAIN Alpha Atlas and link back to this repository,
+- **link to the licence**, and
+- **indicate whether changes were made**.
+
+Full legal code:
+
+```text
+https://creativecommons.org/licenses/by/4.0/legalcode
+```
+
+Plain-language summary:
+
+```text
+https://creativecommons.org/licenses/by/4.0/
+```
+
+## What this licence does not cover
+
+- **Code and workflows.** `Tools/*.py`, `.github/workflows/`, `mkdocs.yml` and
+  `requirements-docs.txt` are licensed under the MIT licence in [`LICENSE`](LICENSE) instead.
+- **Raw pasted platform result pages** in `simulations/sweeps/sources/`. These are included as
+  provenance evidence for the parsed data and are verbatim excerpts of platform output; no licence
+  is granted here to reuse them.
+- **Third-party material.** Nothing here grants rights over platform documentation, platform
+  terminology, competition terms, or any cited paper, book, dataset or tool. Those rights remain
+  with their owners. This repository is an independent knowledge base and is not affiliated with,
+  endorsed by, or sponsored by WorldQuant.
+
+See [`NOTICE`](NOTICE) for the scope table.
