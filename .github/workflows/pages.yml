@@ -1,19 +1,10 @@
 name: Publish docs to GitHub Pages
 
-# MANUAL ONLY. There is no push or pull_request trigger, so nothing here runs until a
-# maintainer starts it from the Actions tab ("Run workflow"). Deploying a public site is a
-# deliberate act, not a side effect of pushing a commit.
-#
-# Before the first run, the repository owner must:
-#   1. Enable Pages: Settings -> Pages -> Build and deployment -> Source: GitHub Actions.
-#   2. Optionally set a repository variable MKDOCS_SITE_URL (Settings -> Secrets and
-#      variables -> Actions -> Variables) when the site is not served from
-#      https://<owner>.github.io/<repo>/ -- a fork or a renamed repository needs this.
-#
-# Validation runs again here, so a site cannot be published from a state that fails the
-# documentation checks.
+# Automatically builds and deploys GitHub Pages on push to main or manual dispatch.
 
 on:
+  push:
+    branches: [main]
   workflow_dispatch:
 
 permissions:
@@ -41,10 +32,10 @@ jobs:
           python-version: "3.12"
 
       - name: Markdown hygiene
-        run: python3 Tools/check_docs.py docs README.md mkdocs.yml LICENSE NOTICE LICENSE-DOCS
+        run: python3 Tools/documentation-validation/check_docs.py Docs README.md mkdocs.yml LICENSE NOTICE LICENSE-DOCS
 
       - name: Experiment index reconciliation
-        run: python3 Tools/verify_index.py
+        run: python3 Tools/documentation-validation/verify_index.py
 
       - name: Install documentation dependencies
         run: python3 -m pip install --disable-pip-version-check -r requirements-docs.txt
@@ -54,12 +45,11 @@ jobs:
           MKDOCS_SITE_URL: ${{ vars.MKDOCS_SITE_URL }}
         run: |
           set -euo pipefail
-          # Unset rather than empty, so mkdocs.yml's !ENV fallback stays in charge.
           if [ -z "${MKDOCS_SITE_URL}" ]; then unset MKDOCS_SITE_URL; fi
           python3 -m mkdocs build --strict
 
       - name: Scan the built site for private material
-        run: python3 Tools/check_docs.py --text-scan site
+        run: python3 Tools/documentation-validation/check_docs.py --text-scan site
 
       - name: Configure Pages
         uses: actions/configure-pages@v5

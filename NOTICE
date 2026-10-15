@@ -4,25 +4,18 @@ Scope of the licences in this repository, and what they do not cover.
 
 | Content | Licence |
 |---|---|
-| Code: `Tools/*.py`, `.github/workflows/`, `mkdocs.yml`, `requirements-docs.txt` | MIT — see [`LICENSE`](LICENSE) |
-| Documentation and research prose: `docs/`, `README.md`, `Commands.md`, `Research/`, `Data/`, `Operators/`, `Troubleshooting/`, explanatory text in `simulations/` | CC BY 4.0 — see [`LICENSE-DOCS`](LICENSE-DOCS) |
-| Parsed experiment data: the `.csv` and `.json` files under `simulations/sweeps/` | CC BY 4.0, as above |
+| Code: `Tools/**/*.py`, `.github/workflows/`, `mkdocs.yml`, `pyproject.toml`, `requirements-docs.txt` | MIT — see [`LICENSE`](LICENSE) |
+| Documentation and research prose: `Docs/`, `README.md`, explanatory text and ledgers in `Analysis and Simulation Reports/` | CC BY 4.0 — see [`LICENSE-DOCS`](LICENSE-DOCS) |
+| Parsed experiment data: the `.csv` and `.json` files under `Analysis and Simulation Reports/` | CC BY 4.0, as above |
 
 ## Not covered by either licence
 
-- **Raw pasted platform result pages** (`simulations/sweeps/sources/*.txt`). These are included as
-  provenance — the text the parsed data was built from — and are verbatim platform output. No
-  licence is granted here to reuse them.
-- **WorldQuant / BRAIN platform material.** Platform documentation, check names, terminology and
-  competition terms belong to their owner. No rights are transferred by this repository.
-- **Any cited third-party paper, book, dataset, operator collection or tool.** Rights remain with
-  their respective owners; the wiki cites and summarises rather than reproducing.
+- **Raw pasted platform result pages** (`Analysis and Simulation Reports/source-data/*.txt`). These are included as provenance — the text the parsed data was built from — and are verbatim platform output. No licence is granted here to reuse them.
+- **WorldQuant / BRAIN platform material.** Platform documentation, check names, terminology, and competition terms belong to their owner. No rights are transferred by this repository.
+- **Any cited third-party paper, book, dataset, operator collection, or tool (`Books/`).** Rights remain with their respective owners; the knowledge base cites and summarises rather than redistributing them.
 
-BRAIN Alpha Atlas is an independent knowledge base. It is not affiliated with, endorsed by, or
-sponsored by WorldQuant.
+BRAIN Alpha Atlas is an independent knowledge base. It is not affiliated with, endorsed by, or sponsored by WorldQuant.
 
 ## No warranty, no advice
 
-The recorded metrics are one user's backtest results, reproduced from pasted simulation output.
-They are historical observations under stated settings, not predictions, and nothing in this
-repository is investment advice or a claim about any level of compensation or success.
+The recorded metrics are one user's backtest results, reproduced from pasted simulation output. They are historical observations under stated settings, not predictions, and nothing in this repository is investment advice or a claim about any level of compensation or success.
