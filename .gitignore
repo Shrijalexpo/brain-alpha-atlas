@@ -7,13 +7,18 @@
 !Docs/**/*.pdf
 
 # Third-party books, papers, formula collections, and official platform captures
-Books/
+# (Keep the Books/ directory structure, README catalogs, and bibliographies tracked)
+Books/books/*
+!Books/books/README.md
+Books/research-papers/*
+!Books/research-papers/README.md
+Books/technical-guides/*
+!Books/technical-guides/README.md
+Books/official-documentation/*
+!Books/official-documentation/README.md
 
 # Platform automation library and notebooks (local credential-handling flow)
 Tools/api-and-automation/ace-api/
-
-# Local-only maintainer agent configuration
-CLAUDE.md
 
 # ---------------------------------------------------------------------------
 # Machine-specific, build output, and virtual environments
