@@ -1,6 +1,6 @@
 # Alpha Research Ledgers and Notebooks
 
-Working ledgers, duplicate-avoidance tables, empirical lessons, field diagnostics, and record templates supporting the experiment catalog in [`../index.md`](../index.md).
+Working ledgers, duplicate-avoidance tables, empirical lessons, field diagnostics, and record templates supporting the experiment catalog in [`../index.md`](../).
 
 ## Files in This Directory
 

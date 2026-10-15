@@ -16,4 +16,4 @@ Code-level factor definitions and operator pattern libraries for translating qua
    - `ts_corr(x, y, d)` maps to `ts_corr(x, y, d)`.
    - `ts_std(x, d)` maps to `ts_std_dev(x, d)`.
 2. **Avoid Crowding:** Classic `Alpha101` price-volume formulas in `USA / TOP3000 / D1` have high production correlation. Combine structural ideas (such as candlestick body-to-range ratios from `Alpha158` or volume-price divergence from `Alpha101`) with fundamental, analyst, or volatility fields.
-3. **Check Duplicate Ledger First:** Before simulating any translated expression, verify [`../../Analysis and Simulation Reports/index.md`](../../Analysis and Simulation Reports/index.md).
+3. **Check Duplicate Ledger First:** Before simulating any translated expression, verify [`../../Analysis and Simulation Reports/index.md`](../../Analysis%20and%20Simulation%20Reports/).

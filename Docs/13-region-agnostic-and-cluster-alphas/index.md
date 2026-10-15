@@ -71,13 +71,13 @@ group_neutralize(sig, ctry_ind)
 
 ## 7. Practical Exercises
 
-1. Compare the failure distribution across `KOR` (`d1`), `AMR` (`d2`), `EUR` (`d3`), `ALL` (`d4, d6`), and `USA` (`d5`) in [`071_multi_region_bundle_20261009.md`](../../Analysis%20and%20Simulation%20Reports/simulation-results/multi-region/071_multi_region_bundle_20261009.md).
+1. Compare the failure distribution across `KOR` (`d1`), `AMR` (`d2`), `EUR` (`d3`), `ALL` (`d4, d6`), and `USA` (`d5`) in [`071_multi_region_bundle_20261009.md`](../../Analysis%20and%20Simulation%20Reports/simulation-results/multi-region/071_multi_region_bundle_20261009.html).
 2. Design a 3-scope Osmosis roadmap using `USA D1`, `EUR D1`, and `GLB D1` (`TOPDIV3000`).
 
 ## 8. Related Topics and Next Steps
 
 - **Next Module:** [14 — BRAIN API and Automation](../14-brain-api-and-automation/index.md)
-- **Regional Simulation Records:** [Simulation Results by Region](../../Analysis%20and%20Simulation%20Reports/simulation-results/README.md)
+- **Regional Simulation Records:** [Simulation Results by Region](../../Analysis%20and%20Simulation%20Reports/simulation-results/)
 
 ## 9. Sources and Verification
 

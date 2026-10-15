@@ -1,10 +1,21 @@
-# Experiment Index
+---
+title: Analysis and Simulation Reports — Experiment Index
+---
 
-Curated index of every experiment recorded in this repository. Each row links to a full
-record. Long expressions and long lesson cells are abbreviated with a trailing `…`; the full text
-is always in the linked record. Every number, status and setting in the tables below was taken
-from the records themselves rather than retyped from a summary, and the tables were checked
-line by line against them.
+# Analysis and Simulation Reports — Experiment Index
+
+Centralized single source of truth and curated index for all **71 WorldQuant BRAIN Alpha experiments**, **13,319 multi-simulation sweep blocks**, regional performance analyses, and research ledgers in this repository. Each row below was taken directly from the canonical simulation records and sweep CSVs and verified line by line by `Tools/documentation-validation/verify_index.py`.
+
+## Directory & Subfolder Navigation
+
+| Subfolder / Resource | Entry Point | Contents & Scope |
+|---|---|---|
+| **Live Simulation & Sweep Analytics Hub** | [Module 18 — Live Simulation Hub](../Docs/18-simulation-results-and-sweep-analytics/index.md) | Executive leaderboard, cross-region findings, [USA 3,550-Block Sweep Analysis](../Docs/18-simulation-results-and-sweep-analytics/usa-3550-sweep-analysis.md), and [Full 71-Experiment Clickable Ledger](../Docs/18-simulation-results-and-sweep-analytics/master-experiment-ledger.md) |
+| **`simulation-results/`** | [`simulation-results/`](simulation-results/) | Canonical experiment records (`001`–`071`) organized by region: [`USA/`](simulation-results/USA/), [`EUR/`](simulation-results/EUR/), [`KOR/`](simulation-results/KOR/), [`AMR/`](simulation-results/AMR/), [`GLB/`](simulation-results/GLB/), and [`multi-region/`](simulation-results/multi-region/) |
+| **`alpha-research/`** | [`alpha-research/`](alpha-research/) | [Status & Duplicate Ledger](alpha-research/status-and-duplicate-ledger.md), [Past Simulations Narrative](alpha-research/past-simulations-ledger.md), [Lessons from Simulations](alpha-research/lessons-from-simulations.md), [Field Research Notebook](alpha-research/field-research-notebook.md), and [Simulation Template](alpha-research/simulation-template.md) |
+| **`sweeps-and-experiments/`** | [`sweeps-and-experiments/`](sweeps-and-experiments/) | Parsed CSV, JSON, and Markdown reports for all bulk sweeps ([EUR 3-Sweep Summary](sweeps-and-experiments/SUMMARY.md), [USA 3,550-Block Summary](sweeps-and-experiments/20261008_071542_SUMMARY.md), [Multi-Region 5,546-Block Summary](sweeps-and-experiments/20261009_115500_SUMMARY.md)) |
+| **`aggregate-analytics/`** | [`aggregate-analytics/`](aggregate-analytics/) | Cross-experiment quantitative summary and machine-readable [`master_experiments_catalog.csv`](aggregate-analytics/master_experiments_catalog.csv) |
+| **`source-data/`** | [`source-data/`](source-data/) | Raw pasted multi-simulation platform exports (`20261008_071542.txt`, `20261009_115500.txt`) with MD5/SHA-256 provenance checksums |
 
 **Reading the statuses:** `PASSED_SUBMITTED` / `PASSED_SUBMITTABLE` mean the platform checks
 were cleared in the recorded session; `FAILED` means a required check failed;

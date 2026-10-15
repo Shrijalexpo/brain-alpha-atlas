@@ -54,7 +54,7 @@ When an Alpha has strong `Sharpe` (`> 1.4`) but fails `Fitness` because `Turnove
 
 1. Understand the **PnL Realization Horizon**: fast signals (1–5 day price reversal, intraday snapshot volume) realize their predictive edge within a few days (`[Platform]`).
 2. Applying excessive `Decay` (e.g., `Decay = 20`) to a 3-day signal forces the portfolio to hold stale positions long after the edge has decayed.
-3. **Empirical proof:** In Simulation [`063`](../../Analysis%20and%20Simulation%20Reports/simulation-results/USA/063_op_cash_flow_stddev_high_turnover.md) (`Sharpe 1.52, Fitness 0.84`), heavy smoothing in Simulation [`064`](../../Analysis%20and%20Simulation%20Reports/simulation-results/USA/064_smoothed_operating_cash_flow_estimate_dispersion.md) (`Decay = 8` plus 20-day averaging) cut Turnover to `11.81%` but collapsed Sharpe to `0.85` (`[Observed]`).
+3. **Empirical proof:** In Simulation [`063`](../../Analysis%20and%20Simulation%20Reports/simulation-results/USA/063_op_cash_flow_stddev_high_turnover.html) (`Sharpe 1.52, Fitness 0.84`), heavy smoothing in Simulation [`064`](../../Analysis%20and%20Simulation%20Reports/simulation-results/USA/064_smoothed_operating_cash_flow_estimate_dispersion.html) (`Decay = 8` plus 20-day averaging) cut Turnover to `11.81%` but collapsed Sharpe to `0.85` (`[Observed]`).
 4. **Best practice:** Smooth only the fastest leg inside the expression (e.g., `ts_mean(-returns, 5)`) and step `Decay` gradually (`4 -> 6 -> 8`).
 
 ### Step 3: Using the Visualization Tool (Consultant Feature)
@@ -100,13 +100,13 @@ NaN Handling:    On
 
 ## 6. Common Mistakes and Troubleshooting
 
-- **Expecting Decay to fix `CONCENTRATED_WEIGHT` or `LOW_SUB_UNIVERSE_SHARPE`:** In Simulation [`071`](../../Analysis%20and%20Simulation%20Reports/simulation-results/multi-region/071_multi_region_bundle_20261009.md) (Dump `d5`), testing `Decay = 0, 3, 4, 5, 6, 7, 8, 10, 12, 16` on the exact same USA implied-volatility expressions left the `CONCENTRATED_WEIGHT` and `LOW_SUB_UNIVERSE_SHARPE` failure set completely unchanged (`[Observed]`). Fix weight concentration with `rank()`, `winsorize()`, `ts_backfill()`, or lower `Truncation` (`0.01–0.02`).
+- **Expecting Decay to fix `CONCENTRATED_WEIGHT` or `LOW_SUB_UNIVERSE_SHARPE`:** In Simulation [`071`](../../Analysis%20and%20Simulation%20Reports/simulation-results/multi-region/071_multi_region_bundle_20261009.html) (Dump `d5`), testing `Decay = 0, 3, 4, 5, 6, 7, 8, 10, 12, 16` on the exact same USA implied-volatility expressions left the `CONCENTRATED_WEIGHT` and `LOW_SUB_UNIVERSE_SHARPE` failure set completely unchanged (`[Observed]`). Fix weight concentration with `rank()`, `winsorize()`, `ts_backfill()`, or lower `Truncation` (`0.01–0.02`).
 - **Forgetting to reset Test Period before submission:** BRAIN blocks submission while a non-zero Test Period is active; reveal the full in-sample period once your expression is finalized (`[Platform]`).
 
 ## 7. Practical Exercises
 
-1. Inspect [`068_eur_multi_universe_decay5_sweep.md`](../../Analysis%20and%20Simulation%20Reports/simulation-results/EUR/068_eur_multi_universe_decay5_sweep.md) (`Decay 5`) and [`069_eur_multi_universe_decay0_sweep.md`](../../Analysis%20and%20Simulation%20Reports/simulation-results/EUR/069_eur_multi_universe_decay0_sweep.md) (`Decay 0`). Compare how `HIGH_TURNOVER` failure rates changed between Decay 0 and Decay 5.
-2. Check how performance changes across `TOP2500`, `TOPCS1600`, `TOP1200`, `TOP800`, and `TOP400` in [`SUMMARY.md`](../../Analysis%20and%20Simulation%20Reports/sweeps-and-experiments/SUMMARY.md).
+1. Inspect [`068_eur_multi_universe_decay5_sweep.md`](../../Analysis%20and%20Simulation%20Reports/simulation-results/EUR/068_eur_multi_universe_decay5_sweep.html) (`Decay 5`) and [`069_eur_multi_universe_decay0_sweep.md`](../../Analysis%20and%20Simulation%20Reports/simulation-results/EUR/069_eur_multi_universe_decay0_sweep.html) (`Decay 0`). Compare how `HIGH_TURNOVER` failure rates changed between Decay 0 and Decay 5.
+2. Check how performance changes across `TOP2500`, `TOPCS1600`, `TOP1200`, `TOP800`, and `TOP400` in [`SUMMARY.md`](../../Analysis%20and%20Simulation%20Reports/sweeps-and-experiments/SUMMARY.html).
 
 ## 8. Related Topics and Next Steps
 

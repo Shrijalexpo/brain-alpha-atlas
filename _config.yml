@@ -1,0 +1,30 @@
+title: BRAIN Alpha Atlas
+description: >-
+  Structured WorldQuant BRAIN Alpha research curriculum, Python parsing and validation utilities,
+  quantitative finance literature catalog, and 71 empirical simulation records.
+theme: jekyll-theme-primer
+
+plugins:
+  - jekyll-relative-links
+  - jekyll-readme-index
+  - jekyll-optional-front-matter
+  - jekyll-titles-from-headings
+
+optional_front_matter:
+  remove_originals: true
+
+readme_index:
+  enabled: true
+  remove_originals: true
+
+relative_links:
+  enabled: true
+  collections: false
+
+exclude:
+  - .venv/
+  - .venv-docs/
+  - site/
+  - __pycache__/
+  - pyproject.toml
+  - requirements-docs.txt

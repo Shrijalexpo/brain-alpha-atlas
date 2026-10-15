@@ -30,9 +30,9 @@ No single number determines whether an Alpha is good. You must read the metrics 
 
 From $\text{Fitness} = \text{Sharpe} \times \sqrt{|\text{Returns}|} / \max(\text{Turnover}, 0.125)$:
 
-1. **The Turnover Penalty (`Turnover > 12.5%`):** Above `12.5%` daily turnover, doubling turnover cuts Fitness in half. In Simulation [`007`](../../Analysis%20and%20Simulation%20Reports/simulation-results/USA/007_dividend_volume_returns.md), a strong `Sharpe = 1.78` failed with `Fitness = 0.67` because `Turnover = 57.51%` (`[Observed]`).
+1. **The Turnover Penalty (`Turnover > 12.5%`):** Above `12.5%` daily turnover, doubling turnover cuts Fitness in half. In Simulation [`007`](../../Analysis%20and%20Simulation%20Reports/simulation-results/USA/007_dividend_volume_returns.html), a strong `Sharpe = 1.78` failed with `Fitness = 0.67` because `Turnover = 57.51%` (`[Observed]`).
 2. **The `12.5%` Turnover Floor (`max(Turnover, 0.125)`):** Once turnover is already below `12.5%`, reducing turnover further does **not** shrink the denominator of Fitness! If Fitness is still below `1.0` when turnover is `<= 12.5%`, the only way to raise Fitness is to increase `Sharpe` or `Returns`.
-3. **The Low-Returns Trap:** In Simulation [`066`](../../Analysis%20and%20Simulation%20Reports/simulation-results/USA/066_op_cash_flow_stddev_level_reversal.md), `Sharpe = 1.16` at `Turnover = 13.12%` yielded `Fitness = 0.78` because `Returns` were too small (`[Observed]`).
+3. **The Low-Returns Trap:** In Simulation [`066`](../../Analysis%20and%20Simulation%20Reports/simulation-results/USA/066_op_cash_flow_stddev_level_reversal.html), `Sharpe = 1.16` at `Turnover = 13.12%` yielded `Fitness = 0.78` because `Returns` were too small (`[Observed]`).
 
 ### `Sharpe` vs. `Train Sharpe` vs. `Investability-Constrained Sharpe`
 
@@ -53,7 +53,7 @@ Before changing an expression, classify the failure into one of four diagnostic 
 
 ### Empirical Check Failure Incidence in Broad Sweeps (3,550 USA Blocks)
 
-In Experiment [`070`](../../Analysis%20and%20Simulation%20Reports/simulation-results/USA/070_usa_top3000_industry_analyst_growth_sweep.md) (single-field backfilled screen across USA universes), 3,544 of 3,550 blocks (99.8%) failed platform validation (`[Observed]`):
+In Experiment [`070`](../../Analysis%20and%20Simulation%20Reports/simulation-results/USA/070_usa_top3000_industry_analyst_growth_sweep.html) (single-field backfilled screen across USA universes), 3,544 of 3,550 blocks (99.8%) failed platform validation (`[Observed]`):
 
 | Individual Validation Check | Blocks Failing Check | Failure Incidence (%) | Primary Root Cause in Single-Field Alphas |
 |---|---:|---:|---|
@@ -71,19 +71,19 @@ This recorded sequence in `USA / TOP3000 / Delay 1 / Subindustry` illustrates di
 
 | Sim ID | Expression Change | Sharpe | Fitness | Turnover | Diagnosis & Next Step |
 |---:|---|---:|---:|---:|---|
-| [`022`](../../Analysis%20and%20Simulation%20Reports/simulation-results/USA/022_ebitda_ev_sales_growth_returns.md) | `rank(ebitda/ev) + rank(sales_growth) + rank(-returns)` | `1.21` | `< 1.0` | High | Base value + growth + raw 1d reversal; Sharpe just below `1.25` |
-| [`024`](../../Analysis%20and%20Simulation%20Reports/simulation-results/USA/024_ts_rank_ebitda_ev_sales_growth_returns.md) | `rank(ts_rank(ebitda/ev, 126)) + rank(sales_growth) + rank(-returns)` | `1.36` | `0.68` | High | `ts_rank(..., 126)` fixed Sharpe (`1.36`), now in **Quadrant 2** (Fitness `0.68`) |
-| [`025`](../../Analysis%20and%20Simulation%20Reports/simulation-results/USA/025_ts_rank_ebitda_ev_ts_rank_sales_growth_returns.md) | Also apply `ts_rank(sales_growth, 126)` | `1.78` | `0.97` | High | Sharpe jumped to `1.78`, Fitness `0.97` (just `0.03` short due to unsmoothed `-returns`) |
-| [`026`](../../Analysis%20and%20Simulation%20Reports/simulation-results/USA/026_submitted_ts_rank_ebitda_ev_sales_growth_ts_mean_reversal.md) | Smooth reversal leg: `rank(ts_mean(-returns, 5))` + cap-bucket neutralization | **`1.61`** | **`1.02`** | **`25.25%`** | **Cleared user-level checks (`PASSED_SUBMITTABLE`)** |
+| [`022`](../../Analysis%20and%20Simulation%20Reports/simulation-results/USA/022_ebitda_ev_sales_growth_returns.html) | `rank(ebitda/ev) + rank(sales_growth) + rank(-returns)` | `1.21` | `< 1.0` | High | Base value + growth + raw 1d reversal; Sharpe just below `1.25` |
+| [`024`](../../Analysis%20and%20Simulation%20Reports/simulation-results/USA/024_ts_rank_ebitda_ev_sales_growth_returns.html) | `rank(ts_rank(ebitda/ev, 126)) + rank(sales_growth) + rank(-returns)` | `1.36` | `0.68` | High | `ts_rank(..., 126)` fixed Sharpe (`1.36`), now in **Quadrant 2** (Fitness `0.68`) |
+| [`025`](../../Analysis%20and%20Simulation%20Reports/simulation-results/USA/025_ts_rank_ebitda_ev_ts_rank_sales_growth_returns.html) | Also apply `ts_rank(sales_growth, 126)` | `1.78` | `0.97` | High | Sharpe jumped to `1.78`, Fitness `0.97` (just `0.03` short due to unsmoothed `-returns`) |
+| [`026`](../../Analysis%20and%20Simulation%20Reports/simulation-results/USA/026_submitted_ts_rank_ebitda_ev_sales_growth_ts_mean_reversal.html) | Smooth reversal leg: `rank(ts_mean(-returns, 5))` + cap-bucket neutralization | **`1.61`** | **`1.02`** | **`25.25%`** | **Cleared user-level checks (`PASSED_SUBMITTABLE`)** |
 
 ## 6. Common Mistakes and Troubleshooting
 
-- **Smoothing a slow signal instead of the fast leg:** In Simulation [`005`](../../Analysis%20and%20Simulation%20Reports/simulation-results/USA/005_ts_mean_operating_income_cap_returns.md), applying `ts_mean` to the quarterly `operating_income / cap` leg while leaving `-returns` raw did nothing to fix turnover and lowered Sharpe to `1.01` (`[Observed]`). Always smooth the highest-turnover leg.
+- **Smoothing a slow signal instead of the fast leg:** In Simulation [`005`](../../Analysis%20and%20Simulation%20Reports/simulation-results/USA/005_ts_mean_operating_income_cap_returns.html), applying `ts_mean` to the quarterly `operating_income / cap` leg while leaving `-returns` raw did nothing to fix turnover and lowered Sharpe to `1.01` (`[Observed]`). Always smooth the highest-turnover leg.
 
 ## 7. Practical Exercises
 
 1. Compute the theoretical Fitness of an Alpha with `Sharpe = 1.50`, `Returns = 10.0%` (`0.10`), and `Turnover = 45.0%` (`0.45`), and compare it with the same Alpha after smoothing reduces `Turnover` to `22.5%` (`0.225`).
-2. Inspect Simulation [`065`](../../Analysis%20and%20Simulation%20Reports/simulation-results/USA/065_op_cash_flow_stddev_sales_growth_reversal.md) (`Sharpe 1.48, Fitness 0.91, Turnover 21.78%`) and diagnose why Fitness fell `0.09` short despite healthy Turnover.
+2. Inspect Simulation [`065`](../../Analysis%20and%20Simulation%20Reports/simulation-results/USA/065_op_cash_flow_stddev_sales_growth_reversal.html) (`Sharpe 1.48, Fitness 0.91, Turnover 21.78%`) and diagnose why Fitness fell `0.09` short despite healthy Turnover.
 
 ## 8. Related Topics and Next Steps
 

@@ -86,7 +86,7 @@ $$\text{Sub-Universe Sharpe} \ge 0.75 \times \sqrt{\frac{N_{\text{sub}}}{N_{\tex
 
 ## 5. Working Examples: Fixing Sub-Universe Failure via Cap-Bucket Neutralization
 
-In Simulation [`026`](../../Analysis%20and%20Simulation%20Reports/simulation-results/USA/026_submitted_ts_rank_ebitda_ev_sales_growth_ts_mean_reversal.md), wrapping the 3-factor composite inside decile market-cap buckets ensured that mega-cap (`TOP1000`) stocks were ranked and neutralized against mega-cap peers rather than against small-cap stocks (`[Observed]`):
+In Simulation [`026`](../../Analysis%20and%20Simulation%20Reports/simulation-results/USA/026_submitted_ts_rank_ebitda_ev_sales_growth_ts_mean_reversal.html), wrapping the 3-factor composite inside decile market-cap buckets ensured that mega-cap (`TOP1000`) stocks were ranked and neutralized against mega-cap peers rather than against small-cap stocks (`[Observed]`):
 
 ```text
 group_neutralize(
@@ -100,11 +100,11 @@ Result: `Sub-universe Sharpe = 1.53` against `Alpha Sharpe = 1.61` (well above t
 
 ## 6. Common Mistakes and Troubleshooting
 
-- **Making cosmetic window tweaks to fix Self-Correlation:** Changing `ts_delta(return_assets, 126)` to `ts_delta(ebitda / enterprise_value, 126)` in Simulation [`033`](../../Analysis%20and%20Simulation%20Reports/simulation-results/USA/033_operating_income_ebitda_ev_delta_reversal_selfcorr.md) still failed self-correlation because the `operating_income/assets + ts_mean(-returns, 5)` backbone was unchanged (`[Observed]`). You must change the underlying dataset or mechanism.
+- **Making cosmetic window tweaks to fix Self-Correlation:** Changing `ts_delta(return_assets, 126)` to `ts_delta(ebitda / enterprise_value, 126)` in Simulation [`033`](../../Analysis%20and%20Simulation%20Reports/simulation-results/USA/033_operating_income_ebitda_ev_delta_reversal_selfcorr.html) still failed self-correlation because the `operating_income/assets + ts_mean(-returns, 5)` backbone was unchanged (`[Observed]`). You must change the underlying dataset or mechanism.
 
 ## 7. Practical Exercises
 
-1. Check Simulations [`029`](../../Analysis%20and%20Simulation%20Reports/simulation-results/USA/029_operating_income_roa_reversal_selfcorr.md), [`031`](../../Analysis%20and%20Simulation%20Reports/simulation-results/USA/031_cashflow_roa_reversal_selfcorr.md), [`033`](../../Analysis%20and%20Simulation%20Reports/simulation-results/USA/033_operating_income_ebitda_ev_delta_reversal_selfcorr.md), and [`046`](../../Analysis%20and%20Simulation%20Reports/simulation-results/USA/046_dividend_volume_returns_selfcorr.md) and identify the shared expression terms that caused `0.88–0.94` correlation.
+1. Check Simulations [`029`](../../Analysis%20and%20Simulation%20Reports/simulation-results/USA/029_operating_income_roa_reversal_selfcorr.html), [`031`](../../Analysis%20and%20Simulation%20Reports/simulation-results/USA/031_cashflow_roa_reversal_selfcorr.html), [`033`](../../Analysis%20and%20Simulation%20Reports/simulation-results/USA/033_operating_income_ebitda_ev_delta_reversal_selfcorr.html), and [`046`](../../Analysis%20and%20Simulation%20Reports/simulation-results/USA/046_dividend_volume_returns_selfcorr.html) and identify the shared expression terms that caused `0.88–0.94` correlation.
 2. Calculate the `+10%` Sharpe threshold required to submit an Alpha whose correlation is `0.78` against an existing Alpha with `Sharpe = 1.61` (`1.61 * 1.10 = 1.771`).
 
 ## 8. Related Topics and Next Steps

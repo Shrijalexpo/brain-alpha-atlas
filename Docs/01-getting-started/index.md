@@ -93,7 +93,7 @@ When transitioning to a Research Consultant role (`[Platform]`):
 
 ### Example 3: Smoothed 5-Day Reversal (`rank(ts_mean(-returns, 5))`)
 
-- **Why it matters:** Single-day `-returns` flips sign every day, creating excessive daily trading (**Turnover > 70%**) that destroys **Fitness**. Averaging over 5 trading days (`ts_mean(-returns, 5)`) was the exact mechanism that turned failing value-growth composites into submittable Alphas in [`026_submitted_ts_rank_ebitda_ev_sales_growth_ts_mean_reversal.md`](../../Analysis%20and%20Simulation%20Reports/simulation-results/USA/026_submitted_ts_rank_ebitda_ev_sales_growth_ts_mean_reversal.md) (`[Observed]`).
+- **Why it matters:** Single-day `-returns` flips sign every day, creating excessive daily trading (**Turnover > 70%**) that destroys **Fitness**. Averaging over 5 trading days (`ts_mean(-returns, 5)`) was the exact mechanism that turned failing value-growth composites into submittable Alphas in [`026_submitted_ts_rank_ebitda_ev_sales_growth_ts_mean_reversal.md`](../../Analysis%20and%20Simulation%20Reports/simulation-results/USA/026_submitted_ts_rank_ebitda_ev_sales_growth_ts_mean_reversal.html) (`[Observed]`).
 
 ## 6. Common Mistakes and Troubleshooting
 
@@ -105,13 +105,13 @@ When transitioning to a Research Consultant role (`[Platform]`):
 
 1. Open the BRAIN simulator, set `USA / TOP3000 / Delay 1 / Subindustry / Decay 4 / Truncation 0.08`, and compare `-returns`, `rank(-returns)`, and `rank(ts_mean(-returns, 5))`.
 2. Record how **Turnover** and **Fitness** change across the three runs.
-3. Inspect [`Analysis and Simulation Reports/index.md`](../../Analysis%20and%20Simulation%20Reports/index.md) to see how early experiments (`001`–`027`) evolved from simple momentum/reversion into multi-factor submissions.
+3. Inspect [`Analysis and Simulation Reports/index.md`](../../Analysis%20and%20Simulation%20Reports/) to see how early experiments (`001`–`027`) evolved from simple momentum/reversion into multi-factor submissions.
 
 ## 8. Related Topics and Next Steps
 
 - **Next Module:** [02 — Financial and Quantitative Foundations](../02-financial-and-quantitative-foundations/index.md)
 - **Settings Reference:** [03 — WorldQuant BRAIN Fundamentals](../03-worldquant-brain-fundamentals/index.md)
-- **Full Experiment Ledger:** [Master Experiment Index](../../Analysis%20and%20Simulation%20Reports/index.md)
+- **Full Experiment Ledger:** [Master Experiment Index](../../Analysis%20and%20Simulation%20Reports/)
 
 ## 9. Sources and Verification
 

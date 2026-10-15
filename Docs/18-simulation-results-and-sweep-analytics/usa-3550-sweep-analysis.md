@@ -1,6 +1,6 @@
 # Deep-Dive: 3,550-Block USA Factor Screening & Candidate Shortlist (`Simulation 070`)
 
-This page presents the complete quantitative factor screening of the **3,550-block USA simulation sweep** ([Experiment `070`](../../Analysis%20and%20Simulation%20Reports/simulation-results/USA/070_usa_top3000_industry_analyst_growth_sweep.md), dataset `20261008_071542_*`), evaluating **2,444 distinct fields** across six USA universes under `Delay = 1`, `Decay = 5`, `Neutralization = INDUSTRY`, `Truncation = 0.08`, `Pasteurization = ON`, and `NaN Handling = ON`.
+This page presents the complete quantitative factor screening of the **3,550-block USA simulation sweep** ([Experiment `070`](../../Analysis%20and%20Simulation%20Reports/simulation-results/USA/070_usa_top3000_industry_analyst_growth_sweep.html), dataset `20261008_071542_*`), evaluating **2,444 distinct fields** across six USA universes under `Delay = 1`, `Decay = 5`, `Neutralization = INDUSTRY`, `Truncation = 0.08`, `Pasteurization = ON`, and `NaN Handling = ON`.
 
 ## 1. Executive Summary & Data-Quality Reconciliation
 

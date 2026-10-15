@@ -18,7 +18,7 @@ Whether you are opening the WorldQuant BRAIN simulator for the first time or you
 | **Curriculum & Reference (`Docs/`)** | [`index.md`](index.md) | 17-module progressive curriculum from beginner foundations to consultant-level engineering |
 | **Tools & Automation (`Tools/`)** | [`../Tools/README.md`](../Tools/README.md) | Sweep parsers, index reconcilers, Markdown/ISIN validators, and ACE API utilities |
 | **External Literature (`Books/`)** | [`../Books/README.md`](../Books/README.md) | Academic papers (Kakushadze 101 Alphas), Qlib Alpha158, and official BRAIN documentation archive |
-| **Empirical Evidence (`Analysis and Simulation Reports/`)** | [`../Analysis and Simulation Reports/index.md`](../Analysis%20and%20Simulation%20Reports/index.md) | All 71 experiment records, regional results (`USA, EUR, KOR, AMR, GLB`), and parsed sweep CSVs |
+| **Empirical Evidence (`Analysis and Simulation Reports/`)** | [`../Analysis and Simulation Reports/index.md`](../Analysis%20and%20Simulation%20Reports/) | All 71 experiment records, regional results (`USA, EUR, KOR, AMR, GLB`), and parsed sweep CSVs |
 
 ## Progressive Learning Roadmap (Beginner → Advanced)
 
@@ -74,4 +74,4 @@ Whether you are opening the WorldQuant BRAIN simulator for the first time or you
 | Fix an `Event input` error on `ts_delta` or handle Vector fields | [04 — Data Explorer & Datasets](04-data-explorer-and-datasets/index.md) · [05 — Fast Expression](05-fast-expression-language/index.md) |
 | Raise `Fitness` when `Sharpe` is already above `1.25` | [07 — Simulation & Evaluation](07-simulation-and-evaluation/index.md) |
 | Understand why `LOW_2Y_SHARPE` or `IS_LADDER_SHARPE` failed | [08 — Submission & Eligibility](08-submission-and-eligibility/index.md) |
-| Check whether an Alpha expression was already tested | [Master Experiment Index](../Analysis%20and%20Simulation%20Reports/index.md) · [Status Ledger](../Analysis%20and%20Simulation%20Reports/alpha-research/status-and-duplicate-ledger.md) |
+| Check whether an Alpha expression was already tested | [Master Experiment Index](../Analysis%20and%20Simulation%20Reports/) · [Status Ledger](../Analysis%20and%20Simulation%20Reports/alpha-research/status-and-duplicate-ledger.html) |

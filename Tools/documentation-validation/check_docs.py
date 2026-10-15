@@ -149,7 +149,11 @@ def check_text(text: str, rel_path: str, root: str) -> list[str]:
             if not clean:
                 continue
             resolved = os.path.normpath(os.path.join(os.path.dirname(rel_path), clean))
-            if not os.path.exists(os.path.join(root, resolved)):
+            full_resolved = os.path.join(root, resolved)
+            if not (
+                os.path.exists(full_resolved)
+                or (resolved.endswith(".html") and os.path.exists(full_resolved[:-5] + ".md"))
+            ):
                 findings.append(f"{rel_path}:{i}: link does not resolve -> {target}")
 
         if stripped.startswith("|"):

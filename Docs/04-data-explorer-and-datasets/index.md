@@ -73,17 +73,17 @@ rank(-ts_std_dev(ts_backfill(daily_signal, 21), 10))
 /* Backfill up to 21 trading days of missing observations, then scale over a 63-day quarter */
 ts_scale(ts_backfill(anl69_sales_best_eeps_cur_yr, 21), 63)
 ```
-*(Produced Sharpe `1.97`, Fitness `1.58`, Turnover `5.78%` in EUR `TOP2500` Simulation [`067`](../../Analysis%20and%20Simulation%20Reports/simulation-results/EUR/067_eur_top2500_country_analyst_sweep.md), `[Observed]`.)*
+*(Produced Sharpe `1.97`, Fitness `1.58`, Turnover `5.78%` in EUR `TOP2500` Simulation [`067`](../../Analysis%20and%20Simulation%20Reports/simulation-results/EUR/067_eur_top2500_country_analyst_sweep.html), `[Observed]`.)*
 
 ## 6. Common Mistakes and Troubleshooting
 
-- **Applying `ts_delta` directly to event/vector estimate fields:** Simulations [`042`](../../Analysis%20and%20Simulation%20Reports/simulation-results/USA/042_estimate_eps_delta_error.md) (`eps_estimate_value`) and [`043`](../../Analysis%20and%20Simulation%20Reports/simulation-results/USA/043_estimate_sales_delta_error.md) (`sales_estimate_value`) failed validation with event-input errors (`[Observed]`). Always check whether an estimate field is Vector/Event type and convert with `vec_avg()` or `ts_backfill()` first.
+- **Applying `ts_delta` directly to event/vector estimate fields:** Simulations [`042`](../../Analysis%20and%20Simulation%20Reports/simulation-results/USA/042_estimate_eps_delta_error.html) (`eps_estimate_value`) and [`043`](../../Analysis%20and%20Simulation%20Reports/simulation-results/USA/043_estimate_sales_delta_error.html) (`sales_estimate_value`) failed validation with event-input errors (`[Observed]`). Always check whether an estimate field is Vector/Event type and convert with `vec_avg()` or `ts_backfill()` first.
 - **Using technical metadata fields as signals:** Fields like `adjfactor`, `*_currency_code`, or `expected_report_*` variance fields produced degenerate sub-1% turnover or step-function artifacts in EUR sweeps (`068`, `069`) (`[Observed]`).
 
 ## 7. Practical Exercises
 
 1. Read the companion [Dataset Catalog & Field Notes](dataset-catalog-and-field-notes.md) to review every dataset family tested in this repository (`pv1`, `pv37`, `fnd6`, `anl4`, `anl10`, `anl69`, `option6`, `model77`, `sentiment1`).
-2. Compare the failure modes of `anl10_*` vs `anl69_*` in [`SUMMARY.md`](../../Analysis%20and%20Simulation%20Reports/sweeps-and-experiments/SUMMARY.md).
+2. Compare the failure modes of `anl10_*` vs `anl69_*` in [`SUMMARY.md`](../../Analysis%20and%20Simulation%20Reports/sweeps-and-experiments/SUMMARY.html).
 
 ## 8. Related Topics and Next Steps
 

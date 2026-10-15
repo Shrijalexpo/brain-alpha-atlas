@@ -83,7 +83,7 @@ python3 Tools/alpha-analysis/validate_spc_isin.py Tools/alpha-analysis/spc_sampl
 
 ## 5. Working Examples: Counting Operators and Fields for Power Pool
 
-Consider the top EUR/KOR slow-analyst expression from Simulations [`067`](../../Analysis%20and%20Simulation%20Reports/simulation-results/EUR/067_eur_top2500_country_analyst_sweep.md) and [`071`](../../Analysis%20and%20Simulation%20Reports/simulation-results/multi-region/071_multi_region_bundle_20261009.md):
+Consider the top EUR/KOR slow-analyst expression from Simulations [`067`](../../Analysis%20and%20Simulation%20Reports/simulation-results/EUR/067_eur_top2500_country_analyst_sweep.html) and [`071`](../../Analysis%20and%20Simulation%20Reports/simulation-results/multi-region/071_multi_region_bundle_20261009.html):
 
 ```text
 ts_scale(ts_backfill(anl69_sales_best_eeps_cur_yr, 21), 63)
@@ -100,7 +100,7 @@ ts_scale(ts_backfill(anl69_sales_best_eeps_cur_yr, 21), 63)
 
 ## 7. Practical Exercises
 
-1. Count the non-exempt operators and non-grouping data fields in Submitted Alpha [`053`](../../Analysis%20and%20Simulation%20Reports/simulation-results/USA/053_submitted_ebitda_ev_mean_reversion.md) (`rank(ebitda / enterprise_value) + rank(ts_mean(-returns, 5))`) and verify that it uses `3` fields (`ebitda, enterprise_value, returns`) and `6` operators (`/, -, ts_mean, rank, rank, +`) — eligible for Power Pool structure!
+1. Count the non-exempt operators and non-grouping data fields in Submitted Alpha [`053`](../../Analysis%20and%20Simulation%20Reports/simulation-results/USA/053_submitted_ebitda_ev_mean_reversion.html) (`rank(ebitda / enterprise_value) + rank(ts_mean(-returns, 5))`) and verify that it uses `3` fields (`ebitda, enterprise_value, returns`) and `6` operators (`/, -, ts_mean, rank, rank, +`) — eligible for Power Pool structure!
 2. Run `python3 Tools/alpha-analysis/validate_spc_isin.py --selftest` from the terminal.
 
 ## 8. Related Topics and Next Steps

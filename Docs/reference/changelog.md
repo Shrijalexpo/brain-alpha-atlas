@@ -1,3 +1,7 @@
+---
+title: Changelog
+---
+
 # Changelog
 
 Chronological record of major structural, analytical, and documentation milestones in **BRAIN Alpha Atlas**.
@@ -8,7 +12,7 @@ Chronological record of major structural, analytical, and documentation mileston
   - [`Docs/`](../index.md) — 17-module progressive WorldQuant BRAIN consultant curriculum (`01-getting-started/` through `17-case-studies-and-lessons-learned/`) plus `reference/`.
   - [`Tools/`](../../Tools/README.md) — Categorized Python utilities under `simulation-processing/`, `documentation-validation/`, `alpha-analysis/`, and `api-and-automation/ace-api/`.
   - [`Books/`](../../Books/README.md) — Structured library under `books/`, `research-papers/`, `technical-guides/`, `official-documentation/`, and `bibliographies/` with full bibliographic metadata and SHA-256 provenance checksums.
-  - [`Analysis and Simulation Reports/`](../../Analysis%20and%20Simulation%20Reports/README.md) — Centralized empirical evidence hub organizing all 71 experiment records by region (`USA`, `EUR`, `KOR`, `AMR`, `GLB`, `multi-region`), parsed sweep datasets (`sweeps-and-experiments/`), research ledgers (`alpha-research/`), raw exports (`source-data/`), and a machine-readable 71-row catalog (`aggregate-analytics/master_experiments_catalog.csv`).
+  - [`Analysis and Simulation Reports/`](../../Analysis%20and%20Simulation%20Reports/) — Centralized empirical evidence hub organizing all 71 experiment records by region (`USA`, `EUR`, `KOR`, `AMR`, `GLB`, `multi-region`), parsed sweep datasets (`sweeps-and-experiments/`), research ledgers (`alpha-research/`), raw exports (`source-data/`), and a machine-readable 71-row catalog (`aggregate-analytics/master_experiments_catalog.csv`).
 - **Consolidated Legacy Top-Level Folders:** Merged and retired scattered top-level directories (`Data/`, `Operators/`, `Research/`, `Troubleshooting/`, `tutorials/`, `simulations/`, `_private_review/`, `.remember/`, `.freebuff/`, `site-preview313/`, `.venv-docs313/`) with a full recoverable backup and deletion log.
 - **Restored & Repaired Broken Tutorial Links:** Resolved all 78 broken links previously in `docs/platform_tutorial_index.md` and reunited the 78 official platform documentation articles with their 142 figures under `Books/official-documentation/brain-platform-docs/`.
 - **Standardized Research Record Metadata:** Enriched all 71 simulation records (`001`–`071`) with standardized metadata tables while maintaining 100% consistency with `verify_index.py`.

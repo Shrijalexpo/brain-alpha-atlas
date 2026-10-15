@@ -50,7 +50,7 @@ WorldQuant BRAIN recommends a 4-stage process for turning academic papers, blogs
 
 Before suggesting or simulating any new Alpha candidate in this workspace (`[Notes]`):
 
-1. Check [`status-and-duplicate-ledger.md`](../../Analysis%20and%20Simulation%20Reports/alpha-research/status-and-duplicate-ledger.md) and [`Analysis and Simulation Reports/index.md`](../../Analysis%20and%20Simulation%20Reports/index.md).
+1. Check [`status-and-duplicate-ledger.md`](../../Analysis%20and%20Simulation%20Reports/alpha-research/status-and-duplicate-ledger.html) and [`Analysis and Simulation Reports/index.md`](../../Analysis%20and%20Simulation%20Reports/).
 2. **Never repeat** an exact expression marked `FAILED`, `ERROR`, `FAILED_SELF_CORRELATION`, `PASSED_SUBMITTABLE`, or `PASSED_SUBMITTED`.
 3. Treat submitted Alphas (`026`, `027`, `053`) as **protected baselines**: you may study why they worked, but any new candidate in that family must change a real economic mechanism while monitoring self-correlation (`< 0.70`).
 4. Generate and test **at most 1 to 3 candidate Alphas at a time**, recording the outcome of each iteration before designing the next (`[Notes]`).
@@ -69,7 +69,7 @@ Based on the evidence accumulated across all 71 experiments and 13,319 sweep blo
 
 ## 7. Practical Exercises
 
-1. Review the [Command & Workflow Playbook](../reference/command-and-workflow-playbook.md) and the [Simulation Record Template](../../Analysis%20and%20Simulation%20Reports/alpha-research/simulation-template.md).
+1. Review the [Command & Workflow Playbook](../reference/command-and-workflow-playbook.md) and the [Simulation Record Template](../../Analysis%20and%20Simulation%20Reports/alpha-research/simulation-template.html).
 2. Take one formula from [`Books/README.md`](../../Books/README.md), explain its economic meaning in one sentence, and adapt its operator structure onto a fundamental or analyst field in `EUR`.
 
 ## 8. Related Topics and Next Steps

@@ -74,7 +74,7 @@ Eligibility thresholds are pass/fail gates. When more consultants pass the eligi
 
 ### Example: Designing a 3-Alpha Pyramid in `EUR - D1 - Analyst`
 
-Using the empirical findings from [`EUR Simulation Results`](../../Analysis%20and%20Simulation%20Reports/simulation-results/EUR/README.md), a consultant targeting the `EUR - D1 - Analyst` pyramid tests distinct slow-analyst fields with distinct operators so that:
+Using the empirical findings from [`EUR Simulation Results`](../../Analysis%20and%20Simulation%20Reports/simulation-results/EUR/), a consultant targeting the `EUR - D1 - Analyst` pyramid tests distinct slow-analyst fields with distinct operators so that:
 - `Avg Fields/Alpha = 1.0` (optimal for Tie-Breaker 2),
 - `Avg Operators/Alpha = 1.0` (excluding `ts_backfill`, optimal for Tie-Breaker 1),
 - `Total Distinct Fields` and `Total Distinct Operators` increase with each submission (optimal for Tie-Breakers 3 & 4).
@@ -87,7 +87,7 @@ Using the empirical findings from [`EUR Simulation Results`](../../Analysis%20an
 ## 7. Practical Exercises
 
 1. Compute the stacked multiplier for an Alpha that satisfies three concurrent themes with multipliers `2x`, `3x`, and `4x`: $(2 + 3 + 4) - 3 + 1 = 7\times$.
-2. Audit our existing submissions (`026`, `027`, `053`) in [`Analysis and Simulation Reports/index.md`](../../Analysis%20and%20Simulation%20Reports/index.md) and identify which `Region x Delay x Category` pyramids they populate (`USA - D1 - Fundamental` and `USA - D1 - Price Volume`).
+2. Audit our existing submissions (`026`, `027`, `053`) in [`Analysis and Simulation Reports/index.md`](../../Analysis%20and%20Simulation%20Reports/) and identify which `Region x Delay x Category` pyramids they populate (`USA - D1 - Fundamental` and `USA - D1 - Price Volume`).
 
 ## 8. Related Topics and Next Steps
 

@@ -9,7 +9,7 @@ This hub is the central analytical dashboard for **expert WorldQuant BRAIN consu
 | **USA 3,550-Block Factor Screening** | [USA 3,550-Block Sweep Analysis](usa-3550-sweep-analysis.md) | Complete metric distributions, operator ranking (`group_rank` vs `group_zscore`), field family scorecard across 2,444 fields, `F1–F21` check breakdowns, and Group A/B/C candidate shortlists |
 | **Complete 71-Experiment Ledger** | [Full 71-Experiment & Sweep Ledger](master-experiment-ledger.md) | Every individual Alpha simulation (`001–066`) and bulk sweep (`067–071`) with exact Fast Expressions, settings, Sharpe, Fitness, Turnover, Drawdown, Margin, and verdicts |
 | **Empirical Case Studies & 26 Lessons** | [Module 17 — Case Studies & Lessons](../17-case-studies-and-lessons-learned/index.md) | Post-mortems on the `024 -> 026` breakthrough, the self-correlation wall, sentiment noise traps, `anl69` slow-analyst signals, and lessons `L-001` through `L-026` |
-| **Raw Machine-Readable Exports** | [`Analysis and Simulation Reports/`](../../Analysis%20and%20Simulation%20Reports/index.md) | Normalized CSV/JSON tables, source dumps, and regional simulation files |
+| **Raw Machine-Readable Exports** | [`Analysis and Simulation Reports/`](../../Analysis%20and%20Simulation%20Reports/) | Normalized CSV/JSON tables, source dumps, and regional simulation files |
 
 ## 1. Submitted & Top-Performing Alpha Leaderboard
 
@@ -33,11 +33,11 @@ All large-scale simulation exports are normalized by `Tools/simulation-processin
 
 | Sweep ID | Exp ID | Region & Universes | Neutralization / Decay | Total Blocks | Sharpe >= 1.25 | Fitness >= 1.0 | PASS | Top OOS Sharpe | Primary Signal Family & Key Finding |
 |---|---|---|---|---:|---:|---:|---:|---:|---|
-| **`20261004_171500`** | [`067`](../../Analysis%20and%20Simulation%20Reports/simulation-results/EUR/067_eur_top2500_country_analyst_sweep.md) | `EUR / TOP2500` | `COUNTRY / 5` | `1,723` | `1` | `0` | `0` | `1.25` | Analyst estimate backfill screen; country neutralization leaves sector drift |
-| **`20261005_123752`** | [`068`](../../Analysis%20and%20Simulation%20Reports/simulation-results/EUR/068_eur_multi_universe_decay5_sweep.md) | `EUR / 6 Universes` | `COUNTRY / 5` | `2,000` | `10` | `0` | `0` | `1.46` | Multi-universe `anl10/anl15` screen; `Decay 5` lifts median Sharpe by `+0.025` over `Decay 0` |
-| **`20261006_100742`** | [`069`](../../Analysis%20and%20Simulation%20Reports/simulation-results/EUR/069_eur_multi_universe_decay0_sweep.md) | `EUR / 5 Universes` | `COUNTRY / 0` | `500` | `0` | `0` | `0` | `1.22` | Controlled `Decay 0` comparison against `068`; higher turnover and lower Fitness |
+| **`20261004_171500`** | [`067`](../../Analysis%20and%20Simulation%20Reports/simulation-results/EUR/067_eur_top2500_country_analyst_sweep.html) | `EUR / TOP2500` | `COUNTRY / 5` | `1,723` | `1` | `0` | `0` | `1.25` | Analyst estimate backfill screen; country neutralization leaves sector drift |
+| **`20261005_123752`** | [`068`](../../Analysis%20and%20Simulation%20Reports/simulation-results/EUR/068_eur_multi_universe_decay5_sweep.html) | `EUR / 6 Universes` | `COUNTRY / 5` | `2,000` | `10` | `0` | `0` | `1.46` | Multi-universe `anl10/anl15` screen; `Decay 5` lifts median Sharpe by `+0.025` over `Decay 0` |
+| **`20261006_100742`** | [`069`](../../Analysis%20and%20Simulation%20Reports/simulation-results/EUR/069_eur_multi_universe_decay0_sweep.html) | `EUR / 5 Universes` | `COUNTRY / 0` | `500` | `0` | `0` | `0` | `1.22` | Controlled `Decay 0` comparison against `068`; higher turnover and lower Fitness |
 | **`20261008_071542`** | [`070`](usa-3550-sweep-analysis.md) | `USA / 6 Universes` | `INDUSTRY / 5` | **`3,550`** | **`12`** | **`1`** | `0` | **`1.54`** | 2,444-field screen; `group_rank` generates 80% of all Sharpe `>= 1.0` alphas |
-| **`20261009_115500`** | [`071`](../../Analysis%20and%20Simulation%20Reports/simulation-results/multi-region/071_multi_region_bundle_20261009.md) | `KOR, AMR, EUR, GLB, USA` | `Multi / 4` | **`5,546`** | **`89`** | **`42`** | `0` | **`2.61`** | 6-dump regional bundle; USA option breakeven (`2.61`) and KOR `anl69` (`1.89`) lead |
+| **`20261009_115500`** | [`071`](../../Analysis%20and%20Simulation%20Reports/simulation-results/multi-region/071_multi_region_bundle_20261009.html) | `KOR, AMR, EUR, GLB, USA` | `Multi / 4` | **`5,546`** | **`89`** | **`42`** | `0` | **`2.61`** | 6-dump regional bundle; USA option breakeven (`2.61`) and KOR `anl69` (`1.89`) lead |
 
 ## 3. Regional Research Playbook (Cross-Region Findings)
 

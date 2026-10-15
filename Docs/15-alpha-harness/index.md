@@ -64,7 +64,7 @@ When you paste one or more BRAIN multi-simulation pages (`N Results`) into a raw
      --outdir "Analysis and Simulation Reports/sweeps-and-experiments" \
      --prefix <YYYYMMDD_HHMMSS>_
    ```
-3. Create the next numbered experiment record (`072_*.md`) in the appropriate regional subfolder of `Analysis and Simulation Reports/simulation-results/` using [`simulation-template.md`](../../Analysis%20and%20Simulation%20Reports/alpha-research/simulation-template.md).
+3. Create the next numbered experiment record (`072_*.md`) in the appropriate regional subfolder of `Analysis and Simulation Reports/simulation-results/` using [`simulation-template.md`](../../Analysis%20and%20Simulation%20Reports/alpha-research/simulation-template.html).
 4. Add the summary row to `Analysis and Simulation Reports/index.md` and run `verify_index.py`:
    ```bash
    python3 Tools/documentation-validation/verify_index.py

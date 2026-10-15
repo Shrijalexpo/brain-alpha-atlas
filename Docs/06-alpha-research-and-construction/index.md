@@ -48,8 +48,8 @@ If an expression contains an arbitrary lookback like `37` days, four nested `if_
 
 Before combining three factors, simulate the primary factor by itself (`[Notes]`):
 
-- **Bad start:** Jumping straight to `rank(a) + rank(b) + rank(c) + rank(d) - rank(e)` (Simulation [`012`](../../Analysis%20and%20Simulation%20Reports/simulation-results/USA/012_large_multifactor_quality_value.md), Sharpe `-0.28`, `[Observed]`).
-- **Good start:** Testing `rank(cashflow_op / enterprise_value)` alone in Simulation [`014`](../../Analysis%20and%20Simulation%20Reports/simulation-results/USA/014_cashflow_yield.md) (`Sharpe 0.41`, positive baseline, `[Observed]`), then comparing `ebitda / enterprise_value` (`[Observed]`).
+- **Bad start:** Jumping straight to `rank(a) + rank(b) + rank(c) + rank(d) - rank(e)` (Simulation [`012`](../../Analysis%20and%20Simulation%20Reports/simulation-results/USA/012_large_multifactor_quality_value.html), Sharpe `-0.28`, `[Observed]`).
+- **Good start:** Testing `rank(cashflow_op / enterprise_value)` alone in Simulation [`014`](../../Analysis%20and%20Simulation%20Reports/simulation-results/USA/014_cashflow_yield.html) (`Sharpe 0.41`, positive baseline, `[Observed]`), then comparing `ebitda / enterprise_value` (`[Observed]`).
 
 ### Step 2: Upgrade the Normalization Before Adding Factors
 
@@ -85,17 +85,17 @@ group_neutralize(
     bucket(rank(cap), range="0.1,1,0.1")
 )
 ```
-- **Recorded Result (Simulation [`026`](../../Analysis%20and%20Simulation%20Reports/simulation-results/USA/026_submitted_ts_rank_ebitda_ev_sales_growth_ts_mean_reversal.md)):** Sharpe `1.61`, Fitness `1.02`, Turnover `25.25%`, Sub-universe Sharpe `1.53` (`[Observed]`). *(Protected baseline — do not re-submit verbatim.)*
+- **Recorded Result (Simulation [`026`](../../Analysis%20and%20Simulation%20Reports/simulation-results/USA/026_submitted_ts_rank_ebitda_ev_sales_growth_ts_mean_reversal.html)):** Sharpe `1.61`, Fitness `1.02`, Turnover `25.25%`, Sub-universe Sharpe `1.53` (`[Observed]`). *(Protected baseline — do not re-submit verbatim.)*
 
 ## 6. Common Mistakes and Troubleshooting
 
 - **Injecting random noise to lower correlation:** Strictly prohibited by WorldQuant BRAIN compliance rules and grounds for account termination (`[Platform]`). Lower correlation legitimately by exploring less-crowded regions (`EUR`, `GLB`, `KOR`, `AMR`), single-dataset ATOM structures, or underutilized dataset categories.
-- **Re-testing already-exhausted expressions:** Always check [`status-and-duplicate-ledger.md`](../../Analysis%20and%20Simulation%20Reports/alpha-research/status-and-duplicate-ledger.md) before running a simulation (`[Notes]`).
+- **Re-testing already-exhausted expressions:** Always check [`status-and-duplicate-ledger.md`](../../Analysis%20and%20Simulation%20Reports/alpha-research/status-and-duplicate-ledger.html) before running a simulation (`[Notes]`).
 
 ## 7. Practical Exercises
 
 1. Pick one dataset family in `EUR` (`anl69` or `anl4`) and draft a 1-sentence hypothesis and a 1-line baseline expression using only standard lookbacks (`21`, `63`, `126`, or `252`).
-2. Check your candidate against [`Analysis and Simulation Reports/index.md`](../../Analysis%20and%20Simulation%20Reports/index.md) to verify it has not already been simulated.
+2. Check your candidate against [`Analysis and Simulation Reports/index.md`](../../Analysis%20and%20Simulation%20Reports/) to verify it has not already been simulated.
 
 ## 8. Related Topics and Next Steps
 

@@ -56,7 +56,7 @@ A recurring beginner error is applying time-series operators directly to raw dol
 
 1. **The Size Confounder:** A `$500B` mega-cap company naturally has much larger dollar `operating_income` than a `$2B` mid-cap company. Cross-sectionally, `operating_income` is mostly a proxy for market capitalization (`cap`).
 2. **Stale Quarterly Step-Functions:** Fundamental fields update once per quarter (roughly every 63 trading days). Taking a short window like `ts_mean(operating_income, 4)` or `ts_delta(operating_income, 4)` yields zero on ~95% of trading days (`[Observed]`).
-3. **Empirical Verification:** In Simulations [`008`](../../Analysis%20and%20Simulation%20Reports/simulation-results/USA/008_raw_operating_income_ts_rank.md), [`009`](../../Analysis%20and%20Simulation%20Reports/simulation-results/USA/009_raw_operating_income_ts_mean.md), and [`010`](../../Analysis%20and%20Simulation%20Reports/simulation-results/USA/010_raw_operating_income_ts_delta.md), raw `operating_income` transforms all produced `Sharpe < 0.50` (`[Observed]`).
+3. **Empirical Verification:** In Simulations [`008`](../../Analysis%20and%20Simulation%20Reports/simulation-results/USA/008_raw_operating_income_ts_rank.html), [`009`](../../Analysis%20and%20Simulation%20Reports/simulation-results/USA/009_raw_operating_income_ts_mean.html), and [`010`](../../Analysis%20and%20Simulation%20Reports/simulation-results/USA/010_raw_operating_income_ts_delta.html), raw `operating_income` transforms all produced `Sharpe < 0.50` (`[Observed]`).
 4. **The Solution — Scale by Enterprise Value or Assets:** Dividing by `enterprise_value`, `assets`, or `cap` converts a dollar level into a dimensionless yield or profitability ratio (`ebitda / enterprise_value`, `cashflow_op / assets`), and using a semi-annual or annual lookback (`63`, `126`, or `252` days) captures genuine multi-quarter fundamental improvement (`[Observed]`).
 
 ## 5. Working Examples
@@ -76,7 +76,7 @@ rank(ts_rank(cashflow_op / assets, 126))
 + rank(ts_delta(operating_income / assets, 63))
 + rank(ts_mean(-returns, 5))
 ```
-*(Basis of submitted Alpha [`027`](../../Analysis%20and%20Simulation%20Reports/simulation-results/USA/027_submitted_cashflow_quality_improvement_reversal.md), `[Observed]`.)*
+*(Basis of submitted Alpha [`027`](../../Analysis%20and%20Simulation%20Reports/simulation-results/USA/027_submitted_cashflow_quality_improvement_reversal.html), `[Observed]`.)*
 
 ## 6. Common Mistakes and Troubleshooting
 
@@ -89,7 +89,7 @@ rank(ts_rank(cashflow_op / assets, 126))
 ## 7. Practical Exercises
 
 1. Write down the economic hypothesis for why `ebitda / enterprise_value` behaves differently from `operating_income / cap` for highly leveraged companies.
-2. Compare the results of Simulations [`011`](../../Analysis%20and%20Simulation%20Reports/simulation-results/USA/011_quality_value_composite.md)–[`025`](../../Analysis%20and%20Simulation%20Reports/simulation-results/USA/025_ts_rank_ebitda_ev_ts_rank_sales_growth_returns.md) in the [USA Simulation Results](../../Analysis%20and%20Simulation%20Reports/simulation-results/USA/README.md) to trace how each single-variable change affected Sharpe and Fitness.
+2. Compare the results of Simulations [`011`](../../Analysis%20and%20Simulation%20Reports/simulation-results/USA/011_quality_value_composite.html)–[`025`](../../Analysis%20and%20Simulation%20Reports/simulation-results/USA/025_ts_rank_ebitda_ev_ts_rank_sales_growth_returns.html) in the [USA Simulation Results](../../Analysis%20and%20Simulation%20Reports/simulation-results/USA/) to trace how each single-variable change affected Sharpe and Fitness.
 
 ## 8. Related Topics and Next Steps
 

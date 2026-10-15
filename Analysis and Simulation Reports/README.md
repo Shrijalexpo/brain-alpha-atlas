@@ -1,3 +1,7 @@
+---
+title: Analysis and Simulation Reports
+---
+
 # Analysis and Simulation Reports
 
 Centralized single source of truth for all WorldQuant BRAIN Alpha experiments, simulation exports, multi-simulation sweeps, performance analyses, and research ledgers in this repository.
@@ -44,8 +48,8 @@ Analysis and Simulation Reports/
 
 ## Research Integrity and Provenance Rules
 
-1. **Single Authoritative Record:** Every experiment has one canonical Markdown record in [`simulation-results/`](simulation-results/README.md) and one row in [`index.md`](index.md) and [`aggregate-analytics/master_experiments_catalog.csv`](aggregate-analytics/master_experiments_catalog.csv).
-2. **Automated Reconciliation:** Run `python3 Tools/documentation-validation/verify_index.py` after any update to confirm that [`index.md`](index.md) matches every record and sweep CSV.
+1. **Single Authoritative Record:** Every experiment has one canonical Markdown record in [`simulation-results/`](simulation-results/) and one row in [`index.md`](./) and [`aggregate-analytics/master_experiments_catalog.csv`](aggregate-analytics/master_experiments_catalog.csv).
+2. **Automated Reconciliation:** Run `python3 Tools/documentation-validation/verify_index.py` after any update to confirm that [`index.md`](./) matches every record and sweep CSV.
 3. **Out-of-Sample vs Training Metrics:** Always record the out-of-sample `Sharpe` column separately from `Train Sharpe`. Never substitute training metrics for out-of-sample evaluation.
-4. **Per-Page Legend Isolation:** Failed-check codes (`F1`, `F2`, ...) are local to each pasted results page. Always use the resolved check names (`LOW_2Y_SHARPE`, `LOW_SUB_UNIVERSE_SHARPE`, `IS_LADDER_SHARPE`, etc.) stored in [`sweeps-and-experiments/`](sweeps-and-experiments/README.md).
+4. **Per-Page Legend Isolation:** Failed-check codes (`F1`, `F2`, ...) are local to each pasted results page. Always use the resolved check names (`LOW_2Y_SHARPE`, `LOW_SUB_UNIVERSE_SHARPE`, `IS_LADDER_SHARPE`, etc.) stored in [`sweeps-and-experiments/`](sweeps-and-experiments/).
 5. **No Fabricated Values:** Missing or uncaptured settings/metrics are explicitly recorded as `unknown` or `—`.

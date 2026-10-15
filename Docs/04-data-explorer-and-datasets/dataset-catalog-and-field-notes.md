@@ -26,7 +26,7 @@ Detailed reference of WorldQuant BRAIN dataset categories, individual fields, an
 
 ## 3. Fields and Patterns to Avoid (`No-Repeat` List)
 
-Based on empirical failures in [`Analysis and Simulation Reports/index.md`](../../Analysis%20and%20Simulation%20Reports/index.md):
+Based on empirical failures in [`Analysis and Simulation Reports/index.md`](../../Analysis%20and%20Simulation%20Reports/):
 
 1. **Degenerate / Non-Predictive Fields:** `adjfactor`, `pv37_low_14` under `ts_product` (numerical overflow artifact in `068`), `pv47_*spret`, `*_currency_code`, `expected_report_*` variance fields.
 2. **Direct Matrix Time-Series on Event Fields:** `ts_delta(eps_estimate_value, 20)` (`042`) and `ts_delta(sales_estimate_value, 20)` (`043`) without vector/backfill conversion.
